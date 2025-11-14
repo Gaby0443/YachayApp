@@ -1,0 +1,128 @@
+
+/* ===== CENTRO DE AYUDA ===== */
+.seccion-ayuda {
+  padding: 120px 20px 60px; /* 120 = 80 del header fijo + aire */
+  background-color: #ffffff;
+  min-height: calc(100vh - 160px);
+}
+.ayuda-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título */
+.ayuda-container h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  border-bottom: 3px solid #e9cc86;
+  padding-bottom: 8px;
+}
+
+/* Buscador y botón amarillo */
+.ayuda-busqueda {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* caja blanca con icono e input */
+.ayuda-busqueda {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* CENTRA todo horizontalmente */
+  margin: 70px;
+}
+.ayuda-buscador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 50%; /* OCUPA TODO EL ANCHO */
+  max-width: 1200px; /* LARGO GRANDE */
+}
+.ayuda-buscador i {
+  align-items: center;
+  color: #999;
+}
+.ayuda-buscador input {
+  align-items: center;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+/* Botón "¡Puedes acceder sin conexión!" */
+.ayuda-offline-msg {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Encabezado de FAQ */
+.ayuda-faq-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.ayuda-lista-faq {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ayuda-header-faq {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ayuda-header-faq h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+.btn-tutorial {
+  background: #f0d058;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-tutorial:hover {
+  background: #e6bf38;
+}
+
+/* Lista de FAQs */
+.ayuda-lista-faq {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 700px;
+}
+.faq-item {
+  width: 100%;
+  text-align: left;
+  padding: 14px 20px;
+  border-radius: 6px;
+  border: none;
+  background: #ffe9a8;
+  font-size: 16px;
+  cursor: pointer;
+}
+.faq-item:hover {
+  filter: brightness(0.97);
+  color: red;
+}

@@ -1,0 +1,237 @@
+:root {
+  --azul: #0e2f4f;
+  --gris: #e5eaef;
+  --texto: #0b2239;
+  --wrap: 920px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+}
+
+/* RESET */
+a { text-decoration: none; color: inherit; }
+body {
+  margin: 0;
+  color: var(--texto);
+  background: #fff;
+}
+
+/* ============================================
+   PLAYER
+============================================ */
+.player {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 0 20px;
+}
+
+/* BACK */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  margin-left: -50px;
+}
+.back-btn i {
+  font-size: 30px;
+  color: var(--azul);
+}
+
+/* TEXTOS */
+.player__titulo {
+  margin: 8px 0 6px;
+  font-size: 32px;
+  text-align: center;
+  color: var(--azul);
+}
+.player__badge {
+  width: 90px;
+}
+.player__sub {
+  margin: 4px 0 6px;
+  font-weight: 700;
+  color: #193247;
+}
+
+/* ============================================
+   BARRA DE PROGRESO
+============================================ */
+.seek {
+  width: min(880px, 85vw);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 6px;
+}
+.seek__time {
+  font-size: 14px;
+  color: #3b4a5a;
+}
+.seek__bar {
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--gris);
+}
+.seek__fill {
+  position: absolute;
+  height: 100%;
+  background: var(--azul);
+}
+.seek__dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: var(--azul);
+  border-radius: 50%;
+}
+
+/* ============================================
+   CONTROLES (AUMENTADOS)
+============================================ */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+/* BOTONES DE CONTROL AGRANDADOS */
+.ctrl-btn {
+  width: 60px;     /* AUMENTADO */
+  height: 60px;    /* AUMENTADO */
+  display: grid;
+  place-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ctrl-btn i {
+  font-size: 30px; /* AUMENTADO */
+  color: var(--azul);
+}
+
+/* BOTÓN CENTRAL MÁS GRANDE TODAVÍA */
+.ctrl-btn--main {
+  width: 80px;
+  height: 80px;
+}
+
+.ctrl-btn--main i {
+  font-size: 62px; /* PLAY CENTRAL MÁS GRANDE */
+}
+
+
+
+/* Checkbox controlador */
+.modal-checkbox {
+  display: none;
+}
+
+/* Fondo oscuro */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s ease;
+}
+
+/* Ocultar modal cuando NO está marcado */
+.modal-checkbox:not(:checked) ~ .modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Ventana del modal */
+.modal-ventana {
+  background: #fff;
+  padding: 32px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+}
+
+/* Icono del modal */
+.modal-icono {
+  width: 100px;
+  height: 100px;
+  background: var(--azul);
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+}
+
+.modal-icono img {
+  width: 60px;
+  filter: brightness(0) invert(1);
+}
+
+/* Texto */
+.modal-pregunta {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Botones del modal */
+.modal-botones {
+  display: flex;
+  gap: 12px;
+}
+.boton-modal {
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+.boton-modal--si {
+  background: var(--azul);
+  color: #fff;
+}
+.boton-modal--no {
+  background: #fff;
+  border: 2px solid var(--gris);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 640px) {
+  .ctrl-btn {
+    width: 65px;
+    height: 65px;
+  }
+  .ctrl-btn i {
+    font-size: 36px;
+  }
+  
+  .ctrl-btn--main {
+    width: 90px;
+    height: 90px;
+  }
+  .ctrl-btn--main i {
+    font-size: 50px;
+  }
+}

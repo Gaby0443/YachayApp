@@ -1,0 +1,134 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #ff;
+}
+.barra-navegacion,
+.barra-navegacion * {
+  font-weight: 400 !important;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 40px;
+  margin-left: 200px;
+  min-height: calc(100vh - 60px);
+}
+
+.ilustracion-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 100px;
+}
+
+.ilustracion-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.form-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.form-card {
+  background-color: #e9cc86;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.btn-volver {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 50px;
+}
+
+.app-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0 30px 0;
+}
+
+.form-logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.registro-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.registro-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.terminos-condiciones {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.terminos-condiciones input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #0c2734;
+}
+
+.btn-crear-cuenta {
+  background-color: #0c2734;
+  color: #f7f1e5;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.link-login {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0c2734;
+  margin-top: 20px;
+  cursor: pointer;
+}

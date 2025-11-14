@@ -1,0 +1,113 @@
+:root {
+  --azul: #0e2f4f;
+  --amarillo: #f5b94f;
+  --texto: #0b2239;
+  --wrap: 1200px; /* ancho de trabajo */
+  --radius: 18px;
+  --sombra: 0 18px 40px rgba(0, 0, 0, 0.12);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial,
+    sans-serif;
+}
+
+/* Reset mínimo enlaces (sin subrayado) */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* Contenedor general centrado y con padding (no márgenes que “empujen”) */
+.mision {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 130px 24px 36px;
+  color: var(--texto);
+}
+
+/* Back alineado a la izquierda del mismo contenedor */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.back-btn__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Grid de 3 columnas: tarjeta / imagen / tarjeta */
+.mision__wrap {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 36px;
+}
+
+/* Tarjetas laterales (más grandes que la imagen) */
+.mision__card {
+  background: #f1b848; /* amarillo */
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  padding: 32px 36px 100px; /* AJUSTA si quieres más/menos aire */
+  /* MUY IMPORTANTE: SIN altura fija ni recortes */
+  height: auto; /* asegúrate de NO tener height fijo en otro lado */
+  max-height: none; /* por si había un límite previo */
+  overflow: visible; /* que no oculte el texto */
+}
+
+.mision__title {
+  margin: 0 0 14px;
+  font-size: 32px;
+  color: #0e2f4f;
+  text-align: center;
+  font-weight: 800;
+}
+
+.mision__text {
+  /* contenedor del párrafo */
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+.mision__text p {
+  margin: 0; /* sin extra arriba/abajo */
+}
+
+/* ====== IMAGEN CENTRAL (más pequeña) ====== */
+.mision__media {
+  display: grid;
+  place-items: center;
+}
+
+.mision__media img {
+  width: 100%; /* ocupa su columna (que ya es angosta) */
+  max-width: 520px; /* tope de ancho (ajústalo si quieres más chica) */
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+/* Responsive: apilar en móviles */
+@media (max-width: 1100px) {
+  .mision__wrap {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 22px;
+  }
+  .mision__media img {
+    width: min(92vw, 620px);
+    margin-inline: auto;
+  }
+  .mision__card {
+    min-height: unset;
+  }
+}
+.mision__text p {
+  margin: 0; /* sin espacios extra arriba/abajo */
+  line-height: 1.55;
+  font-size: 16px;
+}
+    

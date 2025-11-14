@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YachayAPP</title>
+    <link rel="stylesheet" href="stylesLp.css" />
+    <link rel="stylesheet" href="stylesIniciarSesion.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="barra-navegacion">
+      <div class="contenedor barra-navegacion__contenido">
+        <div class="marca">
+          <img
+            class="marca__logo-incompleto"
+            src="imgs/LogoIncompleto.png"
+            alt="YachayAPP Logo"
+          />
+          <span class="marca__nombre">YACHAYAPP</span>
+        </div>
+
+        <nav class="menu">
+          <a class="menu__enlace" href="index.html">Inicio</a>
+          <a class="menu__enlace" href="#">Nosotros</a>
+          <a class="menu__enlace" href="#">Idiomas</a>
+          <a class="menu__enlace" href="Aplicativo.html">Aplicativo</a>
+        </nav>
+
+        <a class="boton boton--borde boton--peque" href="iniciarSesion.html"
+          >Iniciar sesión</a
+        >
+      </div>
+    </header>
+    <main class="principal contenedor">
+      <!-- INICIO: COLUMNA IZQUIERDA (Imagen/Ilustración) -->
+      <section class="columna-izquierda">
+        <!-- Reemplaza el contenido por tu imagen real -->
+        <div class="marco-imagen">
+          <img class="portada" src="imgs/portada1.png" />
+          <!-- Ejemplo cuando tengas la imagen:
+        <img src="tu-imagen.jpg" alt="Familia aprendiendo idiomas" />
+        --></div>
+      </section>
+      <!-- FIN: COLUMNA IZQUIERDA (Imagen/Ilustración) -->
+
+      <!-- INICIO: COLUMNA DERECHA (Tarjeta de Inicio de sesión) -->
+      <section class="tarjeta-login">
+        <!-- INICIO: Encabezado de la tarjeta -->
+        <div class="tarjeta-login__encabezado">
+          <!-- Reemplaza este círculo por una imagen si quieres -->
+          <img class="logo-completo" src="imgs/LogoCompleto.png" />
+        </div>
+        <!-- FIN: Encabezado de la tarjeta -->
+
+        <!-- INICIO: Botones sociales -->
+        <div class="acciones-sociales">
+          <!-- INICIO: Botón Google -->
+          <button class="boton boton--google boton--icono" type="button">
+            <img class="boton__icono" src="imgs/Google_Logo.png" />
+            Iniciar sesión con Google
+          </button>
+          <!-- FIN: Botón Google -->
+
+          <!-- INICIO: Botón Facebook -->
+          <button class="boton boton--facebook boton--icono" type="button">
+            <img class="boton__icono" src="imgs/Facebook_Logo.png" />
+            Iniciar sesión con Facebook
+          </button>
+          <!-- FIN: Botón Facebook -->
+        </div>
+        <!-- FIN: Botones sociales -->
+        <!-- INICIO: Separador "o" con líneas -->
+        <div class="separador">
+          <span>o</span>
+        </div>
+        <!-- FIN: Separador "o" con líneas -->
+        <!-- INICIO: FORMULARIO DE INICIO DE SESIÓN -->
+        <form class="formulario" action="#" method="post">
+          <!-- INICIO: Campo Correo electrónico -->
+          <label class="formulario__etiqueta" for="correo">
+            Correo electrónico
+          </label>
+          <input
+            class="formulario__entrada"
+            id="correo"
+            name="correo"
+            type="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <!-- FIN: Campo Correo electrónico -->
+
+          <!-- INICIO: Campo Contraseña -->
+          <label class="formulario__etiqueta" for="clave"> Contraseña </label>
+          <input
+            class="formulario__entrada"
+            id="clave"
+            name="clave"
+            type="password"
+            placeholder="Contraseña"
+            required
+          />
+          <!-- FIN: Campo Contraseña -->
+
+          <!-- INICIO: Enlace ¿Olvidó su contraseña? -->
+          <div class="formulario__extra">
+            <a class="enlace" href="#">¿Olvidó su contraseña?</a>
+          </div>
+          <!-- FIN: Enlace ¿Olvidó su contraseña? -->
+
+          <!-- INICIO: Botón principal Enviar/Iniciar sesión -->
+          <a href="progreso.html" class="boton boton--primario boton--bloque">
+            Iniciar sesión
+          </a>
+          <!-- FIN: Botón principal Enviar/Iniciar sesión -->
+
+          <!-- INICIO: Enlace Crear cuenta -->
+          <p class="registro">
+            <a class="enlace" href="#">Aún no tengo cuenta</a>
+          </p>
+          <!-- FIN: Enlace Crear cuenta -->
+        </form>
+        <!-- FIN: FORMULARIO DE INICIO DE SESIÓN -->
+      </section>
+      <!-- FIN: COLUMNA DERECHA (Tarjeta de Inicio de sesión) -->
+    </main>
+    <!-- FOOTER -->
+    <section class="footer">
+      <div class="footer-cont">
+        <div class="footer-left">
+          <i class="fa-regular fa-copyright"></i>
+          <span>YACHAYAPP</span>
+        </div>
+        <div class="footer-right">
+          <a href="#" class="footer-link">Términos y Condiciones</a>
+          <a href="mailto:info@AylluTalk.pe" class="footer-link"
+            >info@AylluTalk.pe</a
+          >
+          <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

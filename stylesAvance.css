@@ -1,0 +1,252 @@
+.seccion-avances {
+  padding: 120px 80px 60px 80px;
+  font-family: "Poppins", sans-serif;
+  color: #0c2734;
+}
+
+.header-avances {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.header-avances i {
+  font-size: 25px;
+  color: #0c2734;
+}
+
+.header-avances h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.contenido-avances {
+  display: flex;
+  gap: 120px;
+}
+
+.columna-resumen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.selector-idioma-docente select {
+  padding: 8px 20px;
+  font-size: 18px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.mensaje-promedio {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.columna-detalles {
+  flex-grow: 1;
+}
+
+.tabla-avances {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-bottom: 20px;
+}
+
+.tabla-avances th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0 10px;
+  color: #6a6a6a;
+}
+/* CAMBIO APLICADO: Centrar el encabezado de la última columna ("Estado") */
+.tabla-avances th:last-child {
+  text-align: center;
+}
+
+.tabla-avances td {
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.tabla-avances td:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0b2942;
+}
+.tabla-avances td:first-child small {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6a6a6a;
+  margin-left: 30px;
+}
+.tabla-avances td:nth-child(2) {
+  font-weight: 700;
+}
+.tabla-avances td:last-child {
+  text-align: center;
+}
+
+.estado-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.estado-dot.excelente {
+  background-color: #03a832;
+}
+.estado-dot.bueno {
+  background-color: #ffc700;
+}
+.estado-dot.malo {
+  background-color: #ff4747;
+}
+
+.btn-reproducir {
+  background-color: #0b2942;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px 0 30px 0;
+}
+
+.actividades-recientes h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.actividades-recientes ul {
+  list-style: none;
+  padding: 0;
+}
+.actividades-recientes li {
+  font-size: 18px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.actividades-recientes li i:first-child {
+  width: 25px;
+  text-align: center;
+}
+.actividades-recientes li span {
+  font-weight: 600;
+  color: #6a6a6a;
+  margin-left: auto;
+}
+.actividades-recientes li span i {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.btn-exportar-label {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-exportar {
+  background-color: #f8bd00;
+  color: #0c2734;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.reporte-modal-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+
+#mostrar-reporte-modal:checked ~ .reporte-modal-fondo {
+  visibility: visible;
+  opacity: 1;
+}
+
+.reporte-modal-contenido {
+  background-color: #fff7df;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.modal-titulo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0c2734;
+  margin: 0 0 5px 0;
+}
+
+.modal-texto {
+  font-size: 16px;
+  color: #0c2734;
+  margin-bottom: 20px;
+}
+
+.modal-botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-descargar {
+  background-color: #f8bd00;
+  color: #0c2734;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-cerrar {
+  background-color: #dcdcdc;
+  color: #0c2734;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+  cursor: pointer;
+}

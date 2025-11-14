@@ -1,0 +1,153 @@
+
+.seccion-crear-tarea {
+  padding: 120px 0px 60px 0px;
+  font-family: "Poppins", sans-serif;
+  color: #0c2734;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-crear-tarea {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin: 0 0 30px 160px; 
+}
+
+.header-crear-tarea i {
+  font-size: 24px;
+  color: #0c2734;
+}
+
+.header-crear-tarea h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.contenido-disponible {
+  width: 100%;
+  max-width: 750px;
+  text-align: center;
+}
+
+.contenido-disponible h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0c2734;
+  margin-bottom: 40px;
+}
+
+.card-tarea {
+  background: white;
+  padding: 25px 35px;
+  margin: 25px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 650px;
+}
+
+.card-tarea h4 {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0c2734;
+}
+
+
+.input-select,
+.input-text {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 8px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* FECHAS */
+.fechas-container {
+  justify-content: space-between;   
+  gap: 60px;               
+  width: 95%;
+}
+
+.fecha-inicio,
+.fecha-limite {
+  flex: 1;
+}
+
+.fechas-container label {
+  font-size: 14px;
+  color: #4e5b68;
+}
+
+/*  LISTA DE ASIGNACIÓN */
+
+.lista-asignacion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.asignacion-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.asignacion-item input {
+  width: 18px;
+  height: 18px;
+  accent-color: #f8bd00;
+}
+
+
+.botones-tarea {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 40px auto 30px auto;
+  max-width: 330px;
+}
+
+.btn-crear-tarea {
+  background-color: #f8bd00;
+  color: #0c2734;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.25s;
+}
+
+.btn-crear-tarea:hover {
+  background-color: #f8bd00;
+}
+
+.btn-cancelar {
+  background-color: #e6e6e6;
+  color: #555;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.25s;
+}
+
+.btn-cancelar:hover {
+  background-color: #d4d4d4;
+}

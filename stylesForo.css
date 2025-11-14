@@ -1,0 +1,164 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+  .top-space {
+    height: 81px; /* espacio para el menú */
+  }
+  
+  .container {
+    width: 75%;
+    margin: 120px auto;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  
+  .search-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .add-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f8bd00;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  .filter-buttons {
+    margin: 20px 0;
+  }
+  
+  .filter-buttons button {
+    background: #eaeaea;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .filter-buttons .active {
+    background: #f8bd00;
+  }
+  
+  .subtitle {
+    margin-top: 15px;
+  }
+  
+  .card {
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    margin-top: 20px;
+    margin-bottom:50px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  .time {
+    color: gray;
+    font-size: 13px;
+  }
+  
+  .dots {
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .card-text {
+    color: #444;
+    line-height: 1.4;
+  }
+  
+  .card-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 10px;
+  }
+  
+  .icon-group {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+  }
+    .icon-img {
+      width: 20px;
+      height: 20px;
+      margin-right: 6px;
+      cursor: pointer;
+      object-fit: contain;
+  }
+  .icon-like input,
+  .icon-save input {
+    display: none;
+  }
+  
+  .like-img,
+  .save-img {
+    width: 22px;
+    cursor: pointer;
+    object-fit: contain;
+  }
+  
+  .icon-like input:checked + .like-img {
+    content: url("imagenes/like-filled.png");
+  }
+  
+  .icon-save input:checked + .save-img {
+    content: url("imagenes/save-filled.png");
+  }
+.footer {
+    margin-top: auto;
+}
+

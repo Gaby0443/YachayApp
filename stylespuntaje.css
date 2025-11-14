@@ -1,0 +1,284 @@
+/* VARIABLES GLOBALES: Colores y estilos reutilizables */
+:root {
+  --azul: #0e2f4f; /* Color azul oscuro del header */
+  --amarillo: #f5b94f; /* Color amarillo del cuerpo de la tarjeta */
+  --texto: #0b2239; /* Color del texto principal */
+  --blanco: #fff; /* Color blanco */
+  --sombra: 0 12px 28px rgba(0, 0, 0, 0.12); /* Sombra de las tarjetas */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial,
+    sans-serif;
+}
+
+/* RESET: Quitar subrayado de todos los enlaces */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Aplicar box-sizing a todos los elementos */
+* {
+  box-sizing: border-box;
+}
+
+/* HTML y BODY ocupan toda la altura */
+html,
+body {
+  height: 100%;
+}
+
+/* BODY: Fondo crema claro */
+body {
+  margin: 0;
+  color: var(--texto);
+  background: #fdfcf8;
+}
+
+/* SECCIÓN PRINCIPAL: Contenedor centrado con espacio arriba/abajo para menús */
+.seccion-puntaje {
+  max-width: 600px; /* Ancho máximo de la sección */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 120px 20px 100px; /* Espacio arriba (para menú) y abajo */
+}
+
+/* BOTÓN RETROCEDER: Flecha + texto alineados a la izquierda */
+.boton-retroceder {
+  display: inline-flex; /* Elementos en línea (flecha + texto) */
+  align-items: center; /* Alinear verticalmente al centro */
+  gap: 8px; /* Espacio entre flecha y texto */
+  margin-bottom: 24px; /* Separación hacia abajo */
+  cursor: pointer; /* Cursor tipo manita al pasar */
+  margin-left: -400px; /* Pegado a la izquierda */
+}
+
+/* Efecto hover al pasar el mouse sobre el botón retroceder */
+.boton-retroceder:hover {
+  opacity: 0.8;
+}
+
+/* ICONO DE FLECHA del botón retroceder */
+.boton-retroceder__icono {
+  width: 18px;
+  height: 28px;
+  object-fit: contain; /* Mantener proporción de la imagen */
+  display: block;
+}
+
+/* TEXTO STRONG del botón retroceder */
+.boton-retroceder strong {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--texto);
+}
+
+/* TARJETA PRINCIPAL: Contenedor blanco con sombra */
+.tarjeta-puntaje {
+  background: var(--blanco);
+  border-radius: 12px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar contenido que se salga */
+  box-shadow: var(--sombra); /* Sombra suave */
+  margin-bottom: 28px; /* Espacio hacia abajo */
+}
+
+/* CABECERA AZUL: Título "Puntaje" con fondo azul oscuro */
+.tarjeta-puntaje__cabecera {
+  background: var(--azul);
+  padding: 16px;
+  text-align: center;
+}
+
+/* TÍTULO "Puntaje" */
+.tarjeta-puntaje__titulo {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blanco);
+}
+
+/* CUERPO AMARILLO: Contenedor de la lista y el total */
+.tarjeta-puntaje__cuerpo {
+  background: var(--amarillo);
+  padding: 24px 28px 20px;
+  position: relative; /* Para posicionar el badge "Total" */
+  min-height: 340px; /* Altura mínima */
+}
+
+/* SUBTÍTULO "Palabras Aprendidas:" */
+.lista-palabras__subtitulo {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+/* ITEMS: Contenedor de todas las palabras */
+.lista-palabras__items {
+  display: flex;
+  flex-direction: column; /* Apiladas verticalmente */
+  gap: 8px; /* Espacio entre cada palabra */
+}
+
+/* ITEM PALABRA: Cada línea de palabra (número + texto + puntos) */
+.item-palabra {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* 3 columnas: número, texto, puntos */
+  gap: 8px;
+  align-items: baseline; /* Alinear al texto base */
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* NÚMERO de cada palabra (1. 2. 3. etc.) */
+.item-palabra__numero {
+  font-weight: 700;
+  color: var(--texto);
+}
+
+/* TEXTO de la palabra (ej: "Plátano: Puquchi") */
+.item-palabra__texto {
+  font-weight: 400;
+  color: var(--texto);
+}
+
+/* PUNTOS de cada palabra (ej: "2 pts") */
+.item-palabra__puntos {
+  font-weight: 600;
+  color: var(--texto);
+  text-align: right;
+}
+
+/* CONTENEDOR TOTAL: Badge en esquina inferior derecha */
+.contenedor-total {
+  position: absolute; /* Posición absoluta dentro del cuerpo amarillo */
+  bottom: 20px; /* 20px desde abajo */
+  right: 28px; /* 28px desde la derecha */
+}
+
+/* INSIGNIA TOTAL: Badge redondeado "Total: 24 pts" */
+.insignia-total {
+  display: inline-block;
+  background: #e9a832; /* Amarillo más oscuro */
+  padding: 8px 18px;
+  border-radius: 20px; /* Muy redondeado */
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--texto);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra del badge */
+}
+
+/* =============================================
+   SISTEMA DE COMPARTIR - SOLO HTML Y CSS
+   ============================================= */
+
+/* 1. CONTENEDOR: Agrupa el checkbox, botón y menú */
+.contenedor-compartir {
+  position: relative;
+  display: inline-block;
+  margin-left: -400px; /* ← MUEVE TODO EL CONTENEDOR */
+}
+
+/* 2. CHECKBOX OCULTO: No se ve, pero controla todo */
+.checkbox-compartir {
+  display: none;
+}
+
+/* 3. BOTÓN COMPARTIR: Es un label que activa el checkbox */
+.boton-compartir {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blanco);
+  border: 2px solid #f5b94f;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--texto);
+  transition: all 0.2s ease;
+}
+
+/* 4. HOVER del botón (se ilumina al pasar el mouse) */
+.boton-compartir:hover {
+  background: #fffbf0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 5. ACTIVE del botón (al hacer clic) */
+.boton-compartir:active {
+  transform: translateY(0);
+}
+
+/* 6. ICONO del botón compartir */
+.boton-compartir__icono {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+/* 7. TEXTO "Compartir" */
+.boton-compartir__texto {
+  font-weight: 600;
+}
+
+/* 8. MENÚ DE REDES: Cápsula con los iconos (OCULTO por defecto) */
+.menu-redes {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  background: #0e2f4f;
+  border-radius: 30px;
+  padding: 8px 12px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* 9. MENÚ VISIBLE: Cuando el checkbox está marcado */
+.checkbox-compartir:checked ~ .menu-redes {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* 10. BOTÓN DE RED SOCIAL: Cada círculo blanco */
+.boton-red {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blanco);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+/* 11. HOVER en cada red social (se agranda) */
+.boton-red:hover {
+  transform: scale(1.15);
+}
+
+/* 12. ACTIVE en cada red social (se achica) */
+.boton-red:active {
+  transform: scale(0.95);
+}
+
+/* 13. IMAGEN dentro de cada botón */
+.boton-red img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}

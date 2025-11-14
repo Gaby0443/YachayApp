@@ -1,0 +1,288 @@
+.seccion-crear-contenido {
+  padding: 120px 80px 60px 80px;
+  font-family: "Poppins", sans-serif;
+  color: #0c2734;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-crear-contenido {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.header-crear-contenido h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* --- Nuevo Contenedor de Dos Columnas --- */
+.contenedor-principal-docente {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columna-izquierda-docente {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.columna-derecha-docente {
+  flex: 1;
+  min-width: 450px;
+}
+
+/* --- Estilo del botón 'Crear Contenido Nuevo' --- */
+.btn-crear-contenido {
+  background-color: #0b2942;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-crear-contenido:hover {
+  background-color: #1a3c5c;
+}
+
+.btn-crear-contenido i {
+  font-size: 20px;
+}
+
+/* --- Formulario / Panel Permanente --- */
+.panel-nuevo-contenido {
+  background-color: #f7f7f7;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.modal-header h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0c2734;
+  margin: 0;
+}
+
+.btn-editar-nombre {
+  background: none;
+  border: none;
+  color: #0c2734;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* Estilos de formulario (entradas, etiquetas) */
+.form-nuevo-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0c2734;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* --- Botones de Media (Audio e Imagen) --- */
+.form-group-media {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.media-audio,
+.media-imagen {
+  flex: 1;
+}
+
+.media-audio p,
+.media-imagen p {
+  font-size: 18px; /* Ajuste del tamaño de letra */
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0c2734;
+}
+
+.controles-audio,
+.controles-imagen {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-media-blanco,
+.btn-media-amarillo {
+  flex: 1;
+  padding: 10px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-media-blanco {
+  background-color: white;
+  color: #0c2734;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-media-blanco:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-media-amarillo {
+  background-color: #f8bd00;
+  color: #0c2734;
+  border: 1px solid #f8bd00;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-media-amarillo:hover {
+  background-color: #e0ac00;
+}
+
+/* Grupos */
+.form-group-grupos {
+  margin-top: 20px;
+}
+
+.form-group-grupos h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0c2734;
+}
+
+.grupos-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #0c2734;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #f8bd00;
+}
+
+.btn-guardar-contenido {
+  background-color: #f8bd00;
+  color: #0c2734;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  align-self: center;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn-guardar-contenido:hover {
+  background-color: #e0ac00;
+}
+
+/* --- Estilos para la Vista Previa de Contenido Creado --- */
+.lista-contenido-creado {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tarjeta-contenido-creado {
+  background-color: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #f8bd00;
+  display: grid;
+  grid-template-areas:
+    "nombre nombre"
+    "grupos fecha";
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.nombre-contenido {
+  grid-area: nombre;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #0c2734;
+}
+
+.grupos-asignados {
+  grid-area: grupos;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4e5b68;
+  margin: 0;
+}
+
+.fecha-creacion {
+  grid-area: fecha;
+  font-size: 14px;
+  color: #6a6a6a;
+  margin: 0;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YachayAPP - Avance de Estudiantes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylesAvance.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- TOPHEADER-->
+    <nav class="topheader">
+      <div class="Logo-nombre">
+        <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
+        <h1>YACHAYAPP</h1>
+      </div>
+
+      <ul class="Menu-Horizontal">
+        <li>
+          <a href="">Aprender</a>
+          <ul class="Menu-Vertical">
+            <li>
+              <a href="">Modulos</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="pronunciacion.html">Pronunciacion</a></li>
+                <li><a href="audios.html">Audios</a></li>
+                <li><a href="">Mini Juegos</a></li>
+                <li><a href="">Historias Narradas</a></li>
+                <li><a href="">Evaluaciones</a></li>
+                <li><a href="audio2.html">Lecciones Educativas</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Lecciones AR</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="misionCultural.html">Misiones</a></li>
+                <li><a href="leccionesRa.html"> Lecciones RA</a></li>
+                <li><a href="traduccion.html">Traducción</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Práctica Conversacional </a>
+              <ul class="Menu-Vertical2">
+                <li><a href="">Escenarios</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Juegos</a>
+          <ul class="Menu-Vertical">
+            <li><a href="juegos.html">Flashcards</a></li>
+            <li><a href="desafioAuditivo.html">Desafios</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Menu</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Dispositivos Wearables</a></li>
+            <li><a href="">Glosario Personal</a></li>
+            <li><a href="">Biblioteca Cultural</a></li>
+            <li><a href="foroComunitario.html">Foro Comunitario</a></li>
+            <li>
+              <a href="">Docentes</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="crearContenido.html">Crear Contenido</a></li>
+                <li><a href="crearTarea.html"> Crear Tarea</a></li>
+                <li><a href="resenasDocentes.html">Reseña de Docentes</a></li>
+                <li><a href="avanceEstudiantes.html">Avance Estudiantes</a></li>
+              </ul>
+            </li>
+            <li><a href="">Sesiones Con mentores nativos</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Progreso</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Ranking Global</a></li>
+            <li><a href="progreso.html">Avance</a></li>
+          </ul>
+        </li>
+
+        <li class="iconos">
+          <a href="#" title="Notificaciones"
+            ><i class="fa-regular fa-bell"></i
+          ></a>
+          <a href="soporte.html" title="Configuración"
+            ><i class="fa-solid fa-gear"></i
+          ></a>
+          <a href="centroAyuda.html" title="Preguntas Frecuentes"
+            ><i class="fa-solid fa-headset"></i>
+          </a>
+          <a href="#" title="Perfil de usuario"
+            ><i class="fa-solid fa-user"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <input type="checkbox" id="mostrar-reporte-modal" hidden />
+
+    <section class="seccion-avances">
+      <div class="header-avances">
+        <h2>Avances de Estudiantes</h2>
+      </div>
+
+      <div class="contenido-avances">
+        <div class="columna-resumen">
+          <div class="selector-idioma-docente">
+            <select>
+              <option>Quechua</option>
+              <option>Aimara</option>
+              <option>Matsés</option>
+              <option>Asháninka</option>
+              <option>Shipibo-Konibo</option>
+            </select>
+          </div>
+
+          <div class="circular" style="--p: 89">
+            <span>89%</span>
+            <small>Completado</small>
+          </div>
+          <p class="mensaje-promedio">
+            ¡Excelente! El promedio de los progresos de los alumnos es
+            excelente! 😀
+          </p>
+        </div>
+
+        <div class="columna-detalles">
+          <table class="tabla-avances">
+            <thead>
+              <tr>
+                <th>Alumnos</th>
+                <th>Avance</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <i class="fa-solid fa-circle-user"></i>
+                  Mateo<br />
+                  <small>20241368</small>
+                </td>
+                <td>80%</td>
+                <td><span class="estado-dot excelente"></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa-solid fa-circle-user"></i>
+                  Laura<br />
+                  <small>20242593</small>
+                </td>
+                <td>53%</td>
+                <td><span class="estado-dot bueno"></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa-solid fa-circle-user"></i>
+                  Diego<br />
+                  <small>20231504</small>
+                </td>
+                <td>90%</td>
+                <td><span class="estado-dot excelente"></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa-solid fa-circle-user"></i>
+                  Laura<br />
+                  <small>20240424</small>
+                </td>
+                <td>20%</td>
+                <td><span class="estado-dot malo"></span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button class="btn-reproducir">Reproducir todo</button>
+
+          <div class="actividades-recientes">
+            <h4>Actividades Recientes</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-paw"></i> Animales:
+                <span
+                  >2/4 palabras <i class="fa-solid fa-chevron-right"></i
+                ></span>
+              </li>
+              <li>
+                <i class="fa-solid fa-hands"></i> Saludos:
+                <span
+                  >10/10 palabras <i class="fa-solid fa-chevron-right"></i
+                ></span>
+              </li>
+              <li>
+                <i class="fa-solid fa-hashtag"></i> Números:
+                <span
+                  >3/8 palabras <i class="fa-solid fa-chevron-right"></i
+                ></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="btn-exportar-label">
+            <label for="mostrar-reporte-modal" class="btn-exportar"
+              >Exportar</label
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="reporte-modal-fondo">
+      <div class="reporte-modal-contenido">
+        <p class="modal-titulo">Reporte Generado</p>
+        <p class="modal-texto">Se generó el reporte de los alumnos.</p>
+        <div class="modal-botones">
+          <button class="btn-descargar">Descargar</button>
+          <label for="mostrar-reporte-modal" class="btn-cerrar"> Cerrar </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="footer">
+      <div class="footer-cont">
+        <div class="footer-left">
+          <i class="fa-regular fa-copyright" aria-hidden="true"></i>
+          <span>YACHAYAPP</span>
+        </div>
+
+        <div class="footer-right">
+          <a href="#" class="footer-link">Términos y Condiciones</a>
+          <a href="mailto:info@AylluTalk.pe" class="footer-link"
+            >info@AylluTalk.pe</a
+          >
+          <a href="#" aria-label="Instagram" class="social"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="TikTok" class="social"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

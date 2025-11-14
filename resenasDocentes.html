@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YachayAPP - Reseñas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylesResenas.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+ <!-- TOPHEADER-->
+    <nav class="topheader">
+      <div class="Logo-nombre">
+        <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
+        <h1>YACHAYAPP</h1>
+      </div>
+
+      <ul class="Menu-Horizontal">
+        <li>
+          <a href="">Aprender</a>
+          <ul class="Menu-Vertical">
+            <li>
+              <a href="">Modulos</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="pronunciacion.html">Pronunciacion</a></li>
+                <li><a href="audios.html">Audios</a></li>
+                <li><a href="">Mini Juegos</a></li>
+                <li><a href="">Historias Narradas</a></li>
+                <li><a href="">Evaluaciones</a></li>
+                <li><a href="audio2.html">Lecciones Educativas</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Lecciones AR</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="misionCultural.html">Misiones</a></li>
+                <li><a href="leccionesRa.html"> Lecciones RA</a></li>
+                <li><a href="traduccion.html">Traducción</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Práctica Conversacional </a>
+              <ul class="Menu-Vertical2">
+                <li><a href="">Escenarios</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Juegos</a>
+          <ul class="Menu-Vertical">
+            <li><a href="juegos.html">Flashcards</a></li>
+            <li><a href="desafioAuditivo.html">Desafios</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Menu</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Dispositivos Wearables</a></li>
+            <li><a href="">Glosario Personal</a></li>
+            <li><a href="">Biblioteca Cultural</a></li>
+            <li><a href="foroComunitario.html">Foro Comunitario</a></li>
+            <li>
+              <a href="">Docentes</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="crearContenido.html">Crear Contenido</a></li>
+                <li><a href="crearTarea.html"> Crear Tarea</a></li>
+                <li><a href="resenasDocentes.html">Reseña de Docentes</a></li>
+                <li><a href="avanceEstudiantes.html">Avance Estudiantes</a></li>
+              </ul>
+            </li>
+            <li><a href="">Sesiones Con mentores nativos</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Progreso</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Ranking Global</a></li>
+            <li><a href="index.html">Avance</a></li>
+          </ul>
+        </li>
+
+        <li class="iconos">
+          <a href="#" title="Notificaciones"
+            ><i class="fa-regular fa-bell"></i
+          ></a>
+          <a href="soporte.html" title="Configuración"
+            ><i class="fa-solid fa-gear"></i
+          ></a>
+          <a href="centroAyuda.html" title="Preguntas Frecuentes"
+            ><i class="fa-solid fa-headset"></i>
+          </a>
+          <a href="#" title="Perfil de usuario"
+            ><i class="fa-solid fa-user"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <input type="checkbox" id="ordenar-mejor-valoradas" hidden />
+    <input type="checkbox" id="mostrar-menu-orden" hidden />
+
+    <section class="seccion-resenas">
+      <div class="header-resenas">
+        <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
+        <h2>Docente - Reseñas</h2>
+
+        <div class="ordenar-por">
+          <p>Ordenar por:</p>
+          <div class="dropdown-orden">
+            <label for="mostrar-menu-orden" class="btn-orden-actual">
+              <span class="texto-fecha">FECHA</span>
+              <span class="texto-valoradas">MEJOR VALORADAS</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </label>
+
+            <div class="menu-orden">
+              <label
+                for="mostrar-menu-orden"
+                onclick="document.getElementById('ordenar-mejor-valoradas').checked = false;"
+                class="opcion-orden opcion-fecha"
+                >Más recientes</label
+              >
+
+              <label
+                for="mostrar-menu-orden"
+                onclick="document.getElementById('ordenar-mejor-valoradas').checked = true;"
+                class="opcion-orden opcion-valoradas"
+                >Mejor valoradas</label
+              >
+
+              <label for="mostrar-menu-orden" class="opcion-orden opcion-utiles"
+                >Más útiles</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="resenas-container">
+        <div class="columna-resenas columna-izquierda">
+          <div class="resena" data-orden-fecha="1" data-orden-valor="5">
+            <p class="nombre">Rodolfo Perez</p>
+            <div class="estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="comentario">Muy útil y fácil de usar.</p>
+            <p class="fecha">9 oct.</p>
+          </div>
+
+          <div class="resena" data-orden-fecha="3" data-orden-valor="4">
+            <p class="nombre">Ana Ramirez</p>
+            <div class="estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-regular fa-star"></i>
+            </div>
+            <p class="comentario">Buena, pero se puede mejorar.</p>
+            <p class="fecha">10 oct.</p>
+          </div>
+
+          <div class="resena" data-orden-fecha="5" data-orden-valor="5">
+            <p class="nombre">Juan Torres</p>
+            <div class="estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="comentario">Me sirvió mucho el vocabulario básico.</p>
+            <p class="fecha">8 oct.</p>
+          </div>
+        </div>
+
+        <div class="columna-resenas columna-derecha">
+          <div class="resena" data-orden-fecha="2" data-orden-valor="5">
+            <p class="nombre">Sofia Vargas</p>
+            <div class="estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="comentario">Valor cultural inmenso. Lo uso a diario.</p>
+            <p class="fecha">11 oct.</p>
+          </div>
+
+          <div class="resena" data-orden-fecha="4" data-orden-valor="4">
+            <p class="nombre">Miguel Salazar</p>
+            <div class="estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-regular fa-star"></i>
+            </div>
+            <p class="comentario">Contenido de calidad y fácil de usar.</p>
+            <p class="fecha">6 oct.</p>
+          </div>
+
+          <div class="resena" data-orden-fecha="6" data-orden-valor="4">
+            <p class="nombre">Elena Navarro</p>
+            <div class="estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-regular fa-star"></i>
+            </div>
+            <p class="comentario">Me ayudó mucho en clases.</p>
+            <p class="fecha">2 oct.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="footer-cont">
+        <div class="footer-left">
+          <i class="fa-regular fa-copyright" aria-hidden="true"></i>
+          <span>YACHAYAPP</span>
+        </div>
+
+        <div class="footer-right">
+          <a href="#" class="footer-link">Términos y Condiciones</a>
+          <a href="mailto:info@AylluTalk.pe" class="footer-link"
+            >info@AylluTalk.pe</a
+          >
+          <a href="#" aria-label="Instagram" class="social"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="TikTok" class="social"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

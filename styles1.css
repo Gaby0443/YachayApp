@@ -1,0 +1,123 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.barra-navegacion,
+.barra-navegacion * {
+  font-weight: 400 !important;
+}
+
+/* ====== SECCIÓN HERO ====== */
+.seccion-hero {
+  padding: 120px 20px 60px;
+  background: white;
+}
+.div-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.hero-ilustracion img {
+  height: 1200%;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+/* ====== TARJETA ====== */
+.hero-card {
+  position: relative;
+  background: #e9cc86;
+  border-radius: 18px;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.card-back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.card-logo {
+  width: 200px;
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px 100px;
+}
+.card-subtitle {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 5px 50px;
+  color: #0c2734;
+}
+
+/* ====== BOTONES ====== */
+.card-providers {
+  display: grid;
+  gap: 12px;
+}
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #0c2734;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-dark:hover {
+  opacity: 0.93;
+}
+.card-sep {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0;
+}
+.card-sep::before,
+.card-sep::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.card-sep span {
+  font-size: 18px;
+}
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 2px;
+  border-radius: 9999px;
+  border: 2px solid #0c2734;
+  color: #0c2734;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  background: rgba(12, 39, 52, 0.06);
+}
+.card-login {
+  text-align: center;
+  margin-top: 10px;
+}
+.card-login a {
+  color: black;
+  text-decoration: underline;
+}

@@ -1,0 +1,86 @@
+
+/* ===== GUIA RÁPIDA ===== */
+.seccion-guia {
+  padding: 120px 20px 200px; /* 120px para compensar el header fijo */
+  background: #ffffff;
+}
+.guia-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.guia-titulo {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.guia-subtitulo {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.guia-aviso {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 20px;
+}
+
+/* GRID principal */
+.guia-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Columna de pasos */
+.guia-pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.paso-card {
+  background: #ffe9a8;
+  padding: 18px 20px;
+  border-radius: 10px;
+  border: 1px solid #f3d47a;
+}
+.paso-card h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.paso-card p {
+  margin: 4px 0 0;
+  color: #555;
+}
+
+/* Video y marco */
+.guia-video-box {
+  background: #fff;
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px solid #f2d792;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.guia-video {
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* Flechas */
+.guia-btn-prev,
+.guia-btn-next {
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 50%;
+}
+.guia-btn-prev:hover,
+.guia-btn-next:hover {
+  background: #f4e1a3;
+}

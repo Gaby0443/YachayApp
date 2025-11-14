@@ -1,0 +1,140 @@
+.logros-obtenidos {
+  padding: 100px 80px;
+  font-family: "Poppins", sans-serif;
+  color: #0b2942;
+}
+
+.titulo-volver {
+  display: flex;
+  align-items: center;
+  gap: 24.5px;
+  margin-bottom: 25px;
+}
+
+.titulo-volver i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.titulo-volver h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* --- SELECTOR DE IDIOMA --- */
+.selector-idioma {
+  margin: 20px 0px 50px 45px;
+}
+
+.selector-idioma select {
+  padding: 8px 20px;
+  font-size: 18px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contenedor-logros {
+  display: flex;
+  padding: 40px 0px 0px 90px;
+}
+
+/* --- PANEL IZQUIERDO (PROGRESO) --- */
+.panel-izquierdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 300px;
+}
+
+/* círculo reutilizado */
+.panel-izquierdo .circular {
+  --size: 250px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(
+    #0b2942 calc(var(--p) * 1%),
+    #e6e6e6 calc(var(--p) * 1%)
+  );
+  position: relative;
+  margin: 0 auto 15px auto;
+}
+
+.panel-izquierdo .circularbefore {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) - 25px);
+  height: calc(var(--size) - 25px);
+  background: #fff;
+  border-radius: 50%;
+}
+
+.panel-izquierdo .circular span {
+  position: relative;
+  font-size: 64px;
+  font-weight: 600;
+  color: #0b2942;
+}
+
+.panel-izquierdo .circular small {
+  position: absolute;
+  bottom: 65px;
+  color: black;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.panel-izquierdo .mensaje {
+  font-size: 18px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 1.5;
+  text-align: center;
+  color: black;
+}
+
+/* --- PANEL DERECHO (LISTA DE LOGROS) --- */
+.panel-derecho {
+  margin-left: 177px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.fila-logros {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
+.logro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 31px;
+  width: 320px;
+  text-align: left;
+}
+.logro img {
+  width: 88px;
+  height: 87px;
+}
+
+.logro h4 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  color: #000;
+  margin: 0;
+}
+
+.logro p {
+  text-align: left;
+  font-size: 18px;
+  color: #323232;
+  margin: 2px 0 0 0;
+}
