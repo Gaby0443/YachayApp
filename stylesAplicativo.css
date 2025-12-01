@@ -1,12 +1,3 @@
-/****************************************************
- ESTILOS SOLO PARA LA PÁGINA "APLICATIVO"
- NO AFECTA HEADER NI FOOTER
-*****************************************************/
-.barra-navegacion,
-.barra-navegacion * {
-  font-weight: 400 !important;
-}
-/* Contenedor principal */
 .aplicativo {
   padding-block: 40px 64px;
 }
@@ -27,15 +18,14 @@
   align-items: start;
 }
 
-/* ===========================
-     PASOS (COLUMNA IZQUIERDA)
-  =========================== */
-.pasos {
+/* ===== PASOS (COLUMNA IZQUIERDA) ===== */
+
+.aplicativo .pasos {
   display: grid;
   grid-template-rows: auto 40px auto 40px auto;
 }
 
-.paso {
+.aplicativo .paso {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 22px;
@@ -43,7 +33,7 @@
 }
 
 /* Bola amarilla */
-.paso__bola {
+.aplicativo .paso__bola {
   width: 160px;
   height: 160px;
   background: #f5b94f;
@@ -58,13 +48,13 @@
 }
 
 /* Texto del paso */
-.paso__texto {
+.aplicativo .paso__texto {
   color: #222;
   max-width: 420px;
 }
 
 /* Conector vertical */
-.paso__conector {
+.aplicativo .paso__conector {
   width: 2px;
   background: rgba(0, 0, 0, 0.7);
   margin-left: 80px;
@@ -72,7 +62,7 @@
   border-radius: 2px;
 }
 
-.paso__conector::after {
+.aplicativo .paso__conector::after {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -82,16 +72,19 @@
   border-top: 8px solid rgba(0, 0, 0, 0.7);
 }
 
-/* ===========================
-     MOCKUP (COLUMNA DERECHA)
-  =========================== */
-.mockup {
-  display: grid;
-  justify-items: center;
+/* ===== MOCKUP (COLUMNA DERECHA) ===== */
+/* DEJA SOLO ESTE BLOQUE, BORRA LOS ANTERIORES DE .mockup */
+
+.aplicativo .mockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente imagen y botón */
+  justify-content: center; /* centra verticalmente dentro de su columna */
   gap: 16px;
+  text-align: center;
 }
 
-.mockup__celular {
+.aplicativo .mockup__celular {
   width: 100%;
   max-width: 250px;
   object-fit: contain;
@@ -100,14 +93,14 @@
 }
 
 /* Botón de descarga */
-.mockup__descarga {
-  width: 100%;
-  max-width: 320px;
-  padding: 12px 20px;
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: center;
+.aplicativo .mockup__descarga {
+  width: auto; /* que tome el ancho del contenido */
+  max-width: 100%;
+  padding: 12px 24px;
+  margin: 0 auto; /* centrado */
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 
   background: var(--primario);
@@ -119,103 +112,74 @@
   cursor: pointer;
 }
 
-.mockup__descarga:hover {
+.aplicativo .mockup__descarga:hover {
   filter: brightness(1.1);
 }
 
-.icono-descarga {
+.aplicativo .icono-descarga {
   font-size: 1.2rem;
 }
 
-/* ===========================
-     PIE ESPECIAL DE APLICATIVO
-  =========================== */
-.pie-app {
-  background: var(--barra);
-  padding: 16px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
+/* ===== RESPONSIVE ===== */
 
-.pie-app__contenido {
-  display: grid;
-  grid-template-columns: 1fr auto auto auto;
-  gap: 16px;
-  align-items: center;
-}
-
-.pie-app__marca {
-  font-weight: 700;
-}
-
-.pie-app__enlace {
-  text-decoration: none;
-  text-underline-offset: 4px;
-}
-
-.pie-app__social {
-  display: flex;
-  gap: 10px;
-  justify-self: end;
-}
-
-/* ===========================
-     RESPONSIVE
-  =========================== */
 @media (max-width: 960px) {
   .aplicativo__grid {
     grid-template-columns: 1fr;
+    justify-items: center; /* centra las dos columnas (pasos y mockup) */
   }
 
   .aplicativo__titulo {
     text-align: center;
+    margin-right: 0;
   }
 
-  .paso {
+  .aplicativo .paso {
     grid-template-columns: 160px 1fr;
-    gap: 18px;
+    gap: 32px;
   }
 
-  .paso__conector {
-    margin-left: 80px;
+  .aplicativo .paso__bola {
+    width: 150px;
+    height: 150px;
   }
 
-  .mockup {
-    margin-top: 10px;
+  .aplicativo .paso__conector::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .aplicativo .mockup {
+    margin-top: 16px;
   }
 }
 
 @media (max-width: 520px) {
-  .paso {
+  .aplicativo .paso {
     grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 12px;
   }
 
-  .paso__bola {
+  .aplicativo .paso__bola {
     margin-inline: auto;
     width: 140px;
     height: 140px;
   }
 
-  .paso__conector {
-    margin-left: calc(140px / 2);
+  .aplicativo .paso__texto {
+    max-width: 100%;
+    font-size: 0.95rem;
+    padding: 0 50px; /
+  }
+
+  .aplicativo .paso__conector {
+    margin: 0 auto;
+    height: 28px;
   }
 
   .aplicativo__titulo {
     text-align: center;
+    margin-right:30px ;
   }
-
-  .pie-app__contenido {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 8px;
-  }
-}
-.aplicativo .boton--primario {
-  display: grid;
-  place-items: center;
-  padding: 12px 20px;
-  border-radius: 999px;
-  background: var(--primario);
-  color: var(--blanco);
-  font-weight: 600;
-  text-decoration: none;
 }

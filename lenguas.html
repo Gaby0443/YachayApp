@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
     <link rel="stylesheet" href="stylesLp.css" />
-    <link rel="stylesheet" href="stylesAplicativo.css" />
+    <link rel="stylesheet" href="stylesLenguas.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
@@ -38,64 +38,75 @@
         >
       </div>
     </header>
-    <main class="contenedor aplicativo">
-      <h2 class="aplicativo__titulo">¿Cómo funciona YachayApp?</h2>
+    <main class="layout">
+      <section class="left-section">
+        <h2 class="title">Lenguas Originarias Disponibles</h2>
 
-      <section class="aplicativo__grid">
-        <div class="pasos">
-          <article class="paso">
-            <div class="paso__bola">Elige una<br />lengua<br />originaria</div>
-            <div class="paso__texto">
-              “Ingresa a la Aplicación y selecciona el idioma que más te
-              interese, el nivel y los recursos que quieres utilizar”.
-            </div>
-          </article>
+        <div class="cards-grid">
+          <div class="card">
+            <h2>Quechua</h2>
+            <p>
+              "Originaria de la región andina del Perú, hablada en zonas como
+              Cusco, Ayacucho y Puno"
+            </p>
+          </div>
 
-          <div class="paso__conector"></div>
+          <div class="card">
+            <h2>Aimara</h2>
+            <p>
+              "Propia del altiplano sur del Perú, principalmente en las regiones
+              de Puno y Moquegua."
+            </p>
+          </div>
 
-          <article class="paso">
-            <div class="paso__bola">
-              Aprende con<br />juegos y con<br />Realidad<br />Aumentada
-            </div>
-            <div class="paso__texto">
-              “Explora y utiliza todos los recursos que YachayApp te ofrece”.
-            </div>
-          </article>
+          <div class="card">
+            <h2>Shipibo-Konibo</h2>
+            <p>
+              "Lengua de la selva central amazónica usada en Ucayali y Loreto."
+            </p>
+          </div>
 
-          <div class="paso__conector"></div>
+          <div class="card">
+            <h2>Asháninka</h2>
+            <p>
+              "Procedente de la selva central del Perú, usada en zonas de Junín,
+              Pasco y Ucayali."
+            </p>
+          </div>
 
-          <article class="paso">
-            <div class="paso__bola">Mide tu<br />progreso</div>
-            <div class="paso__texto">
-              “Visualiza todo el progreso que vas teniendo en la lengua de tu
-              elección”.
-            </div>
-          </article>
+          <div class="card center">
+            <h2>Matsés</h2>
+            <p>
+              "Originaria de la Amazonía norte del Perú, hablada en comunidades
+              en Loreto."
+            </p>
+          </div>
         </div>
-        <aside class="mockup">
-          <img class="mockup__celular" src="imgs/CelularApp.png" />
-
-          <a class="boton boton--primario mockup__descarga" href="#">
-            <span class="icono-descarga" aria-hidden="true">⬇</span>
-            <span>Descarga la APP</span>
-          </a>
-        </aside>
       </section>
+
+      <aside class="right-image">
+        <img src="imgs/Lengaviva.png" alt="Ilustración" />
+      </aside>
     </main>
-    <!-- FOOTER -->
+
     <section class="footer">
       <div class="footer-cont">
         <div class="footer-left">
-          <i class="fa-regular fa-copyright"></i>
+          <i class="fa-regular fa-copyright" aria-hidden="true"></i>
           <span>YACHAYAPP</span>
         </div>
+
         <div class="footer-right">
           <a href="#" class="footer-link">Términos y Condiciones</a>
           <a href="mailto:info@AylluTalk.pe" class="footer-link"
             >info@AylluTalk.pe</a
           >
-          <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Instagram" class="social"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="TikTok" class="social"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
         </div>
       </div>
     </section>

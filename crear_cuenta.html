@@ -16,6 +16,7 @@
   <body>
     <header class="barra-navegacion">
       <div class="contenedor barra-navegacion__contenido">
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
         <div class="marca">
           <img
             class="marca__logo-incompleto"
@@ -25,10 +26,10 @@
           <span class="marca__nombre">YACHAYAPP</span>
         </div>
 
-        <nav class="menu">
+        <nav class="menu" id="menu">
           <a class="menu__enlace" href="index.html">Inicio</a>
           <a class="menu__enlace" href="#">Nosotros</a>
-          <a class="menu__enlace" href="#">Idiomas</a>
+          <a class="menu__enlace" href="lenguas.html">Idiomas</a>
           <a class="menu__enlace" href="Aplicativo.html">Aplicativo</a>
         </nav>
 
@@ -37,7 +38,6 @@
         >
       </div>
     </header>
-
     <!-- SECCIÓN PRINCIPAL -->
     <section class="seccion-hero" id="aprender">
       <div class="div-hero">
@@ -106,5 +106,6 @@
         </div>
       </div>
     </section>
+    <script src="menu_toggle.js"></script>
   </body>
 </html>

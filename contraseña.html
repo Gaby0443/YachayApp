@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
     <link rel="stylesheet" href="stylesLp.css" />
-    <link rel="stylesheet" href="stylesAplicativo.css" />
+    <link rel="stylesheet" href="stylesContraseña.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
@@ -38,64 +38,74 @@
         >
       </div>
     </header>
-    <main class="contenedor aplicativo">
-      <h2 class="aplicativo__titulo">¿Cómo funciona YachayApp?</h2>
 
-      <section class="aplicativo__grid">
-        <div class="pasos">
-          <article class="paso">
-            <div class="paso__bola">Elige una<br />lengua<br />originaria</div>
-            <div class="paso__texto">
-              “Ingresa a la Aplicación y selecciona el idioma que más te
-              interese, el nivel y los recursos que quieres utilizar”.
-            </div>
-          </article>
+    <div class="container">
+      <!-- IMAGEN GRANDE A LA IZQUIERDA -->
+      <div class="left-section">
+        <img src="imgs/portada.png" class="big-image" />
+      </div>
 
-          <div class="paso__conector"></div>
+      <!-- RECTÁNGULO AMARILLO A LA DERECHA -->
+      <div class="yellow-box">
+        <button class="card-back" aria-label="Volver">
+          <a href="iniciarSesion.html"
+            ><i class="fa-solid fa-angle-left"></i
+          ></a>
+        </button>
 
-          <article class="paso">
-            <div class="paso__bola">
-              Aprende con<br />juegos y con<br />Realidad<br />Aumentada
-            </div>
-            <div class="paso__texto">
-              “Explora y utiliza todos los recursos que YachayApp te ofrece”.
-            </div>
-          </article>
+        <img src="imgs/logo_yachayapp.png" class="logo" />
 
-          <div class="paso__conector"></div>
+        <p class="form-title">Restablecer Contraseña</p>
 
-          <article class="paso">
-            <div class="paso__bola">Mide tu<br />progreso</div>
-            <div class="paso__texto">
-              “Visualiza todo el progreso que vas teniendo en la lengua de tu
-              elección”.
-            </div>
-          </article>
+        <input
+          type="email"
+          placeholder="Dirección de Correo electrónico"
+          class="input"
+        />
+
+        <div class="code-input-wrapper">
+          <input
+            type="text"
+            placeholder="Ingresar código de 6 dígitos"
+            class="code-input"
+          />
+
+          <div class="blue-btn">
+            <button>
+              <a href="progreso.html"
+                ><i class="fa-solid fa-paper-plane"></i
+              ></a>
+            </button>
+          </div>
         </div>
-        <aside class="mockup">
-          <img class="mockup__celular" src="imgs/CelularApp.png" />
 
-          <a class="boton boton--primario mockup__descarga" href="#">
-            <span class="icono-descarga" aria-hidden="true">⬇</span>
-            <span>Descarga la APP</span>
-          </a>
-        </aside>
-      </section>
-    </main>
-    <!-- FOOTER -->
+        <input type="password" placeholder="Contraseña" class="input" />
+
+        <button class="submit-btn">Iniciar Sesión</button>
+
+        <p class="registro">
+          <a class="enlace" href="crear_cuenta.html">Aún no tengo cuenta</a>
+        </p>
+      </div>
+    </div>
     <section class="footer">
       <div class="footer-cont">
         <div class="footer-left">
-          <i class="fa-regular fa-copyright"></i>
+          <i class="fa-regular fa-copyright" aria-hidden="true"></i>
           <span>YACHAYAPP</span>
         </div>
+
         <div class="footer-right">
           <a href="#" class="footer-link">Términos y Condiciones</a>
           <a href="mailto:info@AylluTalk.pe" class="footer-link"
             >info@AylluTalk.pe</a
           >
-          <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Instagram" class="social"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="TikTok" class="social"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
         </div>
       </div>
     </section>
