@@ -1,0 +1,145 @@
+/* SECCIÓN NOSOTROS – GENERAL */
+.nosotros-seccion {
+  padding: 40px 40px 100px;
+  background: #fff;
+  position: relative;
+}
+
+.nosotros-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*  MISIÓN / VISIÓN*/
+.nosotros-bloque {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 40px;
+  max-width: 580px;
+}
+
+.nosotros-bloque h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nosotros-bloque p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/*  ICONOS*/
+.nosotros-icon {
+  background: #0c2734;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+/*  IMAGEN DERECHA  */
+.nosotros-imagen {
+  position: absolute;
+  top: 20px;
+  left: 55%;
+}
+
+.nosotros-imagen img {
+  width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* VALORES*/
+.nosotros-valores {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  max-width: 580px;
+}
+
+.valor-icon {
+  background: #0c2734;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.nosotros-circulos {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.circulo {
+  width: 130px;
+  height: 130px;
+  background: #f2c75b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .nosotros-imagen {
+    position: static;
+    margin: 20px auto 40px auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nosotros-imagen img {
+    width: 80%;
+    max-width: 340px;
+  }
+
+  .nosotros-bloque,
+  .nosotros-valores {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .nosotros-seccion {
+    padding: 30px 20px;
+  }
+
+  .nosotros-bloque {
+    flex-direction: column;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .nosotros-icon {
+    margin-bottom: 6px;
+  }
+
+  .nosotros-circulos {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .circulo {
+    width: 120px;
+    height: 120px;
+  }
+}

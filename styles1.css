@@ -1,93 +1,93 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-}
-.barra-navegacion,
-.barra-navegacion * {
-  font-weight: 400 !important;
-}
-
-/* ====== SECCIÓN HERO ====== */
+/** SECCIÓN HERO **/
 .seccion-hero {
-  padding: 120px 20px 60px;
+  padding: 40px 0;
   background: white;
 }
+
 .div-hero {
-  max-width: 1200px;
+  width: 75%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px 0;
+  flex-wrap: nowrap;
 }
+
 .hero-ilustracion img {
-  height: 1200%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  object-fit: contain;
   border-radius: 12px;
 }
 
-/* ====== TARJETA ====== */
+/** TARJETA **/
 .hero-card {
   position: relative;
   background: #e9cc86;
-  border-radius: 18px;
-  padding: 24px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
+
+/** BOTÓN BACK **/
 .card-back {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: transparent;
+  top: 12px;
+  left: 12px;
+  background: none;
   border: none;
   cursor: pointer;
 }
+
+/** LOGO **/
 .card-logo {
-  width: 200px;
+  width: 170px;
   display: block;
-  margin-bottom: 10px;
-  padding: 5px 100px;
+  margin: 40px auto 15px auto;
 }
+
+/** SUBTÍTULO **/
 .card-subtitle {
   font-size: 12px;
   letter-spacing: 0.12em;
   font-weight: 600;
+  text-align: center;
   margin-bottom: 20px;
-  padding: 5px 50px;
   color: #0c2734;
 }
 
-/* ====== BOTONES ====== */
+/** BOTONES **/
 .card-providers {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
+
 .btn-dark {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   background: #0c2734;
-  color: #fff;
+  color: white;
   padding: 12px 18px;
-  border-radius: 9999px;
-  font-weight: 600;
+  border-radius: 999px;
   text-decoration: none;
+  font-weight: 600;
 }
-.btn-dark:hover {
-  opacity: 0.93;
-}
+
+/** SEPARADOR **/
 .card-sep {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 16px 0;
 }
+
 .card-sep::before,
 .card-sep::after {
   content: "";
@@ -95,29 +95,57 @@ body {
   height: 1px;
   background: rgba(0, 0, 0, 0.3);
 }
-.card-sep span {
-  font-size: 18px;
-}
+
+/** BOTÓN OUTLINE **/
 .btn-outline {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   justify-content: center;
-  width: 100%;
-  padding: 12px 2px;
-  border-radius: 9999px;
+  padding: 12px;
+  border-radius: 999px;
   border: 2px solid #0c2734;
   color: #0c2734;
   font-weight: 600;
   text-decoration: none;
 }
-.btn-outline:hover {
-  background: rgba(12, 39, 52, 0.06);
-}
+
+/** LOGIN TEXTO **/
 .card-login {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 12px;
 }
-.card-login a {
-  color: black;
-  text-decoration: underline;
+
+/** RESPONSIVE **/
+@media (max-width: 1024px) {
+  .div-hero {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .hero-card {
+    order: -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .div-hero {
+    width: 90%;
+  }
+
+  .hero-ilustracion img {
+    max-width: 320px;
+  }
+
+  .hero-card {
+    width: 90%;
+    padding: 26px;
+  }
+
+  .card-logo {
+    width: 140px;
+  }
+}
+a,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
 }

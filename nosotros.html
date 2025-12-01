@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YachayAPP</title>
+    <link rel="stylesheet" href="stylesNosotros.css" />
+    <link rel="stylesheet" href="stylesLp.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="barra-navegacion">
+      <div class="contenedor barra-navegacion__contenido">
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+        <div class="marca">
+          <img
+            class="marca__logo-incompleto"
+            src="imgs/LogoIncompleto.png"
+            alt="YachayAPP Logo"
+          />
+          <span class="marca__nombre">YACHAYAPP</span>
+        </div>
+
+        <nav class="menu" id="menu">
+          <a class="menu__enlace" href="index.html">Inicio</a>
+          <a class="menu__enlace" href="#">Nosotros</a>
+          <a class="menu__enlace" href="lenguas.html">Idiomas</a>
+          <a class="menu__enlace" href="Aplicativo.html">Aplicativo</a>
+        </nav>
+
+        <a class="boton boton--borde boton--peque" href="iniciarSesion.html"
+          >Iniciar sesión</a
+        >
+      </div>
+    </header>
+    <section class="nosotros-seccion">
+      <div class="nosotros-container">
+        <!-- MISIÓN -->
+        <div class="nosotros-bloque">
+          <div class="nosotros-icon">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <div>
+            <h2>Misión</h2>
+            <p>
+              “Crear una herramienta digital que combine educación, tecnología e
+              identidad cultural en una experiencia accesible y significativa”.
+            </p>
+          </div>
+        </div>
+
+        <!-- FOTO -->
+        <div class="nosotros-imagen">
+          <img src="imgs/nosotros_foto1.png" alt="Foto de equipo" />
+        </div>
+
+        <!-- VISIÓN -->
+        <div class="nosotros-bloque">
+          <div class="nosotros-icon">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <div>
+            <h2>Visión</h2>
+            <p>
+              “Ser un puente entre lo ancestral y lo moderno, promoviendo que
+              las lenguas originarias sean reconocidas como un recurso vivo y
+              útil”.
+            </p>
+          </div>
+        </div>
+
+        <!-- VALORES -->
+        <div class="nosotros-valores">
+          <div class="valor-icon">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h2>Valores</h2>
+        </div>
+
+        <div class="nosotros-circulos">
+          <div class="circulo">Preservación</div>
+          <div class="circulo">Innovación</div>
+          <div class="circulo">Respeto</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+      <div class="footer-cont">
+        <div class="footer-left">
+          <i class="fa-regular fa-copyright"></i>
+          <span>YACHAYAPP</span>
+        </div>
+        <div class="footer-right">
+          <a href="#" class="footer-link">Términos y Condiciones</a>
+          <a href="mailto:info@AylluTalk.pe" class="footer-link"
+            >info@AylluTalk.pe</a
+          >
+          <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </section>
+    <script src="menu_toggle.js"></script>
+  </body>
+</html>

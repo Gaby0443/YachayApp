@@ -125,7 +125,7 @@ body {
 /*SECCION EMPIEZA AHORA*/
 
 .seccion-empieza {
-  padding: calc(93.5px + 81px) 83px 93.5px 83px;
+  padding: 40px 93.5px 83px;
   background-color: white;
 }
 .div-gral-empieza {
@@ -154,7 +154,7 @@ body {
   font-size: 24px;
 }
 .div-empieza-text button {
-  background-color: #0c2734;
+  background-color: #0e2f4f;
   border: none;
   border-radius: 99999px;
   padding: 6px 50px;

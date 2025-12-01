@@ -1,93 +1,82 @@
 /****************************************************
- ESTILOS SOLO PARA LA PÁGINA DE LOGIN
- (NO AFECTA HEADER NI FOOTER)
-*****************************************************/
+ INICIAR SESIÓN — MISMAS DIMENSIONES QUE CONTRASEÑA
+****************************************************/
 
-/* Contenedor principal en 2 columnas */
+/* CONTENEDOR PRINCIPAL */
 .principal {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 36px;
-  align-items: center;
-  padding: 46px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Columna izquierda (imagen) */
-.columna-izquierda {
+  width: 75%;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px 0;
+  flex-wrap: nowrap;
 }
 
-.marco-imagen {
-  max-width: 100%;
-}
-
-.portada {
+/* IMAGEN IZQUIERDA */
+.columna-izquierda img.portada {
   width: 100%;
-  max-width: 520px;
+  max-width: 720px;
+  height: auto;
   object-fit: contain;
-  border-radius: 18px;
 }
 
-/* Tarjeta de login */
+/* TARJETA */
 .tarjeta-login {
-  background: #e9c983;
-  border-radius: 24px;
-  padding: 26px;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
-}
-
-/* Encabezado tarjeta */
-.tarjeta-login__encabezado {
+  position: relative;
+  background-color: #e9c983;
+  width: 350px;
+  padding: 30px 40px;
+  border-radius: 20px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
+/* LOGO SUPERIOR */
 .logo-completo {
-  width: 180px;
-  object-fit: contain;
+  width: 170px;
+  display: block;
+  margin: 10px auto 25px auto;
 }
 
-/* Botones sociales */
+/* BOTONES GOOGLE Y FACEBOOK */
 .acciones-sociales {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 18px;
+  width: 100%;
 }
 
 .boton--icono {
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px 18px;
   width: 100%;
+  display: flex; /* ← ALINEACIÓN PERFECTA */
+  align-items: center;
+  justify-content: center; /* ← CENTRAR TEXTO */
+  gap: 12px;
+  padding: 12px;
   background: #0e2f4f;
+  border-radius: 9999px;
   color: white;
-  border-radius: 999px;
   border: none;
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .boton__icono {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
 }
 
-/* Separador "o" */
+/* SEPARADOR */
 .separador {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 14px 0;
+  margin: 18px 0 12px;
 }
 
 .separador::before,
@@ -96,45 +85,28 @@
   flex: 1;
   height: 2px;
   background: rgba(0, 0, 0, 0.6);
-  border-radius: 2px;
 }
 
-.separador span {
-  font-weight: 600;
-}
-
-/****************************************************
-     FORMULARIO
-    ****************************************************/
-.formulario {
-  margin-top: 8px;
-}
-
+/* FORMULARIO */
 .formulario__etiqueta {
   display: block;
-  font-size: 0.9rem;
-  color: #2b2b2b;
+  font-size: 14px;
   margin: 12px 0 6px;
+  color: #222;
 }
 
 .formulario__entrada {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1.5px solid rgba(0, 0, 0, 0.2);
-  outline: 0;
-  background: #fff8dc;
-  box-sizing: border-box;
-  font-size: 1rem;
-}
-
-.formulario__entrada:focus {
-  border-color: #a17800;
-  box-shadow: 0 0 0 3px rgba(161, 120, 0, 0.15);
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #b9b9b9;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
 .formulario__extra {
-  margin: 10px 0 16px;
+  margin: -4px 0 12px;
   text-align: right;
 }
 
@@ -144,55 +116,56 @@
   text-underline-offset: 3px;
 }
 
-.registro {
-  text-align: center;
-  margin: 12px 0 0;
-  color: #233;
-}
-
-/****************************************************
-     BOTÓN PRINCIPAL INICIAR SESIÓN
-    ****************************************************/
+/* BOTÓN PRINCIPAL */
 .boton--primario {
   width: 100%;
   padding: 12px 18px;
-  border-radius: 999px;
-  background: #0e2f4f;
-  color: white;
+  background-color: #0e2f4f;
+  border-radius: 9999px;
   border: none;
+  color: white;
+  font-size: 17px;
   font-weight: 600;
-  font-size: 1rem;
   cursor: pointer;
-  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 8px;
 }
 
-.boton--primario:hover {
-  filter: brightness(1.1);
+/* TEXTO FINAL */
+.registro {
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
 }
 
-/****************************************************
-     RESPONSIVE
-    ****************************************************/
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .principal {
-    grid-template-columns: 1fr;
-    padding-top: 20px;
+    flex-direction: column;
+    gap: 40px;
   }
-
   .tarjeta-login {
     order: -1;
   }
 }
 
-@media (max-width: 480px) {
-  .portada {
+@media (max-width: 520px) {
+  .principal {
+    width: 90%;
+  }
+  .columna-izquierda img.portada {
     max-width: 320px;
   }
-
+  .tarjeta-login {
+    width: 90%;
+    padding: 26px;
+  }
   .logo-completo {
     width: 140px;
   }
-
   .boton--icono {
     padding: 10px 14px;
   }

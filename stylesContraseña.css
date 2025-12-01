@@ -1,0 +1,198 @@
+/* ============================
+   CONTENEDORES PRINCIPALES
+============================= */
+.container {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px 0;
+  flex-wrap: nowrap;
+}
+
+.left-section img.big-image {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+}
+
+/* ============================
+   CAJA AMARILLA (FORM CARD)
+============================= */
+.yellow-box {
+  position: relative; /* necesario para colocar el botón atrás */
+  background-color: #e9cc86;
+  width: 350px;
+  padding: 30px 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* ============================
+   BOTÓN DE REGRESAR
+============================= */
+.card-back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #e9cc86;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-back a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* ============================
+   LOGO SUPERIOR
+============================= */
+.logo {
+  width: 170px;
+  margin: 50px auto 25px auto; /* espacio adicional por el botón atrás */
+  display: block;
+}
+
+/* ============================
+   TITULO FORM
+============================= */
+.form-title {
+  font-size: 17px;
+  margin: 0 0 15px 0;
+  text-align: left;
+}
+
+/* ============================
+   CAMPOS DE FORMULARIO
+============================= */
+.input,
+.code-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid #b9b9b9;
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+/* Código + Botón Enviar */
+.code-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.code-input {
+  flex: 1 1 auto;
+  height: 45px;
+}
+
+/* ============================
+   BOTÓN AZUL DE ENVIAR CÓDIGO
+============================= */
+.blue-btn {
+  flex: 0 0 45px;
+  height: 45px;
+  background-color: #0e2f4f; /* azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.blue-btn:hover {
+  background-color: #0e2f4f;
+}
+
+.blue-btn button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.blue-btn i {
+  color: white;
+  font-size: 18px;
+}
+
+/* ============================
+   BOTÓN DE "INICIAR SESIÓN"
+============================= */
+.submit-btn {
+  width: 100%;
+  padding: 13px;
+  background-color: #0e2f4f;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #0e2f4f;
+}
+
+/* ============================
+   ENLACE "NO TENGO CUENTA"
+============================= */
+.registro {
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.registro a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0e2f4f;
+}
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .yellow-box {
+    order: -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: 90%;
+  }
+
+  .left-section img.big-image {
+    max-width: 320px;
+  }
+
+  .yellow-box {
+    width: 90%;
+    padding: 26px;
+  }
+
+  .logo {
+    width: 140px;
+    margin-top: 40px;
+  }
+}
