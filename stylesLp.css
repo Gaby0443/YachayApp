@@ -305,15 +305,198 @@ body {
   font-size: 20px;
   line-height: 1;
 }
-/* =============================================================
-   RESPONSIVE
-============================================================= */
+/*RESPONSIVE*/
 @media (max-width: 1024px) {
   .menu {
-    display: none; /* ocultar menú en móviles */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: none;
+  }
+  .barra-navegacion .boton {
+    margin-right: 30px;
+    text-align: center;
+    display: inline-block !important;
+    padding: 10px !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    min-width: 30px;
   }
 
+  .boton--borde {
+    border: 2px solid var(--borde);
+    color: var(--blanco);
+    background: var(--primario);
+    text-decoration: none;
+    min-width: 30px;
+  }
   .barra-navegacion__contenido {
-    justify-content: space-between;
+    justify-content: space-between !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .marca__nombre {
+    font-size: 25px;
+  }
+  .marca__logo-incompleto {
+    height: 36px;
+  }
+}
+
+/*RESPONSIVE: SECCION EMPIEZA AHORA*/
+
+@media (max-width: 992px) {
+  .div-gral-empieza {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .div-empieza-img img {
+    width: 80%;
+    height: auto;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion-empieza {
+    padding: 40px 20px;
+  }
+
+  .div-empieza-text p {
+    font-size: 20px;
+  }
+
+  .div-empieza-text button {
+    padding: 8px 40px;
+  }
+}
+
+/* RESPONSIVE: SECCION MOTIVADORA*/
+
+@media (max-width: 992px) {
+  .div-gral-motivadora {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .div-motivadora-img img {
+    width: 80%;
+    height: auto;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion-motivadora {
+    padding: 40px 20px;
+  }
+
+  .div-motivadora-text h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .div-motivadora-text p {
+    font-size: 15px;
+  }
+}
+
+/* RESPONSIVE: FOOTER*/
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .footer-cont {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-right {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-right .social {
+    font-size: 18px;
+  }
+
+  .footer-left span {
+    font-size: 14px;
+  }
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--texto);
+}
+
+/* MENÚ HAMBURGUESA */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+    order: 0;
+    margin-right: 10px;
+  }
+
+  .marca {
+    order: 1;
+  }
+
+  .menu {
+    order: 2;
+    margin: 0 !important;
+    padding: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+
+    position: absolute;
+    top: 5.063rem;
+    left: 0; /* menú desde la izquierda (lo que querías) */
+    background: #e9c983;
+    z-index: 9999;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  /* ELEMENTOS DEL MENÚ (centrados verticalmente, sin curvas) */
+  .menu__enlace {
+    all: unset; /* limpiar estilos heredados */
+    display: flex;
+    align-items: center; /* centra vertical */
+    width: 100%;
+    height: 42px;
+    padding: 0 22px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: black;
+    border-bottom: 1px solid #0e2f4f;
+    box-sizing: border-box;
+  }
+
+  .menu__enlace:last-child {
+    border-bottom: none;
+  }
+
+  /* Botón "Iniciar sesión" a la derecha */
+  .barra-navegacion .boton {
+    order: 3;
+    margin-left: auto;
   }
 }
