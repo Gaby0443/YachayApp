@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="stylesPronunicacion.css"/>
+    <link rel="stylesheet" href="stylesPronunicacion.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
@@ -14,13 +14,13 @@
     />
   </head>
   <body>
-<!-- TOPHEADER-->
+    <!-- TOPHEADER-->
     <nav class="topheader">
       <div class="Logo-nombre">
         <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
         <h1>YACHAYAPP</h1>
       </div>
-
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
       <ul class="Menu-Horizontal">
         <li>
           <a href="">Aprender</a>
@@ -30,8 +30,7 @@
               <ul class="Menu-Vertical2">
                 <li><a href="pronunciacion.html">Pronunciacion</a></li>
                 <li><a href="audios.html">Audios</a></li>
-                <li><a href="">Historias Narradas</a></li>
-                <li><a href="">Evaluaciones</a></li>
+                <li><a href="historiasNarradas.html">Historias Narradas</a></li>
                 <li><a href="audio2.html">Lecciones Educativas</a></li>
               </ul>
             </li>
@@ -58,9 +57,22 @@
         <li>
           <a href="" target="_self">Menu</a>
           <ul class="Menu-Vertical">
-            <li><a href="">Dispositivos Wearables</a></li>
-            <li><a href="glosarioPersonal.html">Glosario Personal</a></li>
-            <li><a href="">Biblioteca Cultural</a></li>
+            <li>
+              <a href="dispositivosWeareables.html">Dispositivos Wearables</a>
+            </li>
+            <li>
+              <a href="">Glosario Personal</a>
+              <ul class="Menu-Vertical2">
+                <li>
+                  <a href="glosarioPersonal.html">Frases de Supervivencia</a>
+                </li>
+                <li><a href="saludosBasicos.html"> Descargas</a></li>
+                <li>
+                  <a href="Personal.html">Mostrar Todo</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="bibliotecaCultural.html">Biblioteca Cultural</a></li>
             <li><a href="foroComunitario.html">Foro Comunitario</a></li>
             <li>
               <a href="">Docentes</a>
@@ -71,19 +83,22 @@
                 <li><a href="avanceEstudiantes.html">Avance Estudiantes</a></li>
               </ul>
             </li>
-            <li><a href="">Sesiones Con mentores nativos</a></li>
+            <li>
+              <a href="sesionMentor.html">Sesiones Con mentores nativos</a>
+            </li>
           </ul>
         </li>
         <li>
           <a href="" target="_self">Progreso</a>
           <ul class="Menu-Vertical">
-            <li><a href="">Ranking Global</a></li>
+            <li><a href="rankingGlobal.html">Ranking Global</a></li>
+            <li><a href="recompensas.html">Recompensas</a></li>
             <li><a href="progreso.html">Avance</a></li>
           </ul>
         </li>
 
         <li class="iconos">
-          <a href="notificaciond.html" title="Notificaciones"
+          <a href="notificacion.html" title="Notificaciones"
             ><i class="fa-regular fa-bell"></i
           ></a>
           <a href="soporte.html" title="Configuración"
@@ -92,46 +107,51 @@
           <a href="centroAyuda.html" title="Preguntas Frecuentes"
             ><i class="fa-solid fa-headset"></i>
           </a>
-          <a href="index.html" title="Perfil de usuario"
+          <a href="editarCuenta.html" title="Perfil de usuario"
             ><i class="fa-solid fa-user"></i
           ></a>
+          <a href="index.html" title="Salir">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </a>
         </li>
       </ul>
     </nav>
-<!-- Sección Resultado de Lección -->
-<section class="seccion-leccion-resultado">
-  <div class="titulo-volver">
-    <a href="pronunciacion.html"><i class="fa-solid fa-arrow-left"></i></a>
-    <h2>Animales Andinos</h2>
-  </div>
-   
-  <input type="checkbox" id="mostrar-ajuste" hidden>
-   <input type="checkbox" id="mostrar-nivel" hidden>
-
-  <div class="div-gral">
-    <div class="div-izquierda">
-      <div class="circular" style="--p: 89">
-        <span>89%</span>
-        <small>Precisión</small>
+    <!-- Sección Resultado de Lección -->
+    <section class="seccion-leccion-resultado">
+      <div class="titulo-volver">
+        <a href="pronunciacion.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <h2>Animales Andinos</h2>
       </div>
 
-      <div class="div-leccion-texto">
-        <h2>Lección Completada</h2>
-        <p>Puntos Obtenidos: 70</p>
-      </div>
+      <input type="checkbox" id="mostrar-ajuste" hidden />
+      <input type="checkbox" id="mostrar-nivel" hidden />
 
-      <div class="botones-final">
-        <label for="mostrar-ajuste">
-  <button class="btn-final">Siguiente Lección</button>
-</label>
-        <button class="btn-final"><a href="pronunciacion.html">Salir</a></button>
+      <div class="div-gral">
+        <div class="div-izquierda">
+          <div class="circular" style="--p: 89">
+            <span>89%</span>
+            <small>Precisión</small>
+          </div>
+
+          <div class="div-leccion-texto">
+            <h2>Lección Completada</h2>
+            <p>Puntos Obtenidos: 70</p>
+          </div>
+
+          <div class="botones-final">
+            <label for="mostrar-ajuste">
+              <button class="btn-final">Siguiente Lección</button>
+            </label>
+            <button class="btn-final">
+              <a href="pronunciacion.html">Salir</a>
+            </button>
+          </div>
+        </div>
+        <div class="div-gral-img">
+          <img src="imgA/animales andinos.png" alt="Animales Andinos" />
+        </div>
       </div>
-    </div>
-    <div class="div-gral-img">
-      <img src="imgA/animales andinos.png" alt="Animales Andinos">
-    </div>
-  </div>
-    <!-- MODAL EMERGENTE -->
+      <!-- MODAL EMERGENTE -->
       <div class="ajuste-modal">
         <div class="ajuste-contenido">
           <label for="mostrar-ajuste" class="cerrar-modal">
@@ -145,24 +165,29 @@
           <label for="mostrar-nivel" class="btn-ver-ajuste">Ver Ajuste</label>
         </div>
       </div>
- <!-- MODAL 2: NUEVO NIVEL -->
+      <!-- MODAL 2: NUEVO NIVEL -->
       <div class="nivel-modal">
         <div class="nivel-contenido">
           <label for="mostrar-nivel" class="cerrar-modal">
             <i class="fa-solid fa-arrow-left"></i>
           </label>
           <p>
-            Tu porcentaje de aciertos fue alto en las últimas actividades,
-            por lo que hemos aumentado el nivel de dificultad para que sigas avanzando.
+            Tu porcentaje de aciertos fue alto en las últimas actividades, por
+            lo que hemos aumentado el nivel de dificultad para que sigas
+            avanzando.
           </p>
           <hr />
           <p><b>Nuevo Nivel:</b> Básico 2</p>
-          <p><b>Se va a repasar:</b> Frases largas y vocabulario más avanzado</p>
-          <label for="seccion-leccion-resultado" class="btn-contnuar">Continuar</label>
+          <p>
+            <b>Se va a repasar:</b> Frases largas y vocabulario más avanzado
+          </p>
+          <label for="seccion-leccion-resultado" class="btn-contnuar"
+            >Continuar</label
+          >
         </div>
       </div>
     </section>
-<!-- FOOTER -->
+    <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">
         <div class="footer-left">
@@ -172,12 +197,14 @@
 
         <div class="footer-right">
           <a href="#" class="footer-link">Términos y Condiciones</a>
-          <a href="mailto:info@AylluTalk.pe" class="footer-link">info@AylluTalk.pe</a>
+          <a href="mailto:info@AylluTalk.pe" class="footer-link"
+            >info@AylluTalk.pe</a
+          >
           <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
         </div>
       </div>
     </section>
-
+    <script src="menuApp_toggle.js"></script>
   </body>
 </html>
