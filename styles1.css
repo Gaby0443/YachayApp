@@ -121,3 +121,88 @@ body {
   color: black;
   text-decoration: underline;
 }
+@media (max-width: 992px) {
+  .div-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-ilustracion img {
+    max-width: 450px;
+  }
+
+  .hero-card {
+    max-width: 420px;
+  }
+
+  .card-logo {
+    padding: 5px 50px;
+  }
+
+  .card-subtitle {
+    padding: 5px 20px;
+  }
+}
+
+/* ===== MÓVIL GRANDE (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .seccion-hero {
+    padding-top: 100px;
+  }
+
+  .hero-card {
+    max-width: 90%;
+  }
+
+  .card-logo {
+    width: 150px;
+    padding: 0;
+    margin: 0 auto 10px auto;
+  }
+
+  .card-subtitle {
+    padding: 0;
+    font-size: 11px;
+  }
+}
+
+/* ===== MÓVIL PEQUEÑO (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .div-hero {
+    gap: 20px;
+  }
+
+  .hero-ilustracion img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .hero-card {
+    padding: 18px;
+    max-width: 95%;
+  }
+
+  .btn-dark,
+  .btn-outline {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .card-sep span {
+    font-size: 14px;
+  }
+
+  .card-login a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .div-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-ilustracion img {
+    margin-top: 20px;
+  }
+}

@@ -5,24 +5,18 @@
   --secondary-text: #757575;
   --underline-color: #ffc107; /* Amarillo del subrayado */
 }
-
-
-
 .container {
-    margin-top: 100px;
-    padding-top: 100px;
-    padding-bottom: 200px;
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 200px;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/* --- Estilos del Encabezado (Header) --- */
+} /* --- Estilos del Encabezado (Header) --- */
 .header {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
-
 .back-arrow {
   font-size: 30px;
   font-weight: 600;
@@ -31,35 +25,27 @@
   margin-right: 15px;
   line-height: 1;
 }
-
+.title-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
 .title-section h1 {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: -5px; /* Ajuste para acercar 'Notificaciones' y 'Diarias' */
 }
-
-.title-section h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.underline {
-  width: 250px; /* Ancho del subrayado amarillo */
-  height: 4px;
-  background-color: var(--underline-color);
-  margin-top: -10px; /* Sube la línea para que quede debajo de "Diarias" */
-}
-
-/* --- Estilos del Contenedor de Notificaciones (Main) --- */
+.title-left {
+  display: flex;
+  flex-direction: column;
+} /* --- Estilos del Contenedor de Notificaciones (Main) --- */
 .notifications-container {
   display: flex;
   flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas pequeñas */
   gap: 20px; /* Espacio entre las tarjetas */
   justify-content: flex-start; /* Alinea las tarjetas al inicio */
-}
-
-/* --- Estilos de las Tarjetas (Cards) --- */
+} /* --- Estilos de las Tarjetas (Cards) --- */
 .card {
   flex: 1 1 300px; /* Permite 3 tarjetas por fila en ancho > 940px, y 1 o 2 en anchos menores */
   max-width: 380px; /* Límite de ancho para las tarjetas */
@@ -71,7 +57,6 @@
   align-items: flex-start;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave */
 }
-
 .icon-box {
   width: 60px;
   height: 60px;
@@ -80,21 +65,26 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 30px;
-  /* Colores de fondo de los íconos */
-  /* Nueva Lección (Verde/Libro) */
+  font-size: 30px; /* Colores de fondo de los íconos */ /* Nueva Lección (Verde/Libro) */
   background-color: #e8f5e9;
 }
 .new-lesson {
   background-color: #e8f5e9;
-}
-/* Medalla Ganada (Rosa/Trofeo) */
+} /* Medalla Ganada (Rosa/Trofeo) */
 .medal-won {
   background-color: #fce4ec;
-}
-/* Recordatorio (Azul claro/Calendario) */
+} /* Recordatorio (Azul claro/Calendario) */
 .reminder {
   background-color: #e3f2fd;
+}
+.textoNotificacion {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* espacio entre la flecha y el texto */
+}
+.textoNotificacion i {
+  font-size: 26px;
+  color: #000;
 }
 
 .card-title {
@@ -102,19 +92,15 @@
   font-weight: 600;
   margin-bottom: 5px;
 }
-
 .card-text {
   font-size: 14px;
   color: var(--secondary-text);
   margin-bottom: 25px;
   line-height: 1.4;
 }
-
 .card-text strong {
   font-weight: 600;
-}
-
-/* Estilos del Botón */
+} /* Estilos del Botón */
 .btn.primary {
   background-color: var(--primary-blue);
   color: #ffffff;
@@ -130,53 +116,37 @@
   max-width: 150px; /* Ancho máximo para que se parezca al diseño */
   text-align: center;
 }
-
 .btn.primary:hover {
   background-color: #303f9f;
 }
 .config-icon {
-  font-size: 30px;       
-  color: #000;            
-  z-index: 10;            
-  background: #f8bd00;     
+  font-size: 28px;
+  background: #f8bd00;
   padding: 8px;
-  border-radius: 999px;     
+  margin-left: 550px;
+  border-radius: 50%;
+  cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
 .contenedor {
   display: flex;
   gap: 20px;
   padding-top: 120px;
   padding-left: 80px;
   padding-bottom: 170px;
-  gap:100px;
+  gap: 100px;
 }
-
 .acces-izquierda {
   width: 40%;
 }
-
 .subtexto {
   font-size: 14px;
   color: #777;
 }
-
 .opcion {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-}
-
-/* BOTÓN DESPLEGABLE */
+} /* BOTÓN DESPLEGABLE */
 .nuevo-panel summary {
   background: #f8bd00;
   color: black;
@@ -188,25 +158,20 @@
   gap: 8px;
   align-items: center;
 }
-
 .nuevo-panel summary::-webkit-details-marker {
   display: none;
-}
-
-/* FORMULARIO */
+} /* FORMULARIO */
 .Nuevo-Recordatorio {
   margin-top: 15px;
   padding: 10px;
-  width:550px;
+  width: 550px;
   border-radius: 10px;
 }
-
 .Nuevo-Recordatorio label {
   display: block;
   margin-top: 10px;
   font-weight: 600;
 }
-
 .Nuevo-Recordatorio input {
   width: 100%;
   padding: 8px;
@@ -214,7 +179,6 @@
   border: 1px solid #aaa;
   margin-top: 3px;
 }
-
 .btnGuardar {
   background: #ffc400;
   border: none;
@@ -224,18 +188,14 @@
   border-radius: 8px;
   cursor: pointer;
 }
-
 .mensaje-exito {
   margin-top: 10px;
   color: green;
   font-weight: bold;
-}
-
-/* SWITCH */
+} /* SWITCH */
 .switch input {
-  display:none;
+  display: none;
 }
-
 .slider {
   width: 50px;
   height: 22px;
@@ -245,7 +205,6 @@
   display: inline-block;
   cursor: pointer;
 }
-
 .slider:before {
   content: "";
   width: 18px;
@@ -257,75 +216,70 @@
   left: 2px;
   transition: 0.3s;
 }
-
 input:checked + .slider {
   background: #0c2734;
 }
-
 input:checked + .slider:before {
   transform: translateX(28px);
-}
-
-/* DERECHA */
+} /* DERECHA */
 .acces-derecha {
-  width: 50%;
+  width: 45%;
   background: white;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
-
 .recordatorio-card {
   background: #e7f4ff;
   padding: 12px;
   border-radius: 10px;
   border-left: 5px solid #0c2734;
   margin-bottom: 10px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .contenedor {
-    flex-direction: column;
+} /* RESPONSIVE NOTIFICACIONES */
+@media (max-width: 908px) {
+  .container {
+    padding: 120px 40px 50px 40px;
   }
-  
+  .notifications-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .card {
+    width: 80%;
+  }
+  .header .config-icon {
+    right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .notifications-container {
+    grid-template-columns: 1fr;
+  }
+  .config-icon {
+    margin-left: 50px;
+  }
+} /* RESPONSIVE CONFIGURACIÓN */
+@media (max-width: 908px) {
+  .contenedor {
+    padding: 120px 20px 100px 20px;
+    flex-direction: column;
+    gap: 40px;
+  }
   .acces-izquierda,
   .acces-derecha {
+    width: 90% !important;
+  }
+  .Nuevo-Recordatorio {
+    width: 100% !important;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nuevo-panel summary {
     width: 100%;
-  }
-}
-
-
-
-
-
-
-
-
-/* Ajustes para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-  .header {
-    margin-bottom: 20px;
-  }
-
-  .title-section h1,
-  .title-section h2 {
-    font-size: 24px;
-  }
-
-  .underline {
-    width: 180px;
-  }
-
-  .notifications-container {
-    display: flex;
-    flex-wrap: nowrap; /* ¡Asegúrate de que 'nowrap' esté activo o que 'flex-wrap' no esté! */
-    gap: 20px;
-    justify-content: flex-start;
-  }
-
-  .card {
-    flex: 1 1 100%; /* Ocupa todo el ancho disponible */
-    max-width: none;
+    max-width: 350px;
+    justify-content: center;
+    text-align: center;
   }
 }

@@ -78,7 +78,7 @@ body {
   align-items: center;
   height: auto;
   margin-top: 60px;
-  /* ✨ LÍNEA AÑADIDA PARA IGUALAR EL FONDO ✨ */
+
   background-color: white;
 }
 
@@ -87,14 +87,67 @@ body {
   max-width: 350px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .layout {
-    flex-direction: column;
+    flex-direction: column; /* TARJETAS ARRIBA – IMAGEN ABAJO */
     align-items: center;
+    padding: 30px;
+    gap: 30px;
   }
+
+  .left-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr; /* UNA SOLA COLUMNA */
+    gap: 24px;
+    padding-right: 0;
+  }
+
+  .card {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .card.center {
+    width: 80%;
+    grid-column: span 1; /* ya no ocupa dos columnas */
+  }
+
   .right-image {
-    margin-top: 20px;
-    width: 60%;
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .right-image img {
+    max-width: 300px;
+  }
+}
+
+/* =================================================
+     RESPONSIVE MÓVIL PEQUEÑO (≤ 480px)
+================================================ */
+@media (max-width: 480px) {
+  .card {
+    width: 95%;
+    padding: 14px 16px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .right-image {
+    width: 95%;
+  }
+
+  .right-image img {
+    max-width: 250px;
   }
 }
