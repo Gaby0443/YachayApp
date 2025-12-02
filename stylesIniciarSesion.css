@@ -1,82 +1,93 @@
-/****************************************************
- INICIAR SESIÓN — MISMAS DIMENSIONES QUE CONTRASEÑA
-****************************************************/
 
-/* CONTENEDOR PRINCIPAL */
+
+/* Contenedor principal en 2 columnas */
 .principal {
-  width: 75%;
-  margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; 
+  gap: 50px;
   align-items: center;
-  justify-content: center;
-  gap: 100px;
-  padding: 40px 0;
-  flex-wrap: nowrap;
+  padding: 46px 20px;
+  max-width: 1400px;                  /* Más ancho total */
+  margin: auto;
 }
 
-/* IMAGEN IZQUIERDA */
-.columna-izquierda img.portada {
+/* Columna izquierda (imagen) */
+.columna-izquierda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marco-imagen {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.portada {
   width: 100%;
-  max-width: 720px;
-  height: auto;
+  max-width: 650px;       /* Aumentado de 520px → 650px */
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+/* Tarjeta de login */
+.tarjeta-login {
+  background: #e9c983;
+  border-radius: 24px;
+  padding: 26px 40px; 
+  margin-right: 100px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+}
+
+/* Encabezado tarjeta */
+.tarjeta-login__encabezado {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo-completo {
+  width: 180px;
   object-fit: contain;
 }
 
-/* TARJETA */
-.tarjeta-login {
-  position: relative;
-  background-color: #e9c983;
-  width: 350px;
-  padding: 30px 40px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
-}
-
-/* LOGO SUPERIOR */
-.logo-completo {
-  width: 170px;
-  display: block;
-  margin: 10px auto 25px auto;
-}
-
-/* BOTONES GOOGLE Y FACEBOOK */
+/* Botones sociales */
 .acciones-sociales {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 100%;
+  margin-bottom: 18px;
 }
 
 .boton--icono {
-  width: 100%;
-  display: flex; /* ← ALINEACIÓN PERFECTA */
+  display: grid;
+  grid-template-columns: 24px 1fr;
   align-items: center;
-  justify-content: center; /* ← CENTRAR TEXTO */
-  gap: 12px;
-  padding: 12px;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
+  width: 100%;
   background: #0e2f4f;
-  border-radius: 9999px;
   color: white;
+  border-radius: 999px;
   border: none;
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .boton__icono {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
-/* SEPARADOR */
+/* Separador "o" */
 .separador {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 18px 0 12px;
+  margin: 14px 0;
 }
 
 .separador::before,
@@ -85,28 +96,46 @@
   flex: 1;
   height: 2px;
   background: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
 }
 
-/* FORMULARIO */
+.separador span {
+  font-weight: 600;
+}
+
+/****************************************************
+   FORMULARIO
+****************************************************/
+.formulario {
+  margin-top: 8px;
+  
+}
+
 .formulario__etiqueta {
   display: block;
-  font-size: 14px;
+  font-size: 0.9rem;
+  color: #2b2b2b;
   margin: 12px 0 6px;
-  color: #222;
 }
 
 .formulario__entrada {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  background: #fff;
-  border: 1px solid #b9b9b9;
-  margin-bottom: 12px;
-  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  outline: 0;
+  background: #fff8dc;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.formulario__entrada:focus {
+  border-color: #a17800;
+  box-shadow: 0 0 0 3px rgba(161, 120, 0, 0.15);
 }
 
 .formulario__extra {
-  margin: -4px 0 12px;
+  margin: 10px 0 16px;
   text-align: right;
 }
 
@@ -116,56 +145,55 @@
   text-underline-offset: 3px;
 }
 
-/* BOTÓN PRINCIPAL */
+.registro {
+  text-align: center;
+  margin: 12px 0 0;
+  color: #233;
+}
+
+/****************************************************
+   BOTÓN PRINCIPAL INICIAR SESIÓN
+****************************************************/
 .boton--primario {
   width: 100%;
   padding: 12px 18px;
-  background-color: #0e2f4f;
-  border-radius: 9999px;
-  border: none;
+  border-radius: 999px;
+  background: #0e2f4f;
   color: white;
-  font-size: 17px;
+  border: none;
   font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
-/* TEXTO FINAL */
-.registro {
-  font-size: 14px;
-  margin-top: 15px;
-  text-align: center;
+.boton--primario:hover {
+  filter: brightness(1.1);
 }
 
-/* RESPONSIVE */
+/****************************************************
+   RESPONSIVE
+****************************************************/
 @media (max-width: 1024px) {
   .principal {
-    flex-direction: column;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    padding-top: 20px;
   }
+
   .tarjeta-login {
     order: -1;
   }
 }
 
-@media (max-width: 520px) {
-  .principal {
-    width: 90%;
-  }
-  .columna-izquierda img.portada {
+@media (max-width: 480px) {
+  .portada {
     max-width: 320px;
   }
-  .tarjeta-login {
-    width: 90%;
-    padding: 26px;
-  }
+
   .logo-completo {
     width: 140px;
   }
+
   .boton--icono {
     padding: 10px 14px;
   }

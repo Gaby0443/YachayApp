@@ -1,0 +1,113 @@
+
+
+.contenedor-principal {
+  max-width: 450px; /* Ancho compacto para el mensaje de éxito */
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 10px;
+    text-align: center;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+
+/* --- Título Principal --- */
+.titulo-exito {
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+/* --- Icono de Verificación --- */
+.icono-check-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Estilo para la imagen (ajustar la ruta de la imagen en HTML) */
+.check-img {
+  /* Asumiendo que la imagen es la marca de verificación grande */
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* --- Mensaje de Bienvenida --- */
+.bienvenida {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.descripcion {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* --- Botón Informativo (Plan Mensual) --- */
+.plan-info-btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: fit-content;
+  margin: 0 auto 30px auto;
+  font-weight: 600;
+}
+
+/* --- Botones de Acción --- */
+.botones-accion {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.botones-accion button {
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 50%;
+}
+
+.btn-principal {
+  background-color: #3b82f6; /* Azul brillante */
+  color: white;
+  border: none;
+}
+
+.btn-secundario {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+/* --- Soporte y Logos de Pago --- */
+.soporte-link {
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.soporte-link a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logos-pago {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para las imágenes de logos (ajustar las rutas según tu HTML) */
+.logo-img {
+  height: 20px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.8;
+}

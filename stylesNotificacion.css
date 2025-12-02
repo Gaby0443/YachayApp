@@ -6,10 +6,12 @@
   --underline-color: #ffc107; /* Amarillo del subrayado */
 }
 
+
+
 .container {
-  margin-top: 100px;
-  padding-top: 100px;
-  padding-bottom: 200px;
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 200px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -29,21 +31,24 @@
   margin-right: 15px;
   line-height: 1;
 }
-.title-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
+
 .title-section h1 {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: -5px; /* Ajuste para acercar 'Notificaciones' y 'Diarias' */
 }
 
-.title-left {
-  display: flex;
-  flex-direction: column;
+.title-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.underline {
+  width: 250px; /* Ancho del subrayado amarillo */
+  height: 4px;
+  background-color: var(--underline-color);
+  margin-top: -10px; /* Sube la línea para que quede debajo de "Diarias" */
 }
 
 /* --- Estilos del Contenedor de Notificaciones (Main) --- */
@@ -130,13 +135,22 @@
   background-color: #303f9f;
 }
 .config-icon {
-  font-size: 28px;
-  background: #f8bd00;
+  font-size: 30px;       
+  color: #000;            
+  z-index: 10;            
+  background: #f8bd00;     
   padding: 8px;
-  margin-left: 550px;
-  border-radius: 50%;
-  cursor: pointer;
+  border-radius: 999px;     
 }
+
+
+
+
+
+
+
+
+
 
 .contenedor {
   display: flex;
@@ -144,7 +158,7 @@
   padding-top: 120px;
   padding-left: 80px;
   padding-bottom: 170px;
-  gap: 100px;
+  gap:100px;
 }
 
 .acces-izquierda {
@@ -183,7 +197,7 @@
 .Nuevo-Recordatorio {
   margin-top: 15px;
   padding: 10px;
-  width: 550px;
+  width:550px;
   border-radius: 10px;
 }
 
@@ -219,7 +233,7 @@
 
 /* SWITCH */
 .switch input {
-  display: none;
+  display:none;
 }
 
 .slider {
@@ -254,21 +268,13 @@ input:checked + .slider:before {
 
 /* DERECHA */
 .acces-derecha {
-  width: 45%;
+  width: 50%;
   background: white;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
-.textoNotificacion {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* espacio entre la flecha y el texto */
-}
-.textoNotificacion i {
-  font-size: 26px;
-  color: #000;
-}
+
 .recordatorio-card {
   background: #e7f4ff;
   padding: 12px;
@@ -277,53 +283,49 @@ input:checked + .slider:before {
   margin-bottom: 10px;
 }
 
-/* RESPONSIVE NOTIFICACIONES */
-@media (max-width: 908px) {
-  .container {
-    padding: 120px 40px 50px 40px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+  }
+  
+  .acces-izquierda,
+  .acces-derecha {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .title-section h1,
+  .title-section h2 {
+    font-size: 24px;
+  }
+
+  .underline {
+    width: 180px;
   }
 
   .notifications-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: nowrap; /* ¡Asegúrate de que 'nowrap' esté activo o que 'flex-wrap' no esté! */
     gap: 20px;
+    justify-content: flex-start;
   }
 
   .card {
-    width: 80%;
-  }
-
-  .header .config-icon {
-    right: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .notifications-container {
-    grid-template-columns: 1fr;
-  }
-  .config-icon {
-    margin-left: 50px;
-  }
-}
-/* RESPONSIVE CONFIGURACIÓN */
-@media (max-width: 908px) {
-  .contenedor {
-    padding: 120px 25px 100px 30px;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .acces-izquierda,
-  .acces-derecha {
-    width: 90% !important;
-  }
-
-  .Nuevo-Recordatorio {
-    width: 90% !important;
-  }
-  .acces-izquierda {
-    flex-direction: column;
-    align-items: center; /* CENTRA TODO */
+    flex: 1 1 100%; /* Ocupa todo el ancho disponible */
+    max-width: none;
   }
 }

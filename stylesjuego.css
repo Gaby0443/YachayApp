@@ -41,6 +41,7 @@ body {
 .contenedor {
   max-width: var(--wrap);
   margin: auto;
+  margin-bottom: 200px;
   padding: 28px 20px 10px;
 }
 
@@ -106,4 +107,5 @@ body {
     width: 100%;
   }
 }
+
 

@@ -1,0 +1,146 @@
+
+
+/* ===== SOPORTE ===== */
+.seccion-soporte {
+  padding: 120px 20px 60px;
+  background-color: #fff;
+  min-height: calc(100vh - 160px);
+}
+.soporte-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Títulos */
+.soporte-izquierda h2 {
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 3px solid #e9cc86;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+.soporte-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.tab-opcion {
+  padding: 10px 20px;
+  border-radius: 9999px;
+  border: none;
+  background: #dcdcdc;
+  cursor: pointer;
+  font-weight: 600;
+}
+.tab-activo {
+  background: #e9cc86;
+}
+
+/* FILTRO */
+.filtro-date {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+  cursor: pointer;
+  background: #fff;
+  width: 150px;
+  color: #444;
+  margin-bottom: 20px;
+}
+.filtro-date:focus {
+  outline: none;
+  border-color: #e9cc86;
+}
+
+/* LISTA */
+.soporte-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.soporte-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: grid;
+  grid-template-columns: 1.5fr auto auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.fecha {
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+}
+.detalle {
+  margin: 4px 0 0;
+  color: #444;
+}
+
+/* ESTADOS */
+.estado {
+  font-weight: 700;
+  font-size: 15px;
+}
+.estado-proceso {
+  color: #cc9400;
+}
+.estado-resuelto {
+  color: #0a7d34;
+}
+
+/* BOTÓN */
+.btn-detalles {
+  background: #f0d058;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-detalles:hover {
+  background: #e6bf38;
+}
+
+/* Columna derecha */
+.soporte-derecha {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 65%;
+  margin-left: 96px;
+}
+.soporte-derecha h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.btn-opcion {
+  width: 80%;
+  padding: 10px;
+  border-radius: 9999px;
+  background: #0c2734;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.btn-opcion.activo {
+  background: #e9cc86;
+  color: black;
+}
+.btn-opcion:hover {
+  opacity: 0.9;
+}
+

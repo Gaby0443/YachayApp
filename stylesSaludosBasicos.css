@@ -1,0 +1,153 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f4f7f6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding: 40px 80px;
+}
+
+.downloads-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.downloads-header i {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #0c2734;
+}
+
+.downloads-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0c2734;
+  margin: 0;
+}
+
+.content-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px 40px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content-card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0c2734;
+  margin-bottom: 30px;
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.category-button {
+  background-color: #ffc107;
+  color: #0c2734;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #e0ac00;
+}
+
+/* Caja de Descarga */
+.download-box {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.download-box h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #002d5b;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.download-box p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Barra de Progreso */
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 15px;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 62%;
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+.download-status {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.action-button {
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-button.pause {
+  background-color: #ffc107;
+  color: #002d5b;
+}
+
+.action-button.pause:hover {
+  background-color: #e0ac00;
+}
+
+.action-button.cancel {
+  background-color: #e0e0e0;
+  color: #555;
+}
+
+.action-button.cancel:hover {
+  background-color: #cccccc;
+}

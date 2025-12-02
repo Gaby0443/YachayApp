@@ -1,6 +1,7 @@
 .page-section {
   display: none;
   margin-top: 100px;
+  margin-bottom: 100px;
   width: 100%;
   /* Asegura que las secciones ocupen el espacio principal */
   flex-grow: 1;
@@ -26,7 +27,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   box-sizing: border-box;
-  background-color: #fff9d8;
+  background-color: #ffffff;
   color: #0c2734;
 }
 
