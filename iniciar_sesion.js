@@ -9,7 +9,7 @@ form.addEventListener("submit", function (e) {
   // Validación simple
   if (correo !== "" && clave !== "") {
     // 🔹 Redirige al HTML que deseas abrir
-    window.location.href = "progreso.html";
+    window.location.href = "inicio_tutorial.html";
   } else {
     alert("Por favor, completa todos los campos.");
   }

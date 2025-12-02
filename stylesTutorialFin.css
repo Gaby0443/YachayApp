@@ -1,0 +1,139 @@
+:root {
+  /* colores base (ajusta si tu Figma tiene variantes) */
+  --bg: #ffffff;
+  --accent-yellow: #f4b000; /* amarillo del título y botón final */
+  --btn-blue: #0a2338; /* azul oscuro de los botones */
+  --btn-blue-shadow: rgba(4, 18, 30, 0.3);
+  --btn-yellow-shadow: rgba(20, 20, 20, 0.18);
+  --text: #111111;
+}
+
+/* reset y base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Centrado vertical y horizontal con espacio lateral y superior */
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 28px; /* deja margen arriba/abajo/lados como en el mockup */
+}
+
+/* Contenedor interior que limita el ancho para respetar márgenes laterales */
+.inner {
+  width: 100%;
+  max-width: 900px; /* ancho igual al mockup para mantener proporciones */
+  text-align: center;
+}
+
+/* Step amarillo (pequeño) */
+.step {
+  color: var(--accent-yellow);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.2px;
+}
+
+/* Título negro (más grande que step) */
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 36px;
+  color: #111;
+}
+
+/* GRID DE BOTONES (2 columnas) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 60px; /* 20px vertical, 60px horizontal -> coincide con separación de mockup */
+  justify-items: center;
+  margin: 0 auto;
+  margin-bottom: 72px; /* espacio entre grid y botón final */
+}
+
+/* Botones estilo común */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 26px; /* borde redondeado como en mockup */
+  padding: 12px 0;
+  font-size: 14px;
+  min-height: 44px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  width: 300px; /* ancho fijo para que todas las opciones tengan la misma longitud */
+  max-width: calc(100% - 40px); /* responsive */
+}
+
+/* BOTÓN AZUL (cuatro opciones) */
+.btn-blue {
+  background: var(--btn-blue);
+  color: #ffffff;
+  box-shadow: 0 10px 20px var(--btn-blue-shadow),
+    inset 0 -6px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* efecto hover (sutil) */
+.btn-blue:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(4, 18, 30, 0.36);
+}
+
+/* BOTÓN AMARILLO FINAL */
+.btn-yellow {
+  background: var(--accent-yellow);
+  color: #000;
+  width: 220px; /* más pequeño y centrado como en tu mockup */
+  box-shadow: 0 10px 20px var(--btn-yellow-shadow);
+  font-weight: 600;
+}
+
+/* hover botón amarillo */
+.btn-yellow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(20, 20, 20, 0.25);
+}
+
+/* fila final centrada */
+.final-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* responsive: en pantallas muy pequeñas convertir grid a 1 columna */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px 0;
+  }
+  .btn {
+    width: 88%;
+  }
+  .btn-yellow {
+    width: 60%;
+  }
+  .inner {
+    padding: 0 12px;
+  }
+}

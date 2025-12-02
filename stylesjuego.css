@@ -41,10 +41,10 @@ body {
 .contenedor {
   max-width: var(--wrap);
   margin: auto;
+  margin-top: 200px;
   margin-bottom: 200px;
   padding: 28px 20px 10px;
 }
-
 
 /* ===== Breadcrumb (flecha + texto) ===== */
 .breadcrumb {
@@ -107,5 +107,3 @@ body {
     width: 100%;
   }
 }
-
-

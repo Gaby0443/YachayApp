@@ -1,0 +1,136 @@
+/* OCULTA TODAS LAS PANTALLAS */
+.pantalla {
+  display: none;
+  text-align: center;
+  padding-top: 50px;
+  min-height: 70vh;
+}
+
+.pantalla.visible {
+  display: block;
+}
+
+/* TITULO */
+.titulo {
+  margin-top: 100px;
+  font-size: 22px;
+  color: #09223b;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* INDICADORES */
+.indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background: #f5b400;
+}
+
+/* SUBTÍTULO */
+.sub {
+  margin-top: 100px;
+  color: #444;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* LISTA DE DISPOSITIVOS */
+.lista-devices {
+  display: flex;
+  justify-content: center;
+}
+
+.device {
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 280px;
+  padding: 15px 20px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.device:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.device i {
+  font-size: 22px;
+  color: #09223b;
+}
+
+/* RADAR ANIMADO */
+.radar {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 30px auto;
+}
+
+.pulse {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid #f5b400;
+  animation: pulse 1.8s infinite ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.4);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.icono {
+  font-size: 40px;
+  color: #f5b400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* CHECK FINAL */
+.check i {
+  color: #f5b400;
+  font-size: 60px;
+  margin: 30px 0;
+}
+
+/* BOTÓN */
+.btn {
+  padding: 12px 40px;
+  background: #f5b400;
+  border: none;
+  border-radius: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}

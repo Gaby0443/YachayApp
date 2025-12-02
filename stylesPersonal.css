@@ -1,0 +1,169 @@
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.back-arrow {
+  width: 26px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #0f1c28;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.btn-darkblue {
+  background: #09223b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-top {
+  width: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Tarjetas */
+.card {
+  background: #fff0b8;
+  border-radius: 20px;
+  padding: 20px 25px 25px 25px;
+  margin-bottom: 25px;
+}
+
+.entry-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.entry-text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.tags {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background: white;
+  color: #3f3f3f;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 12px;
+}
+
+.tag.blue {
+  background: #b8d0ff;
+}
+.tag.purple {
+  background: #e8d7ff;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.btn-yellow {
+  background: #f2c300;
+  color: #0f1c28;
+  border: none;
+  padding: 14px 40px;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.back-arrow {
+  font-size: 26px;
+  color: #09223b;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-right: 12px;
+}
+
+.back-arrow:hover {
+  transform: translateX(-4px);
+}
+
+/* Íconos en botones */
+.icon-btn {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/* Botones superiores */
+.top-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-darkblue {
+  background: #09223b;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-darkblue:hover {
+  background: #0b2e4d;
+  transform: translateY(-2px);
+}
+
+/* Botones inferiores */
+.btn-yellow {
+  background: #f2c300;
+  color: #0f1c28;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-yellow:hover {
+  background: #d4a700;
+  transform: translateY(-2px);
+}
