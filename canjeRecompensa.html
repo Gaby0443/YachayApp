@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="stylesRanking.css" />
+    <link rel="stylesheet" href="stylesCanje.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
@@ -109,78 +109,42 @@
         </li>
       </ul>
     </nav>
-    <!--Contenido-->
-    <section class="catalogo-recompensas">
-      <a href="rankingGlobal.html" class="btn-volver"> Volver a Recompensas </a>
 
-      <div class="catalogo-grid">
-        <!-- CARRUSEL -->
-        <div class="catalogo-left">
-          <h2>CATÁLOGO</h2>
-          <div class="linea"></div>
+    <section class="detalle-recompensa-container">
+      <a href="recompensas.html" class="btn-volver">← Volver</a>
 
-          <div class="catalogo-carrusel">
-            <button class="carrusel-btn izq">
-              <i class="fa-solid fa-chevron-left"></i>
+      <div class="detalle-contenido">
+        <div class="detalle-card">
+          <h2 id="titulo">Descuento en Florerokuna</h2>
+          <p id="descripcion">
+            Canjea 700 puntos y obtén un 30% de descuento en Florerokuna. El
+            código es válido por 48 horas.
+          </p>
+
+          <div class="barra-puntos">
+            <span>700 puntos</span>
+            <span>0 restantes</span>
+          </div>
+
+          <div class="botones">
+            <button class="btn-principal" onclick="generarCodigo()">
+              Generar Código de Canje
             </button>
-            <img
-              src="imgA/Recompensa1.JPG"
-              class="img-carrusel1"
-              alt="Catálogo recompensa"
-            />
-            <img
-              src="imgA/recompensa2.JPG"
-              class="img-carrusel2"
-              alt="Catálogo recompensa"
-            />
-            <button class="carrusel-btn der">
-              <i class="fa-solid fa-chevron-right"></i>
+            <button
+              class="btn-secundario"
+              onclick="window.location.href='recompensas.html'"
+            >
+              Ver más recompensas
             </button>
           </div>
         </div>
 
-        <!-- LISTA DERECHA -->
-        <div class="catalogo-right">
-          <h2>RECOMPENSAS</h2>
-          <a href="canjeRecompensa.html" class="recompensa-card">
-            <img src="imgA/tienda1.JPG" class="rec-img" />
-            <div class="rec-info">
-              <strong>Marta Gomez</strong>
-              <p>Tienda: Florerokuna</p>
-              <p>Estado: Abierto</p>
-            </div>
-            <span class="rec-estado">Aliado</span>
-          </a>
-
-          <a href="canjeRecompensa.html" class="recompensa-card">
-            <img src="imgA/tienda2.JPG" class="rec-img" />
-            <div class="rec-info">
-              <strong>Mario Pascual</strong>
-              <p>Tienda: Almamanta joyakuna</p>
-              <p>Estado: Abierto</p>
-            </div>
-            <span class="rec-estado">Aliado</span>
-          </a>
-
-          <a href="canjeRecompensa.html" class="recompensa-card">
-            <img src="imgA/tienda3.JPG" class="rec-img" />
-            <div class="rec-info">
-              <strong>Mariana Castañeda</strong>
-              <p>Tienda: Los Angeles verdes</p>
-              <p>Estado: Abierto</p>
-            </div>
-            <span class="rec-estado">Aliado</span>
-          </a>
-
-          <a href="canjeRecompensa.html" class="recompensa-card">
-            <img src="imgA/tienda4.JPG" class="rec-img" />
-            <div class="rec-info">
-              <strong>Jessica Sandoval</strong>
-              <p>Tienda: HarkaQ Inti</p>
-              <p>Estado: Abierto</p>
-            </div>
-            <span class="rec-estado">Aliado</span>
-          </a>
+        <div class="codigo-box" id="codigo-box" style="display: none">
+          <p class="codigo-exito">✔ Código generado exitosamente</p>
+          <div class="codigo-marco">
+            <span id="codigo-generado">WAYN - 000000</span>
+          </div>
+          <p>Presenta este código en el establecimiento</p>
         </div>
       </div>
     </section>
@@ -209,5 +173,6 @@
     <script src="menuApp_toggle.js"></script>
     <script src="progreso_scroll.js"></script>
     <script src="frase_del_dia.js"></script>
+    <script src="codigoCanje.js"></script>
   </body>
 </html>

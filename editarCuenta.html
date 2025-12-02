@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="stylesRanking.css" />
+    <link rel="stylesheet" href="stylesEditarCuenta.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
@@ -30,7 +30,7 @@
               <ul class="Menu-Vertical2">
                 <li><a href="pronunciacion.html">Pronunciacion</a></li>
                 <li><a href="audios.html">Audios</a></li>
-                <li><a href="">Historias Narradas</a></li>
+                <li><a href="historiasNarradas.html">Historias Narradas</a></li>
                 <li><a href="">Evaluaciones</a></li>
                 <li><a href="audio2.html">Lecciones Educativas</a></li>
               </ul>
@@ -58,7 +58,9 @@
         <li>
           <a href="" target="_self">Menu</a>
           <ul class="Menu-Vertical">
-            <li><a href="">Dispositivos Wearables</a></li>
+            <li>
+              <a href="dispositivosWeareables.html">Dispositivos Wearables</a>
+            </li>
             <li>
               <a href="">Glosario Personal</a>
               <ul class="Menu-Vertical2">
@@ -66,9 +68,12 @@
                   <a href="glosarioPersonal.html">Frases de Supervivencia</a>
                 </li>
                 <li><a href="saludosBasicos.html"> Descargas</a></li>
+                <li>
+                  <a href="Personal.html">Mostrar Todo</a>
+                </li>
               </ul>
             </li>
-            <li><a href="">Biblioteca Cultural</a></li>
+            <li><a href="bibliotecaCultural.html">Biblioteca Cultural</a></li>
             <li><a href="foroComunitario.html">Foro Comunitario</a></li>
             <li>
               <a href="">Docentes</a>
@@ -103,87 +108,120 @@
           <a href="centroAyuda.html" title="Preguntas Frecuentes"
             ><i class="fa-solid fa-headset"></i>
           </a>
-          <a href="rankingGlobal.html" title="Perfil de usuario"
+          <a href="editarCuenta.html" title="Perfil de usuario"
             ><i class="fa-solid fa-user"></i
           ></a>
+          <a href="index.html" title="Salir">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </a>
         </li>
       </ul>
     </nav>
-    <!--Contenido-->
-    <section class="catalogo-recompensas">
-      <a href="rankingGlobal.html" class="btn-volver"> Volver a Recompensas </a>
+    <div class="contenedor-principal">
+      <h1 class="titulo-cuenta">Cuenta</h1>
 
-      <div class="catalogo-grid">
-        <!-- CARRUSEL -->
-        <div class="catalogo-left">
-          <h2>CATÁLOGO</h2>
-          <div class="linea"></div>
+      <div class="seccion-perfil">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="columna-izquierda">
+          <div class="foto-perfil-container">
+            <img
+              src="imgA/usuario.png"
+              alt="Foto de Perfil"
+              class="foto-perfil"
+              id="foto-perfil"
+            />
+          </div>
 
-          <div class="catalogo-carrusel">
-            <button class="carrusel-btn izq">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <img
-              src="imgA/Recompensa1.JPG"
-              class="img-carrusel1"
-              alt="Catálogo recompensa"
+          <a href="#" class="enlace-cambiar-foto" id="cambiar-foto">Editar</a>
+
+          <p class="se-unio">Se unió: <strong>15 de agosto 2025</strong></p>
+
+          <textarea
+            class="sobre-mi"
+            placeholder="Sobre mí..."
+            id="sobre-mi"
+            disabled
+          ></textarea>
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="columna-derecha">
+          <h2 class="titulo-datos">Datos Personales</h2>
+          <a href="#" class="enlace-editar" id="enlace-editar"
+            >Editar información</a
+          >
+
+          <form class="formulario-perfil" id="perfil-form">
+            <!-- Nombre -->
+            <div class="grupo-input">
+              <input
+                type="text"
+                class="input-gris"
+                id="nombre-input"
+                name="nombre"
+                placeholder="Nombre completo"
+                disabled
+              />
+            </div>
+
+            <!-- FECHA DE NACIMIENTO NUEVA -->
+            <div class="grupo-input grupo-fecha">
+              <label class="label-fecha">Fecha de nacimiento</label>
+
+              <!-- INPUT DATE -->
+              <input
+                type="date"
+                class="input-gris input-date"
+                id="fecha-nacimiento"
+                name="fechaNacimiento"
+                disabled
+              />
+
+              <!-- FALLBACK (si el navegador no soporta date) -->
+              <div class="fecha-fallback oculto" id="fecha-fallback">
+                <select class="input-gris" id="dia-fb" disabled></select>
+                <select class="input-gris" id="mes-fb" disabled></select>
+                <select class="input-gris" id="anio-fb" disabled></select>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="grupo-input input-email">
+              <input
+                type="email"
+                class="input-gris input-largo"
+                id="correo-input"
+                placeholder="Correo Electrónico"
+                disabled
+              />
+            </div>
+          </form>
+
+          <!-- CONTRASEÑA -->
+          <h2 class="titulo-contrasena">Contraseña</h2>
+          <div class="grupo-input-contrasena">
+            <input
+              type="password"
+              class="input-gris input-password"
+              id="password-input"
+              placeholder="••••••••••••"
+              disabled
             />
-            <img
-              src="imgA/recompensa2.JPG"
-              class="img-carrusel2"
-              alt="Catálogo recompensa"
-            />
-            <button class="carrusel-btn der">
-              <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <p class="error-validacion" id="mensaje-error" style="display: none">
+            ***Debe tener al menos 8 caracteres o rellenar todos los campos***
+          </p>
+
+          <div class="acciones-finales oculto" id="acciones-finales">
+            <a href="#" class="btn-cancelar" id="btn-cancelar">Cancelar</a>
+            <button type="button" class="btn-guardar" id="btn-guardar">
+              Guardar
             </button>
           </div>
         </div>
-
-        <!-- LISTA DERECHA -->
-        <div class="catalogo-right">
-          <h2>RECOMPENSAS</h2>
-          <a href="canjeRecompensa.html" class="recompensa-card">
-            <img src="imgA/tienda1.JPG" class="rec-img" />
-            <div class="rec-info">
-              <strong>Marta Gomez</strong>
-              <p>Tienda: Florerokuna</p>
-              <p>Estado: Abierto</p>
-            </div>
-            <span class="rec-estado">Aliado</span>
-          </a>
-
-          <a href="canjeRecompensa.html" class="recompensa-card">
-            <img src="imgA/tienda2.JPG" class="rec-img" />
-            <div class="rec-info">
-              <strong>Mario Pascual</strong>
-              <p>Tienda: Almamanta joyakuna</p>
-              <p>Estado: Abierto</p>
-            </div>
-            <span class="rec-estado">Aliado</span>
-          </a>
-
-          <a href="canjeRecompensa.html" class="recompensa-card">
-            <img src="imgA/tienda3.JPG" class="rec-img" />
-            <div class="rec-info">
-              <strong>Mariana Castañeda</strong>
-              <p>Tienda: Los Angeles verdes</p>
-              <p>Estado: Abierto</p>
-            </div>
-            <span class="rec-estado">Aliado</span>
-          </a>
-
-          <a href="canjeRecompensa.html" class="recompensa-card">
-            <img src="imgA/tienda4.JPG" class="rec-img" />
-            <div class="rec-info">
-              <strong>Jessica Sandoval</strong>
-              <p>Tienda: HarkaQ Inti</p>
-              <p>Estado: Abierto</p>
-            </div>
-            <span class="rec-estado">Aliado</span>
-          </a>
-        </div>
       </div>
-    </section>
+    </div>
     <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">
@@ -207,7 +245,6 @@
       </div>
     </section>
     <script src="menuApp_toggle.js"></script>
-    <script src="progreso_scroll.js"></script>
-    <script src="frase_del_dia.js"></script>
+    <script src="editarCuenta.js"></script>
   </body>
 </html>

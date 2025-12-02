@@ -416,3 +416,49 @@
     text-align: center;
   }
 }
+html,
+body {
+  overflow-x: hidden;
+}
+
+body.modo-oscuro {
+  background-color: #0f0f0f !important;
+  color: #ffffff !important;
+}
+
+body.modo-oscuro .seccion-accesibilidad,
+body.modo-oscuro .seccion-soporte,
+body.modo-oscuro .favoritos-section {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+body.modo-oscuro .opcion,
+body.modo-oscuro .soporte-derecha,
+body.modo-oscuro .favoritos-derecha {
+  background-color: #1b1b1b !important;
+  border-color: #333 !important;
+  color: #fff !important;
+}
+
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro span,
+body.modo-oscuro p,
+body.modo-oscuro a {
+  color: #ffffff !important;
+}
+
+body.modo-oscuro .btn-opcion {
+  background: #333 !important;
+  color: white !important;
+}
+
+body.modo-oscuro .btn-opcion.activo {
+  background: #f0d058 !important;
+  color: #000 !important;
+}
+
+body.modo-oscuro .slider {
+  background-color: #444 !important;
+}

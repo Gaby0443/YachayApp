@@ -1,0 +1,235 @@
+.contenedor-principal {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 30px;
+  justify-content: center;
+}
+
+.titulo-cuenta {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  padding-left: 30px;
+}
+
+.seccion-perfil {
+  display: flex;
+  max-width: 1200px;
+  gap: 35px;
+  padding: 35px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  margin-bottom: 40px;
+}
+
+.columna-izquierda {
+  width: 260px;
+  text-align: center;
+}
+
+.foto-perfil-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px auto;
+}
+
+.foto-perfil {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.enlace-cambiar-foto {
+  color: #0b6ff1;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.se-unio {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.sobre-mi {
+  width: 100%;
+  height: 130px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d6dbe1;
+  background-color: #f7f7f7;
+  resize: none;
+  font-size: 14px;
+}
+
+.columna-derecha {
+  flex: 1;
+}
+
+.titulo-datos,
+.titulo-contrasena {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.enlace-editar {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0b6ff1;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.formulario-perfil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.grupo-input {
+  flex: 1 1 calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+}
+
+.input-gris,
+.input-date {
+  width: 70%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  border: 1px solid #cfd6df;
+  font-size: 14px;
+}
+
+.input-gris:disabled,
+.input-date:disabled {
+  opacity: 0.6;
+}
+
+.label-fecha {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.fecha-fallback {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.grupo-input-contrasena {
+  position: relative;
+  max-width: 350px;
+}
+
+.input-password {
+  padding-right: 35px;
+}
+
+.icono-ojo {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.error-validacion {
+  color: #c92020;
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.acciones-finales {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-guardar {
+  background-color: #f8bd00;
+  color: #0c2734;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background-color: white;
+  color: #0c2734;
+  border-radius: 25px;
+  border: 1px solid #0c2734;
+  padding: 10px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.grupo-input,
+.grupo-fecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.grupo-input.nombre-completo::before {
+  content: "Nombre completo";
+  font-size: 14px;
+  font-weight: 600;
+  color: #0c2734;
+  margin-bottom: 5px;
+}
+@media (max-width: 1200px) {
+  .input-gris,
+  .input-date {
+    width: 85%;
+  }
+}
+
+@media (max-width: 900px) {
+  .seccion-perfil {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .grupo-input,
+  .grupo-fecha {
+    flex: 1 1 70%;
+  }
+
+  .input-gris,
+  .input-date {
+    width: 80%;
+  }
+
+  .formulario-perfil {
+    flex-direction: column;
+  }
+
+  .grupo-input.nombre-completo::before {
+    margin-top: 10px;
+    width: 70%;
+  }
+}

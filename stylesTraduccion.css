@@ -77,16 +77,15 @@ body {
 }
 #main-translator {
   display: flex;
-  justify-content: center; 
-  align-items: center;      
-  gap: 40px;                
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap;          
-  min-height: calc(100vh - 160px); 
+  flex-wrap: wrap;
+  min-height: calc(100vh - 160px);
 }
-
 
 #main-translator,
 #permissions-page {
@@ -131,7 +130,8 @@ body {
   margin-right: 20px;
 }
 /* Asegura que los hijos mantengan proporciones adecuadas */
-.upload-area, .translation-panel {
+.upload-area,
+.translation-panel {
   flex: 1 1 400px;
   max-width: 500px;
 }
@@ -747,25 +747,316 @@ body {
   font-size: 18px;
 }
 
+/* OCULTAR MODAL DE PERMISOS CUANDO YA SE ACEPTÓ */
 #permission-toggle:checked ~ #camera-permission-modal {
   display: none !important;
   opacity: 0;
   pointer-events: none;
 }
 
-
+/* CONTENEDOR PRINCIPAL */
 .app-main-content {
-  margin-top: 100px !important; 
+  margin-top: 100px !important;
   padding-top: 20px;
   box-sizing: border-box;
   min-height: calc(100vh - 81px);
   display: flex;
   flex-direction: column;
+  align-items: center; /* ← Esto centra todo correctamente */
   justify-content: flex-start;
 }
 
+/* AJUSTE DE PERMISSIONS PAGE Y MODAL */
 #camera-permission-modal,
 #permissions-page {
   top: 81px !important;
   height: calc(100vh - 81px);
+}
+
+/* MOSTRAR VISTA AR */
+#ar-toggle:checked ~ #ar-view {
+  display: block !important;
+}
+
+/* OCULTAR TRADUCTOR CUANDO AR ESTÁ ACTIVO */
+#ar-toggle:checked ~ #main-translator {
+  display: none !important;
+}
+
+/* CONTENEDOR AR */
+.ar-section {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
+  display: none;
+}
+
+/* SIMULADOR DE CÁMARA */
+.ar-camera-simulator {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg");
+  background-size: cover; /* ← Ajusta perfecto la imagen */
+  background-position: center; /* ← Centrada */
+  filter: brightness(0.6);
+}
+
+/* TEXTO SUPERIOR */
+.ar-legend {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* CAJA DE INFORMACIÓN AR */
+.ar-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(233, 204, 134, 0.95);
+  color: #0c2734;
+  padding: 20px;
+  width: 280px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.ar-overlay h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.ar-native {
+  margin: 6px 0 2px 0;
+  font-weight: 600;
+}
+
+.ar-translation {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* BOTÓN ACTIVAR MODO AR */
+.ar-open-button {
+  background-color: #e9cc86;
+  color: #0c2734;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  /* CORREGIDO: centra automáticamente */
+  align-self: center;
+}
+
+/* MODAL AR */
+.ar-modal {
+  display: none;
+}
+
+#ar-info-toggle:checked ~ #ar-info-modal {
+  display: flex !important;
+}
+
+.ar-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.ar-modal-content {
+  width: 90%;
+  max-width: 600px;
+  background-color: #1b2533;
+  padding: 40px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* BOTÓN CERRAR MODAL */
+.ar-close-btn {
+  display: inline-block;
+  background-color: #e9cc86;
+  color: #0c2734;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* FONDO CLICKEABLE */
+.ar-modal-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 1200px) {
+  .upload-area {
+    width: 60%;
+    margin-right: 0;
+  }
+  .translation-panel {
+    width: 320px;
+  }
+  .collapse-arrow-controller {
+    right: calc(50% - 200px);
+  }
+  .app-main-content {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  #main-translator {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .upload-area,
+  .translation-panel {
+    width: 90%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .upload-box {
+    height: 350px;
+  }
+  .translation-panel {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    left: 0 !important;
+  }
+  .collapse-arrow-controller {
+    display: none;
+  }
+  .permissions-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .permissions-sidebar {
+    width: 100%;
+    border-right: none;
+  }
+  .permissions-main {
+    width: 100%;
+    padding: 20px;
+  }
+  .ar-section {
+    max-width: 100%;
+    height: 420px;
+    margin: 0 10px;
+  }
+}
+@media (max-width: 480px) {
+  /* Margen general seguro */
+  .app-main-content {
+    padding: 0 16px;
+    margin-right: 30px;
+  }
+
+  /* Área de carga bien proporcionada */
+  .upload-area {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  .upload-box {
+    height: 260px; /* más grande para mantener proporción */
+    width: 100%;
+  }
+
+  /* Panel de traducción SIEMPRE visible */
+  .translation-panel {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px; /* suficiente para que no se vea aplastado */
+    left: 0 !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Flecha colapsable no se usa en móvil */
+  .collapse-arrow-controller {
+    display: none;
+  }
+
+  /* Sección AR */
+  .ar-section {
+    height: 300px; /* mejor proporción */
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    border-radius: 12px;
+  }
+
+  /* Cuadro machu picchu */
+  .ar-overlay {
+    width: 240px; /* más ancho */
+    padding: 14px;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .ar-overlay h3 {
+    font-size: 18px;
+  }
+
+  .ar-native,
+  .ar-translation {
+    font-size: 12px;
+  }
+
+  /* Botón modo AR centrado */
+  .ar-open-button {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto 20px auto;
+    justify-content: center;
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+
+  /* Vista de permisos */
+  .permissions-container {
+    flex-direction: column;
+    width: 70%;
+    padding: 16px;
+    margin: 0 auto;
+  }
+
+  .permissions-sidebar,
+  .permissions-main {
+    width: 100%;
+    padding: 16px;
+  }
+}
+html,
+body {
+  overflow-x: hidden;
 }
