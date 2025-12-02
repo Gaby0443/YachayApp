@@ -522,3 +522,132 @@ a {
     overflow-x: hidden !important;
   }
 }
+
+.modal-activo > *:not(.modal-fondo) {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.modal-fondo {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.modal-contenido {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px 30px;
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+}
+
+.frase-titulo {
+  font-size: 2.2em;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.frase-texto {
+  font-size: 2em;
+  font-weight: 500;
+  margin: 0 auto 30px;
+  max-width: 80%;
+  line-height: 1.3;
+}
+
+.frase-grafico {
+  width: 200px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.idioma-quechua,
+.idioma-aymara {
+  font-size: 0.9em;
+  color: #555;
+  margin: 5px auto;
+  line-height: 1.4;
+  padding: 0 20px;
+  max-width: 80%;
+}
+
+.frase-acciones {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-practicar,
+.btn-cerrar-modal {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-practicar {
+  background-color: #3b82f6;
+  color: white;
+  border: 2px solid #3b82f6;
+}
+
+.btn-cerrar-modal {
+  background-color: white;
+  color: #555;
+  border: 2px solid #ccc;
+}
+
+.btn-practicar:hover {
+  background-color: #2563eb;
+}
+
+.btn-cerrar-modal:hover {
+  background-color: #f7f7f7;
+  border-color: #aaa;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+  .progreso-container {
+    justify-content: flex-start;
+  }
+  .logros-general-container {
+    flex-direction: column;
+  }
+  .logros-columna {
+    min-width: 100%;
+    padding: 0;
+  }
+  .frase-texto {
+    font-size: 1.5em;
+  }
+}

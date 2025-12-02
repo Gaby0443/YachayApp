@@ -1,0 +1,495 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.topheader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0c2734;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20 2px;
+}
+.Logo-nombre {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 15px;
+}
+.Logo-nombre img {
+  width: 90px;
+  height: auto;
+}
+.Menu-Horizontal {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+.Menu-Horizontal li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.Menu-Horizontal li a:hover {
+  text-decoration: underline;
+}
+.btn-login {
+  background: #025f8d;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 9999px;
+}
+.btn-login:hover {
+  opacity: 0.9;
+}
+
+.retos-section {
+  padding: 30px 40px 60px;
+  background: #fff;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.titulo-principal {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 550;
+}
+
+.retos-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.retos-columna {
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.reto-semanal,
+.tus-recompensas {
+  border: 2px solid #e6cc60;
+  border-radius: 12px;
+  padding: 25px;
+  background: #fff;
+}
+
+/* BARRA DE PROGRESO */
+
+.barra-container {
+  display: flex;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.barra {
+  width: 50px;
+  height: 16px;
+  background: #f0c236;
+  border-radius: 6px;
+}
+
+.gris {
+  background: #dcdcdc;
+}
+
+.reto-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* RECOMPENSAS */
+
+.recompensas-imgs {
+  display: flex;
+  gap: 25px;
+  margin: 20px 0;
+}
+
+.recompensas-imgs img {
+  width: 100px;
+}
+.btn {
+  margin-top: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  background-color: #f0c236;
+  color: black;
+  border: none;
+  border-radius: 0.313rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #fca421;
+}
+.ranking-global {
+  width: 30%;
+  border: 2px solid #e6cc60;
+  padding: 25px;
+  border-radius: 12px;
+  background: #fff;
+}
+.ranking-global h3 {
+  margin-left: 100px;
+}
+.ranking-lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.ranking-lista li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+.rank-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.rank-info strong {
+  font-size: 17px;
+  font-weight: 600;
+}
+.rank-info small {
+  font-size: 14px;
+  color: #555;
+  margin-left: 2px;
+}
+.puesto {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.puesto1 {
+  border-color: red;
+}
+.puesto2 {
+  border-color: gold;
+}
+.puesto3 {
+  border-color: blue;
+}
+.catalogo-recompensas {
+  padding: 120px 40px 60px;
+}
+
+.btn-volver {
+  background: #f0d058;
+  padding: 10px 25px;
+  font-weight: 500;
+  border-radius: 8px;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+}
+.catalogo-left h2,
+.catalogo-right h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.linea {
+  width: 100%;
+  height: 3px;
+  background: #eacb62;
+  margin-bottom: 20px;
+}
+.catalogo-carrusel {
+  border: 2px solid #eacb62;
+  padding: 12px;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-carrusel1 {
+  width: 50%;
+  border-radius: 8px;
+}
+.img-carrusel2 {
+  width: 26%;
+  border-radius: 8px;
+  margin-left: 30px;
+}
+.carrusel-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.recompensa-card {
+  border: 2px solid #eacb62;
+  border-radius: 12px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+.rec-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.rec-info p {
+  margin: 0;
+  font-size: 14px;
+}
+.rec-estado {
+  margin-left: auto;
+  font-weight: 700;
+}
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #0c2734;
+  color: #fff;
+  padding: 20px 0;
+}
+.footer-cont {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+.social {
+  color: #fff;
+  font-size: 20px;
+}
+@media (max-width: 1024px) {
+  .retos-section {
+    padding: 30px 20px 50px;
+    margin-top: 30px;
+  }
+
+  .retos-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .retos-columna,
+  .ranking-global {
+    width: 90%;
+  }
+
+  .ranking-global h3 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogo-left,
+  .catalogo-right {
+    width: 100%;
+  }
+
+  .carrusel-btn {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .img-carrusel1,
+  .img-carrusel2 {
+    width: 50%;
+    height: auto;
+  }
+  .catalogo-recompensas {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ---- Topheader ---- */
+  .topheader {
+    height: auto;
+    padding: 15px;
+  }
+
+  .Logo-nombre img {
+    width: 70px;
+  }
+
+  .Menu-Horizontal {
+    display: none; /* Puedes activar hamburguesa si lo deseas */
+  }
+
+  /* ---- SECCIÓN RETOS ---- */
+  .titulo-principal {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .retos-layout {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .retos-columna,
+  .ranking-global {
+    width: 100%;
+  }
+
+  .reto-semanal,
+  .tus-recompensas {
+    padding: 20px;
+  }
+
+  .recompensas-imgs {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ---- BARRA DE PROGRESO ---- */
+  .barra {
+    width: 40px;
+    height: 14px;
+  }
+
+  /* ---- RANKING ---- */
+  .ranking-lista li {
+    gap: 10px;
+    font-size: 15px;
+  }
+
+  .puesto {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* ---- CATÁLOGO ---- */
+  .catalogo-recompensas {
+    padding: 100px 20px 40px;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .carrusel-btn {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+
+  .img-carrusel1 {
+    width: 50%;
+  }
+  .img-carrusel2 {
+    width: 35%;
+  }
+
+  /* ---- RECOMPENSAS LIST ---- */
+  .recompensa-card {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .rec-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* ---- Footer ---- */
+  .footer-cont {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-principal {
+    font-size: 22px;
+  }
+
+  .reto-semanal,
+  .tus-recompensas {
+    padding: 18px;
+  }
+
+  .barra {
+    width: 32px;
+  }
+
+  .recompensas-imgs img {
+    width: 80px;
+  }
+
+  .ranking-lista li {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .rec-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .carrusel-btn {
+    font-size: 18px;
+  }
+
+  .img-carrusel1 {
+    width: 50%;
+  }
+  .img-carrusel2 {
+    width: 40%;
+  }
+}

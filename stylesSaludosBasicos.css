@@ -13,6 +13,7 @@ main {
   padding: 40px 80px;
 }
 
+/* HEADER */
 .downloads-header {
   display: flex;
   align-items: center;
@@ -32,6 +33,7 @@ main {
   margin: 0;
 }
 
+/* CARD PRINCIPAL */
 .content-card {
   background-color: #fff;
   border-radius: 15px;
@@ -49,6 +51,7 @@ main {
   margin-bottom: 30px;
 }
 
+/* BOTONES SUPERIORES */
 .category-buttons {
   display: flex;
   justify-content: center;
@@ -65,14 +68,14 @@ main {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .category-button:hover {
   background-color: #e0ac00;
 }
 
-/* Caja de Descarga */
+/* BOX DE DESCARGA */
 .download-box {
   background-color: #f8f9fa;
   border-radius: 15px;
@@ -85,8 +88,7 @@ main {
   font-size: 24px;
   font-weight: 600;
   color: #002d5b;
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 }
 
 .download-box p {
@@ -95,7 +97,7 @@ main {
   margin-bottom: 25px;
 }
 
-/* Barra de Progreso */
+/* BARRA DE PROGRESO */
 .progress-bar-container {
   width: 100%;
   background-color: #e0e0e0;
@@ -118,6 +120,7 @@ main {
   margin-bottom: 30px;
 }
 
+/* BOTONES DE ACCIÓN */
 .action-buttons {
   display: flex;
   justify-content: center;
@@ -131,7 +134,7 @@ main {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .action-button.pause {
@@ -150,4 +153,118 @@ main {
 
 .action-button.cancel:hover {
   background-color: #cccccc;
+}
+
+/* ======================================================= */
+/*                📱 RESPONSIVE BREAKPOINTS                */
+/* ======================================================= */
+
+/* -------- Tablet (≤ 992px) -------- */
+@media (max-width: 992px) {
+  main {
+    padding: 40px 40px;
+  }
+
+  .content-card {
+    padding: 25px;
+    max-width: 600px;
+  }
+
+  .downloads-header h1 {
+    font-size: 26px;
+  }
+
+  .content-card h2 {
+    font-size: 28px;
+  }
+}
+
+/* -------- Móvil grande (≤ 768px) -------- */
+@media (max-width: 768px) {
+  main {
+    padding: 30px 24px;
+  }
+
+  .downloads-header {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .downloads-header h1 {
+    font-size: 24px;
+  }
+
+  .category-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .category-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .download-box {
+    padding: 20px;
+  }
+
+  .download-box h3 {
+    font-size: 20px;
+  }
+
+  .download-box p {
+    font-size: 16px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* -------- Móvil pequeño (≤ 480px) -------- */
+@media (max-width: 480px) {
+  main {
+    padding: 20px 16px;
+  }
+
+  .downloads-header h1 {
+    font-size: 22px;
+  }
+
+  .content-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .content-card h2 {
+    font-size: 22px;
+  }
+
+  .download-box h3 {
+    font-size: 18px;
+  }
+
+  .download-box p {
+    font-size: 14px;
+  }
+
+  .progress-bar-container {
+    height: 12px;
+  }
+
+  .download-status {
+    font-size: 16px;
+  }
+
+  .action-button {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
 }

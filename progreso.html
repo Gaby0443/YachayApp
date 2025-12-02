@@ -58,7 +58,15 @@
           <a href="" target="_self">Menu</a>
           <ul class="Menu-Vertical">
             <li><a href="">Dispositivos Wearables</a></li>
-            <li><a href="glosarioPersonal.html">Glosario Personal</a></li>
+            <li>
+              <a href="">Glosario Personal</a>
+              <ul class="Menu-Vertical2">
+                <li>
+                  <a href="glosarioPersonal.html">Frases de Supervivencia</a>
+                </li>
+                <li><a href="saludosBasicos.html"> Descargas</a></li>
+              </ul>
+            </li>
             <li><a href="">Biblioteca Cultural</a></li>
             <li><a href="foroComunitario.html">Foro Comunitario</a></li>
             <li>
@@ -70,13 +78,16 @@
                 <li><a href="avanceEstudiantes.html">Avance Estudiantes</a></li>
               </ul>
             </li>
-            <li><a href="">Sesiones Con mentores nativos</a></li>
+            <li>
+              <a href="sesionMentor.html">Sesiones Con mentores nativos</a>
+            </li>
           </ul>
         </li>
         <li>
           <a href="" target="_self">Progreso</a>
           <ul class="Menu-Vertical">
-            <li><a href="">Ranking Global</a></li>
+            <li><a href="rankingGlobal.html">Ranking Global</a></li>
+            <li><a href="recompensas.html">Recompensas</a></li>
             <li><a href="progreso.html">Avance</a></li>
           </ul>
         </li>
@@ -174,6 +185,39 @@
         </button>
       </div>
     </section>
+    <div class="modal-fondo" id="modal-fondo">
+      <div class="modal-contenido">
+        <button class="modal-cerrar" id="modal-cerrar">X</button>
+        <div class="frase-container">
+          <p class="frase-titulo">✨ Frase del día ✨</p>
+          <h2 class="frase-texto">
+            El exito es la suma de pequeños esfuerzos cada dia tras dia
+          </h2>
+
+          <img
+            src="imgA/progreso.png"
+            alt="Gráfico de progreso"
+            class="frase-grafico"
+          />
+
+          <p class="idioma-quechua">
+            Quechua:Sumaq llank'ayqa huch'uy llank'aykunaqa p'unchawkunapi
+            ruwasqanmanta kachkan
+          </p>
+          <p class="idioma-aymara">
+            Aymara: "Kusisiñaxa jisk'a lurañanakax uru sutincha uru
+            luratankankiwa."
+          </p>
+
+          <div class="frase-acciones">
+            <button class="btn-practicar">A practicar</button>
+            <button class="btn-cerrar-modal" id="btn-cerrar-modal">
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">
@@ -198,5 +242,6 @@
     </section>
     <script src="menuApp_toggle.js"></script>
     <script src="progreso_scroll.js"></script>
+    <script src="frase_del_dia.js"></script>
   </body>
 </html>

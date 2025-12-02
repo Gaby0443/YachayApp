@@ -1,11 +1,9 @@
-/* ===== CONTENEDORES PRINCIPALES ===== */
 .seccion-soporte,
 .seccion-accesibilidad {
   padding: 120px 20px 60px;
   background-color: #fff;
   min-height: calc(100vh - 160px);
 }
-
 .soporte-container,
 .acces-container {
   display: grid;
@@ -14,9 +12,7 @@
   max-width: 1200px;
   margin: 0 auto;
   align-items: start;
-}
-
-/* ===== COLUMNA IZQUIERDA ===== */
+} /* ===== COLUMNA IZQUIERDA ===== */
 .soporte-izquierda h2,
 .acces-izquierda h2 {
   font-size: 26px;
@@ -24,96 +20,92 @@
   border-bottom: 3px solid #e9cc86;
   padding-bottom: 8px;
   margin-bottom: 24px;
+} /* ===== SOPORTE ===== */
+.seccion-soporte {
+  padding: 120px 20px 60px;
+  background-color: #fff;
+  min-height: calc(100vh - 160px);
 }
-
-/* ===== SOPORTE ===== */ 
-.seccion-soporte { 
-  padding: 120px 20px 60px; 
-  background-color: #fff; 
-  min-height: calc(100vh - 160px); } 
-.soporte-container { 
-  display: grid; 
-  grid-template-columns: 2fr 1fr; 
-  gap: 40px; 
-  max-width: 1200px; 
-  margin: 0 auto; } 
-/* Columna izquierda */ 
-.soporte-izquierda h2 { 
-  font-size: 26px; 
-  font-weight: 700; 
-  border-bottom: 3px solid #e9cc86; 
-  padding-bottom: 8px; 
-  margin-bottom: 24px; 
-} 
-.soporte-tabs { 
-    display: flex; 
-    gap: 20px; 
-    margin-bottom: 20px; 
-} 
-.soporte-tabs button { 
-  background: #dcdcdc; 
-  border: none; 
-  padding: 10px 20px; 
-  border-radius: 9999px; 
-  cursor: pointer; 
-  font-weight: 600; 
-} 
-.soporte-tabs .tab-activo { 
-  background: #e9cc86; 
-} 
-  /* Formulario */ 
-.soporte-label { 
-  display: block; 
-    margin-bottom: 8px; 
-    font-weight: 600; 
-} 
-.soporte-select { 
-  width: 100%; 
-  padding: 10px; 
-  border-radius: 6px; 
-  border: 1px solid #ccc; 
-  margin-bottom: 20px; 
-} 
-.soporte-textos { 
-  display: flex; 
-  gap: 20px; 
-  margin-bottom: 20px; 
-} 
-.soporte-textarea { 
-  width: flex; 
-  height: 190px; 
-  border-radius: 10px; 
-  border: 1px solid #ddd; 
-  padding: 3px 130px; 
-  background: #fff7df; 
-} 
-.soporte-adjuntar { 
-  position: relative; 
-  flex: 1; 
-} 
-.soporte-iconos { 
-  position: absolute; 
-  bottom: 30px; 
-  right: 50px; 
-  display: flex; 
-  gap: 15px; 
-  color: #555; 
-} 
-.btn-enviar { 
-  background: #f0d058; 
-  border: none; 
-  padding: 12px 40px; 
-  border-radius: 6px; 
-  cursor: pointer; 
-  font-weight: 600; 
-  display: block; 
-  margin-top: 10px; 
-} 
-.btn-enviar:hover { 
-  background: #e6bf38; 
+.soporte-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+} /* Columna izquierda */
+.soporte-izquierda h2 {
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 3px solid #e9cc86;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
 }
-
-/* ===== COLUMNA DERECHA CONFIGURACIÓN ===== */
+.soporte-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.soporte-tabs button {
+  background: #dcdcdc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.soporte-tabs .tab-activo {
+  background: #e9cc86;
+} /* Formulario */
+.soporte-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.soporte-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.soporte-textos {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.soporte-textarea {
+  width: flex;
+  height: 190px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 3px 130px;
+  background: #fff7df;
+}
+.soporte-adjuntar {
+  position: relative;
+  flex: 1;
+}
+.soporte-iconos {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  display: flex;
+  gap: 15px;
+  color: #555;
+}
+.btn-enviar {
+  background: #f0d058;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+}
+.btn-enviar:hover {
+  background: #e6bf38;
+} /* ===== COLUMNA DERECHA CONFIGURACIÓN ===== */
 .soporte-derecha {
   background: #f8f8f8;
   padding: 30px 20px;
@@ -126,13 +118,11 @@
   justify-self: end;
   box-sizing: border-box;
 }
-
 .soporte-derecha h3 {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 0;
 }
-
 .btn-opcion {
   width: 80%;
   padding: 10px;
@@ -145,7 +135,6 @@
   text-align: center;
   transition: 0.3s;
 }
-
 .btn-opcion a {
   display: block;
   width: 100%;
@@ -154,17 +143,13 @@
   text-decoration: none;
   line-height: 1.5;
 }
-
 .btn-opcion.activo {
   background: #e9cc86;
   color: black;
 }
-
 .btn-opcion:hover {
   opacity: 0.9;
-}
-
-/* ===== OPCIONES ACCESIBILIDAD ===== */
+} /* ===== OPCIONES ACCESIBILIDAD ===== */
 .subtexto {
   font-size: 14px;
   color: gray;
@@ -184,9 +169,7 @@
   border-radius: 10px;
   background: #fff;
   font-weight: 500;
-}
-
-/* SWITCH */
+} /* SWITCH */
 .switch {
   position: relative;
   display: inline-block;
@@ -225,9 +208,7 @@
 }
 .switch input:checked + .slider:before {
   transform: translateX(22px);
-}
-
-/* TAMAÑO DE LETRA */
+} /* TAMAÑO DE LETRA */
 .tam-letra {
   flex-direction: column;
   align-items: flex-start;
@@ -240,17 +221,198 @@
 }
 .slider-letra input[type="range"] {
   flex: 1;
+} /* === FAVORITOS === */
+.favoritos-section {
+  padding: 120px 20px 60px;
+  background-color: #fff;
+  min-height: calc(100vh - 160px);
 }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
+.favoritos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+} /* IZQUIERDA */
+.favoritos-izquierda h2 {
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 3px solid #e9cc86;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+.favoritos-sub {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 14px;
+}
+.favoritos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} /* TARJETAS */
+.frase-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+.frase-texto {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+.frase-grupo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.frase-fecha,
+.frase-idioma {
+  background: #f1f1f1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.btn-frase-play {
+  margin-left: auto;
+  background: #f0d058;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-frase-play:hover {
+  background: #e49f09;
+} /* DERECHA — MISMO ESTILO QUE SOPORTE-DERECHA */
+.favoritos-derecha {
+  background: #f8f8f8;
+  padding: 30px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  box-sizing: border-box;
+}
+.favoritos-derecha h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+@media (max-width: 992px) {
+  /* Contenedores principales → una columna */
   .soporte-container,
-  .acces-container {
-    grid-template-columns: 1fr;
+  .acces-container,
+  .favoritos-container {
+    grid-template-columns: 1fr !important;
+    gap: 30px;
   }
 
-  .soporte-derecha {
-    max-width: 100%;
+  /* CONFIGURACIÓN DERECHA (Soporte / Accesibilidad / Favoritos) */
+  .soporte-derecha,
+  .acces-derecha,
+  .favoritos-derecha {
+    order: -1; /* Subir arriba */
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px;
+
+    display: flex !important; /* Ya NO ES GRID */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .soporte-derecha h3,
+  .acces-derecha h3,
+  .favoritos-derecha h3 {
+    margin-bottom: 5px;
+  }
+
+  /* Botones iguales y centrados */
+  .btn-opcion {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  /* ------------------------------
+        📌 SOPORTE — IZQUIERDA
+  ------------------------------- */
+
+  .soporte-izquierda {
     width: 100%;
+  }
+
+  .soporte-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Las dos cajas de texto → vertical */
+  .soporte-textos {
+    flex-direction: column !important;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .soporte-textarea {
+    width: 100% !important;
+    height: 150px;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .soporte-adjuntar {
+    width: 100%;
+  }
+
+  .soporte-iconos {
+    bottom: 15px;
+    right: 20px;
+  }
+
+  .soporte-select {
+    font-size: 15px;
+  }
+}
+
+/* ============================
+   📱 RESPONSIVE — MÓVIL (≤ 600px)
+============================= */
+@media (max-width: 600px) {
+  /* Configuración totalmente vertical */
+  .soporte-derecha,
+  .acces-derecha,
+  .favoritos-derecha {
+    flex-direction: column !important;
+    gap: 15px;
+  }
+
+  .btn-opcion {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* SOPORTE IZQUIERDA ajustes */
+  .soporte-textarea {
+    height: 130px;
+    font-size: 14px;
+  }
+
+  .soporte-iconos i {
+    font-size: 16px;
+  }
+
+  .btn-enviar {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
   }
 }

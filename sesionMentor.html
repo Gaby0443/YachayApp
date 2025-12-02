@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YachayAPP</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="stylesheet" href="stylesMentor.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- TOPHEADER-->
+    <nav class="topheader">
+      <div class="Logo-nombre">
+        <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
+        <h1>YACHAYAPP</h1>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <ul class="Menu-Horizontal">
+        <li>
+          <a href="">Aprender</a>
+          <ul class="Menu-Vertical">
+            <li>
+              <a href="">Modulos</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="pronunciacion.html">Pronunciacion</a></li>
+                <li><a href="audios.html">Audios</a></li>
+                <li><a href="">Historias Narradas</a></li>
+                <li><a href="">Evaluaciones</a></li>
+                <li><a href="audio2.html">Lecciones Educativas</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Lecciones AR</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="misionCultural.html">Misiones</a></li>
+                <li><a href="leccionesRa.html"> Lecciones RA</a></li>
+                <li><a href="traduccion.html">Traducción</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="practicaConversacional.html">Práctica Conversacional </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Juegos</a>
+          <ul class="Menu-Vertical">
+            <li><a href="juegos.html">Flashcards</a></li>
+            <li><a href="desafioAuditivo.html">Desafios</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Menu</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Dispositivos Wearables</a></li>
+            <li>
+              <a href="">Glosario Personal</a>
+              <ul class="Menu-Vertical2">
+                <li>
+                  <a href="glosarioPersonal.html">Frases de Supervivencia</a>
+                </li>
+                <li><a href="saludosBasicos.html"> Descargas</a></li>
+              </ul>
+            </li>
+            <li><a href="">Biblioteca Cultural</a></li>
+            <li><a href="foroComunitario.html">Foro Comunitario</a></li>
+            <li>
+              <a href="">Docentes</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="crearContenido.html">Crear Contenido</a></li>
+                <li><a href="crearTarea.html"> Crear Tarea</a></li>
+                <li><a href="resenasDocentes.html">Reseña de Docentes</a></li>
+                <li><a href="avanceEstudiantes.html">Avance Estudiantes</a></li>
+              </ul>
+            </li>
+            <li><a href="">Sesiones Con mentores nativos</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Progreso</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Ranking Global</a></li>
+            <li><a href="progreso.html">Avance</a></li>
+          </ul>
+        </li>
+
+        <li class="iconos">
+          <a href="notificacion.html" title="Notificaciones"
+            ><i class="fa-regular fa-bell"></i
+          ></a>
+          <a href="soporte.html" title="Configuración"
+            ><i class="fa-solid fa-gear"></i
+          ></a>
+          <a href="centroAyuda.html" title="Preguntas Frecuentes"
+            ><i class="fa-solid fa-headset"></i>
+          </a>
+          <a href="index.html" title="Perfil de usuario"
+            ><i class="fa-solid fa-user"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- SESIONES MENTOR NATIVO -->
+    <section class="sesiones-section">
+      <h2>Sesiones con Mentor Nativo</h2>
+
+      <!-- Filtros -->
+      <div class="sesiones-filtros">
+        <select class="sesion-select">
+          <option>Idioma</option>
+          <option>Quechua</option>
+          <option>Aymara</option>
+          <option>Matsés</option>
+          <option>Asháninka</option>
+        </select>
+
+        <select class="sesion-select">
+          <option>Nivel</option>
+          <option>Básico</option>
+          <option>Intermedio</option>
+          <option>Avanzado</option>
+        </select>
+      </div>
+
+      <!-- Buscador -->
+      <div class="sesiones-buscador">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar un mentor" />
+      </div>
+
+      <div class="sesiones-contenedor">
+        <!-- Lista de mentores -->
+        <div class="sesiones-lista">
+          <h3>LISTA DE MENTORES DISPONIBLES</h3>
+
+          <div class="mentor-card">
+            <img src="imgA/Marta.jpg" alt="Marta Lopez" />
+            <div class="mentor-info">
+              <strong>Marta Lopez</strong>
+              <span>Quechua</span>
+              <span>Avanzado</span>
+              <div class="mentor-rating">⭐️⭐️⭐️⭐️⭐️ 5.3</div>
+            </div>
+            <button class="mentor-detalles"><a href="mentor.html">10:30 AM</button>
+          </div>
+
+          <div class="mentor-card">
+            <img src="imgA/juan.jpg" alt="Juan Ochoa" />
+            <div class="mentor-info">
+              <strong>Juan Ochoa</strong>
+              <span>Quechua</span>
+              <span>Básico</span>
+              <div class="mentor-rating">⭐️⭐️⭐️⭐️ 4.2</div>
+            </div>
+            <button class="mentor-detalles">10:35 AM</button>
+          </div>
+
+          <div class="mentor-card">
+            <img src="imgA/señor.jpeg" alt="Mario Zapata" />
+            <div class="mentor-info">
+              <strong>Mario Zapata</strong>
+              <span>Quechua</span>
+              <span>Avanzado</span>
+              <div class="mentor-rating">⭐️⭐️⭐️⭐️ 4.8</div>
+            </div>
+            <button class="mentor-detalles">10:38 AM</button>
+          </div>
+
+          <div class="mentor-card">
+            <img src="imgA/Karla.jpg" alt="Karla Sanchez" />
+            <div class="mentor-info">
+              <strong>Karla Sanchez</strong>
+              <span>Quechua</span>
+              <span>Intermedio</span>
+              <div class="mentor-rating">⭐️⭐️⭐️ 3.5</div>
+            </div>
+            <button class="mentor-detalles">10:40 AM</button>
+          </div>
+        </div>
+
+        <!-- Reservas -->
+        <aside class="sesiones-reservas">
+          <h3>RESERVAS PRÓXIMAS</h3>
+
+          <div class="reserva-card">
+            <p class="reserva-texto">
+              Tu próxima sesión:<br />
+              Con María Cardenas<br />
+              Contreras a las <strong>10:30</strong>
+            </p>
+
+            <button class="btn-reunion">
+              Iniciar reunión<br />
+              <span class="sub">(Disponible 5 minutos antes)</span>
+            </button>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <section class="footer">
+      <div class="footer-cont">
+        <div class="footer-left">
+          <i class="fa-regular fa-copyright" aria-hidden="true"></i>
+          <span>YACHAYAPP</span>
+        </div>
+
+        <div class="footer-right">
+          <a href="#" class="footer-link">Términos y Condiciones</a>
+          <a href="mailto:info@AylluTalk.pe" class="footer-link"
+            >info@AylluTalk.pe</a
+          >
+          <a href="#" aria-label="Instagram" class="social"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="TikTok" class="social"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <script src="menuApp_toggle.js"></script>
+    <script src="progreso_scroll.js"></script>
+    <script src="frase_del_dia.js"></script>
+  </body>
+</html>
