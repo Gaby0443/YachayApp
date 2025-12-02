@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
-    <link rel="stylesheet" href="styleConfiguracion.css" />
     <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="stylesEmparejar.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
+  <body>
 <!-- TOPHEADER-->
     <nav class="topheader">
       <div class="Logo-nombre">
@@ -97,56 +98,61 @@
         </li>
       </ul>
     </nav>
-    <!-- SECCIÓN DE SOPORTE TÉCNICO -->
-    <section class="seccion-soporte">
-      <div class="soporte-container">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="soporte-izquierda">
-          <h2>Soporte técnico</h2>
-          <div class="soporte-tabs">
-            <button class="tab-activo">Solicitudes</button>
-            <a href = "soporteHistorial.html"><button>Historial de solicitudes</button></a>
-          </div>
-
-          <div class="soporte-form">
-            <label for="categoria" class="soporte-label">Categoría</label>
-            <select id="categoria" class="soporte-select">
-              <option>Escoja una opción</option>
-              <option>Cuenta</option>
-              <option>Descargas</option>
-              <option>Permisos</option>
-              <option>Otro</option>
-            </select>
-            <div class="soporte-textos">
-              <textarea
-                placeholder="Describe el problema"
-                class="soporte-textarea"
-              ></textarea>
-
-              <div class="soporte-adjuntar">
-                <textarea
-                  placeholder="Adjunta una captura (opcional)"
-                  class="soporte-textarea"
-                ></textarea>
-                <div class="soporte-iconos">
-                  <i class="fa-solid fa-paperclip"></i>
-                  <i class="fa-solid fa-image"></i>
-                </div>
-              </div>
-            </div>
-
-            <button class="btn-enviar">Enviar</button>
-          </div>
+    <!-- SECCIÓN PRINCIPAL DEL JUEGO -->
+    <section class="seccion-juego">
+      <!-- CABECERA: Botón retroceder + Título + Ver Puntaje -->
+      <div class="cabecera-juego">
+        <!-- Botón retroceder (izquierda) -->
+        <div class="boton-retroceder" >
+           <a href= juegos.html><i class="fa-solid fa-arrow-left"></i></a>
+          <h2>Juegos Educativos</h2>
         </div>
 
-        <!-- COLUMNA DERECHA -->
-        <div class="soporte-derecha">
-          <h3>Configuración</h3>
-          <button class="btn-opcion"><a href= "accesibilidad.html">Accesibilidad</a></button>
-          <button class="btn-opcion activo">Soporte técnico</button>
-          <button class="btn-opcion"><a href="suscripcion.html">Suscripciones</a></button>
-          <button class="btn-opcion">Favoritos</button>
-        </div>
+        <!-- Botón Ver Puntaje (derecha) -->
+        <a href="puntaje.html" class="boton-puntaje">Ver Puntaje</a>
+      </div>
+
+      <!-- TÍTULO CENTRAL -->
+      <h1 class="titulo-juego">Empareja</h1>
+
+      <!-- TABLERO DE JUEGO: Grid de 2x3 (6 tarjetas) -->
+      <div class="tablero-juego">
+        <!-- TARJETA 1: Amarilla vacía -->
+        <button class="tarjeta tarjeta--amarilla"></button>
+
+        <!-- TARJETA 2: Amarilla vacía -->
+        <button class="tarjeta tarjeta--amarilla"></button>
+
+        <!-- TARJETA 3: Blanca con contenido (puquchi) -->
+        <button class="tarjeta tarjeta--blanca">
+          <p class="tarjeta__texto">puquchi</p>
+          <img
+            src="imgA/platano.png"
+            alt="Plátano"
+            class="tarjeta__imagen"
+          />
+        </button>
+
+        <!-- TARJETA 4: Amarilla vacía -->
+        <button class="tarjeta tarjeta--amarilla"></button>
+
+        <!-- TARJETA 5: Amarilla vacía -->
+        <button class="tarjeta tarjeta--amarilla"></button>
+
+        <!-- TARJETA 6: Blanca con contenido (puquchi) -->
+        <button class="tarjeta tarjeta--blanca">
+          <p class="tarjeta__texto">puquchi</p>
+          <img
+            src="imgA/platano.png"
+            alt="Plátano"
+            class="tarjeta__imagen"
+          />
+        </button>
+      </div>
+
+      <!-- MENSAJE ¡CORRECTO! -->
+      <div class="mensaje-correcto">
+        <span class="mensaje-correcto__texto">¡Correcto!</span>
       </div>
     </section>
     <!-- FOOTER -->

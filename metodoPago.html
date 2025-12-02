@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
-    <link rel="stylesheet" href="styleConfiguracion.css" />
     <link rel="stylesheet" href="styles.css" />
+       <link rel="stylesheet" href="stylesSuscripcion.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-<!-- TOPHEADER-->
+  <body>
+    <!-- TOPHEADER-->
     <nav class="topheader">
       <div class="Logo-nombre">
         <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
@@ -97,58 +98,83 @@
         </li>
       </ul>
     </nav>
-    <!-- SECCIÓN DE SOPORTE TÉCNICO -->
-    <section class="seccion-soporte">
-      <div class="soporte-container">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="soporte-izquierda">
-          <h2>Soporte técnico</h2>
-          <div class="soporte-tabs">
-            <button class="tab-activo">Solicitudes</button>
-            <a href = "soporteHistorial.html"><button>Historial de solicitudes</button></a>
+         <div class="contenedor-principal2">
+            
+      <header class="encabezado">
+        <h2 class="titulo-principal"><a href= suscripcion.html><i class="fa-solid fa-arrow-left"></i></a>
+          Selecciona tu metodo de pago
+        </h2>
+      </header>
+
+      <div class="plan-seleccionado">Plan Premium • S/ 10/mes</div>
+
+      <section class="metodos-container">
+        <div class="tarjeta-metodo">
+          <div class="icono-principal">
+            <span class="logo-yape">yape</span>
+            <span class="logo-plin">plin</span>
           </div>
+          <div class="info-pago">
+            <h2 class="nombre-metodo">Yape o Plin</h2>
+            <p class="descripcion-metodo">
+              Escanea el código QR desde tu móvil
+            </p>
+          </div>
+        </div>
+        <a href="tarjeta.html">
+        <div class="tarjeta-metodo">
+          <div class="icono-principal">
+            <span class="icono-tarjeta">💳</span>
+          </div>
+          <div class="info-pago">
+            <h2 class="nombre-metodo">Tarjeta de Crédito o Débito</h2>
+            <p class="descripcion-metodo">
+              Paga con tu tarjeta
+            </p>
+          </div>
+        </div>
+        </a>
 
-          <div class="soporte-form">
-            <label for="categoria" class="soporte-label">Categoría</label>
-            <select id="categoria" class="soporte-select">
-              <option>Escoja una opción</option>
-              <option>Cuenta</option>
-              <option>Descargas</option>
-              <option>Permisos</option>
-              <option>Otro</option>
-            </select>
-            <div class="soporte-textos">
-              <textarea
-                placeholder="Describe el problema"
-                class="soporte-textarea"
-              ></textarea>
+        <div class="tarjeta-metodo">
+          <div class="icono-principal">
+            <span class="icono-banco">🏛️</span>
+          </div>
+          <div class="info-pago">
+            <h2 class="nombre-metodo">Banca internet/Afiliados</h2>
+            <p class="descripcion-metodo">Paga con un código de pago</p>
+          </div>
+        </div>
 
-              <div class="soporte-adjuntar">
-                <textarea
-                  placeholder="Adjunta una captura (opcional)"
-                  class="soporte-textarea"
-                ></textarea>
-                <div class="soporte-iconos">
-                  <i class="fa-solid fa-paperclip"></i>
-                  <i class="fa-solid fa-image"></i>
-                </div>
-              </div>
+          <footer class="info-pago">
+            <h3 class="seguridad">Pagos seguros y cifrados</h3>
+            <div class="logos-pago">
+              <img
+                src="imgA/visalogo.png"
+                alt="Logo de Visa"
+                class="logo-img"
+              />
+              <img
+                src="imgA/mastercard.png"
+                alt="Logo de Mastercard"
+                class="logo-img"
+              />
+              <img
+                src="imgA/Ypaelogo.png"
+                alt="Logo de Yape"
+                class="logo-img"
+              />
+              <img
+                src="imgA/plinlogo.png"
+                alt="Logo de Plin"
+                class="logo-img"
+              />
             </div>
-
-            <button class="btn-enviar">Enviar</button>
-          </div>
+            <p class="descuento-link">
+              <a href="#">¿Tienes un código de descuento?</a>
+            </p>
+          </footer>
         </div>
-
-        <!-- COLUMNA DERECHA -->
-        <div class="soporte-derecha">
-          <h3>Configuración</h3>
-          <button class="btn-opcion"><a href= "accesibilidad.html">Accesibilidad</a></button>
-          <button class="btn-opcion activo">Soporte técnico</button>
-          <button class="btn-opcion"><a href="suscripcion.html">Suscripciones</a></button>
-          <button class="btn-opcion">Favoritos</button>
-        </div>
-      </div>
-    </section>
+        
     <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">

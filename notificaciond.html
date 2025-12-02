@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
-    <link rel="stylesheet" href="styleConfiguracion.css" />
     <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="stylesNotificacion.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-<!-- TOPHEADER-->
+  <body>
+  <!-- TOPHEADER-->
     <nav class="topheader">
       <div class="Logo-nombre">
         <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
@@ -97,59 +98,52 @@
         </li>
       </ul>
     </nav>
-    <!-- SECCIÓN DE SOPORTE TÉCNICO -->
-    <section class="seccion-soporte">
-      <div class="soporte-container">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="soporte-izquierda">
-          <h2>Soporte técnico</h2>
-          <div class="soporte-tabs">
-            <button class="tab-activo">Solicitudes</button>
-            <a href = "soporteHistorial.html"><button>Historial de solicitudes</button></a>
-          </div>
+ <div class="container">
+          <header class="header">
+            <div class="title-section">
+              <h1>Notificaciones</h1>
+              <h2>Diarias</h2>
+              <div class="underline"></div>
+            </div>
+          </header>
 
-          <div class="soporte-form">
-            <label for="categoria" class="soporte-label">Categoría</label>
-            <select id="categoria" class="soporte-select">
-              <option>Escoja una opción</option>
-              <option>Cuenta</option>
-              <option>Descargas</option>
-              <option>Permisos</option>
-              <option>Otro</option>
-            </select>
-            <div class="soporte-textos">
-              <textarea
-                placeholder="Describe el problema"
-                class="soporte-textarea"
-              ></textarea>
-
-              <div class="soporte-adjuntar">
-                <textarea
-                  placeholder="Adjunta una captura (opcional)"
-                  class="soporte-textarea"
-                ></textarea>
-                <div class="soporte-iconos">
-                  <i class="fa-solid fa-paperclip"></i>
-                  <i class="fa-solid fa-image"></i>
-                </div>
+          <main class="notifications-container">
+            <div class="card">
+              <div class="icon-box new-lesson">
+                <span class="icon">📖</span>
               </div>
+              <h3 class="card-title">¡Nueva lección disponible!</h3>
+              <p class="card-text">Descubre el módulo de **historia inca**</p>
+              <button class="btn primary">Ver más</button>
             </div>
 
-            <button class="btn-enviar">Enviar</button>
-          </div>
-        </div>
+            <div class="card">
+              <div class="icon-box medal-won">
+                <span class="icon">🏆</span>
+              </div>
+              <h3 class="card-title">¡Haz ganado una medalla!</h3>
+              <p class="card-text">
+                Completaste el desafío diario de vocabulario
+              </p>
+              <button class="btn primary">Ver más</button>
+            </div>
 
-        <!-- COLUMNA DERECHA -->
-        <div class="soporte-derecha">
-          <h3>Configuración</h3>
-          <button class="btn-opcion"><a href= "accesibilidad.html">Accesibilidad</a></button>
-          <button class="btn-opcion activo">Soporte técnico</button>
-          <button class="btn-opcion"><a href="suscripcion.html">Suscripciones</a></button>
-          <button class="btn-opcion">Favoritos</button>
+            <div class="card">
+              <div class="icon-box reminder">
+                <span class="icon">🗓️</span>
+              </div>
+              <h3 class="card-title">¡Recordatorio de práctica!</h3>
+              <p class="card-text">
+                Tu sesión de repaso está programada para hoy
+              </p>
+              <button class="btn primary">Ver más</button>
+            </div>
+            <a href="configNoti.html" title="NotificacionesConfiguracion">
+            <i class="fa-solid fa-gear config-icon"></i>
+                </a>
+          </main>
         </div>
-      </div>
-    </section>
-    <!-- FOOTER -->
+        <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">
         <div class="footer-left">

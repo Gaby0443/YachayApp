@@ -4,8 +4,18 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+body > *:not(.footer) {
+  flex-shrink: 0;
+}
+
+.footer {
+  margin-top: auto;
+}
 /*TOPHEADER*/
 .topheader {
   position: fixed;
@@ -19,6 +29,7 @@ body {
   box-sizing: border-box;
   z-index: 9999;
 }
+
 /*logo*/
 .Logo-nombre {
   display: flex;
@@ -26,21 +37,35 @@ body {
   gap: 50px;
   color: white;
 }
+
 .Logo-nombre img {
   width: 90.7px;
   margin-top: 2px;
 }
+
 .Logo-nombre h1 {
   font-weight: 500;
 }
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none; /* Oculto en desktop */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
 /* menu*/
 .Menu-Horizontal {
   list-style: none;
   display: flex;
   align-items: center;
 }
+
 .Menu-Horizontal li a {
-  display: Block;
+  display: block;
   padding: 10px 30px;
   color: white;
   text-decoration: none;
@@ -63,6 +88,7 @@ body {
 .Menu-Horizontal .iconos a:hover {
   color: #ffd54f;
 }
+
 .Menu-Vertical li {
   position: relative;
 }
@@ -76,6 +102,7 @@ body {
   border-radius: 0 0 8px 8px;
   padding: 8px;
 }
+
 .Menu-Horizontal li a:hover {
   color: #ffd54f;
 }
@@ -85,7 +112,7 @@ body {
 }
 
 .Menu-Horizontal li:hover > .Menu-Vertical {
-  display: Block;
+  display: block;
 }
 
 .Menu-Vertical2 {
@@ -185,19 +212,20 @@ body {
   margin-top: 28px;
 }
 
-/* --- LOGROS --- */
+/* LOGROS */
 .idioma h3 {
   margin-top: 77px;
   font-size: 24px;
   font-weight: 700;
 }
+
 .idioma p {
   margin-top: 36px;
   font-size: 18px;
   font-weight: 300;
 }
 
-/* --- LISTA DE LOGROS --- */
+/* LISTA DE LOGROS */
 .logros-lista {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -229,7 +257,6 @@ body {
 
 .boton-logros {
   display: flex;
-  color: black;
   justify-content: flex-end;
   margin-top: 50px;
 }
@@ -251,16 +278,19 @@ body {
   text-decoration: none;
   transform: translateY(-2px);
 }
+
 a {
   color: black;
   text-decoration: none;
 }
-/* ===== Footer ===== */
+
+/* Footer  */
 .footer {
   background-color: #0c2734;
   width: 100%;
   height: 81px;
 }
+
 .footer-cont {
   margin: 0 40px 0px 40px;
   display: flex;
@@ -276,6 +306,7 @@ a {
   color: WHITE;
   font-weight: 500;
 }
+
 .footer-left i {
   font-size: 18px;
 }
@@ -284,6 +315,7 @@ a {
   color: WHITE;
   text-decoration: none;
 }
+
 .footer-link:hover {
   text-decoration: underline;
 }
@@ -293,9 +325,200 @@ a {
   align-items: center;
   gap: 27px;
 }
+
 .footer-right .social {
   color: WHITE;
   text-decoration: none;
   font-size: 20px;
   line-height: 1;
+}
+
+/* RESPONSIVE: MENÚ HAMBURGUESA */
+@media (max-width: 908px) {
+  .topheader {
+    height: auto;
+    padding: 10px 16px;
+  }
+
+  .Logo-nombre {
+    gap: 16px;
+  }
+
+  /* Mostrar hamburguesa en móvil */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar menú horizontal por defecto en móvil */
+  .Menu-Horizontal {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 81px;
+    left: 0;
+    width: 100%;
+    background-color: #0c2734;
+    padding: 10px 0;
+  }
+
+  /* Cuando se active con JS */
+  .Menu-Horizontal.active {
+    display: flex;
+  }
+
+  .Menu-Horizontal li {
+    width: 100%;
+  }
+
+  .Menu-Horizontal li a {
+    padding: 12px 20px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .Menu-Horizontal .iconos {
+    margin-left: 0;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  /* Submenús en móvil */
+  .Menu-Vertical,
+  .Menu-Vertical2 {
+    position: static;
+    width: 100%;
+    background-color: #0c2734;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .Menu-Vertical li a,
+  .Menu-Vertical2 li a {
+    padding-left: 40px;
+    font-size: 18px;
+  }
+
+  .Menu-Vertical2 li a {
+    padding-left: 60px;
+  }
+
+  .Menu-Horizontal li:hover > .Menu-Vertical,
+  .Menu-Vertical li:hover > .Menu-Vertical2 {
+    display: block;
+  }
+}
+
+/* RESPONSIVE: FOOTER */
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .footer-cont {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-right {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-right .social {
+    font-size: 18px;
+  }
+
+  .footer-left span {
+    font-size: 14px;
+  }
+}
+
+/* RESPONSIVE: SECCIÓN PROGRESO  */
+@media (max-width: 900px) {
+  .progreso {
+    padding: 100px 16px 50px 16px !important;
+  }
+  .progreso h2 {
+    margin-bottom: 50px;
+  }
+
+  .idiomas {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 20px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+
+  .idioma {
+    flex: 0 0 100% !important;
+    scroll-snap-align: start !important;
+    box-sizing: border-box !important;
+    padding: 0 16px !important;
+  }
+
+  .idioma > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .circular,
+  .nombre,
+  h3,
+  .logros-lista,
+  .idioma > p {
+    text-align: center !important;
+  }
+
+  .circular {
+    --size: 180px !important;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .circular span {
+    font-size: 48px !important;
+  }
+  .circular small {
+    position: absolute;
+    bottom: 40px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .idioma h3 {
+    font-size: 20px !important;
+    margin-top: 30px !important;
+  }
+
+  .logros-lista {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 0 !important;
+  }
+
+  .logro img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .logro p {
+    font-size: 13px !important;
+  }
+
+  .boton-logros {
+    justify-content: center !important;
+    margin-top: 40px !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
 }

@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
-    <link rel="stylesheet" href="styleConfiguracion.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylesNotificacion.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-<!-- TOPHEADER-->
+  <body>
+    <!-- TOPHEADER-->
     <nav class="topheader">
       <div class="Logo-nombre">
         <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
         <h1>YACHAYAPP</h1>
       </div>
-
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
       <ul class="Menu-Horizontal">
         <li>
           <a href="">Aprender</a>
@@ -29,6 +30,7 @@
               <ul class="Menu-Vertical2">
                 <li><a href="pronunciacion.html">Pronunciacion</a></li>
                 <li><a href="audios.html">Audios</a></li>
+                <li><a href="">Mini Juegos</a></li>
                 <li><a href="">Historias Narradas</a></li>
                 <li><a href="">Evaluaciones</a></li>
                 <li><a href="audio2.html">Lecciones Educativas</a></li>
@@ -43,7 +45,10 @@
               </ul>
             </li>
             <li>
-              <a href="practicaConversacional.html">Práctica Conversacional </a>
+              <a href="">Práctica Conversacional </a>
+              <ul class="Menu-Vertical2">
+                <li><a href="">Escenarios</a></li>
+              </ul>
             </li>
           </ul>
         </li>
@@ -58,7 +63,7 @@
           <a href="" target="_self">Menu</a>
           <ul class="Menu-Vertical">
             <li><a href="">Dispositivos Wearables</a></li>
-            <li><a href="glosarioPersonal.html">Glosario Personal</a></li>
+            <li><a href="">Glosario Personal</a></li>
             <li><a href="">Biblioteca Cultural</a></li>
             <li><a href="foroComunitario.html">Foro Comunitario</a></li>
             <li>
@@ -82,7 +87,7 @@
         </li>
 
         <li class="iconos">
-          <a href="notificaciond.html" title="Notificaciones"
+          <a href="notificacion.html" title="Notificaciones"
             ><i class="fa-regular fa-bell"></i
           ></a>
           <a href="soporte.html" title="Configuración"
@@ -97,58 +102,67 @@
         </li>
       </ul>
     </nav>
-    <!-- SECCIÓN DE SOPORTE TÉCNICO -->
-    <section class="seccion-soporte">
-      <div class="soporte-container">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="soporte-izquierda">
-          <h2>Soporte técnico</h2>
-          <div class="soporte-tabs">
-            <button class="tab-activo">Solicitudes</button>
-            <a href = "soporteHistorial.html"><button>Historial de solicitudes</button></a>
-          </div>
+    <div class="contenedor">
+      <!-- IZQUIERDA -->
+      <div class="acces-izquierda">
+        <div class="textoNotificacion">
+          <a href="notificacion.html"><i class="fa-solid fa-arrow-left"></i></a>
+          <h2>Notificaciones</h2>
+        </div>
 
-          <div class="soporte-form">
-            <label for="categoria" class="soporte-label">Categoría</label>
-            <select id="categoria" class="soporte-select">
-              <option>Escoja una opción</option>
-              <option>Cuenta</option>
-              <option>Descargas</option>
-              <option>Permisos</option>
-              <option>Otro</option>
-            </select>
-            <div class="soporte-textos">
-              <textarea
-                placeholder="Describe el problema"
-                class="soporte-textarea"
-              ></textarea>
+        <p class="subtexto">Los cambios se guardan automáticamente</p>
 
-              <div class="soporte-adjuntar">
-                <textarea
-                  placeholder="Adjunta una captura (opcional)"
-                  class="soporte-textarea"
-                ></textarea>
-                <div class="soporte-iconos">
-                  <i class="fa-solid fa-paperclip"></i>
-                  <i class="fa-solid fa-image"></i>
-                </div>
-              </div>
-            </div>
-
-            <button class="btn-enviar">Enviar</button>
+        <div class="acces-opciones">
+          <div class="opcion">
+            <span>Activar Recordatorios</span>
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+            </label>
           </div>
         </div>
 
-        <!-- COLUMNA DERECHA -->
-        <div class="soporte-derecha">
-          <h3>Configuración</h3>
-          <button class="btn-opcion"><a href= "accesibilidad.html">Accesibilidad</a></button>
-          <button class="btn-opcion activo">Soporte técnico</button>
-          <button class="btn-opcion"><a href="suscripcion.html">Suscripciones</a></button>
-          <button class="btn-opcion">Favoritos</button>
+        <details class="nuevo-panel">
+          <summary class="nuevoRecordatorio">
+            Agregar nuevo recordatorio <i class="fa fa-plus"></i>
+          </summary>
+
+          <div class="Nuevo-Recordatorio">
+            <h3>Nuevo Recordatorio</h3>
+
+            <label>Nombre:</label>
+            <input type="text" placeholder="Ej: Recordatorio de práctica" />
+
+            <label>Fecha:</label>
+            <input type="date" />
+
+            <label>Hora:</label>
+            <input type="time" />
+
+            <button class="btnGuardar">Guardar</button>
+          </div>
+        </details>
+      </div>
+
+      <!-- DERECHA (LISTADO) -->
+      <div class="acces-derecha">
+        <h3>Recordatorios Guardados</h3>
+
+        <!-- EJEMPLO DE RECORDATORIO (DUPLICA ESTO PARA AGREGAR MÁS) -->
+        <div class="recordatorio-card">
+          <h4>Lectura diaria</h4>
+          <p><strong>Fecha:</strong> 2025-11-15</p>
+          <p><strong>Hora:</strong> 06:24 AM</p>
+        </div>
+
+        <div class="recordatorio-card">
+          <h4>Práctica de escritura</h4>
+          <p><strong>Fecha:</strong> 2025-11-17</p>
+          <p><strong>Hora:</strong> 07:00 PM</p>
         </div>
       </div>
-    </section>
+    </div>
+
     <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">
@@ -171,5 +185,6 @@
         </div>
       </div>
     </section>
+    <script src="menuApp_toggle.js"></script>
   </body>
 </html>

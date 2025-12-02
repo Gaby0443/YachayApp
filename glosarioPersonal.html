@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
-    <link rel="stylesheet" href="styleConfiguracion.css" />
+    <link rel="stylesheet" href="stylesGlosario.css" />
+    
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +14,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-<!-- TOPHEADER-->
+  <body>
+   <!-- TOPHEADER-->
     <nav class="topheader">
       <div class="Logo-nombre">
         <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
@@ -97,59 +99,77 @@
         </li>
       </ul>
     </nav>
-    <!-- SECCIÓN DE SOPORTE TÉCNICO -->
-    <section class="seccion-soporte">
-      <div class="soporte-container">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="soporte-izquierda">
-          <h2>Soporte técnico</h2>
-          <div class="soporte-tabs">
-            <button class="tab-activo">Solicitudes</button>
-            <a href = "soporteHistorial.html"><button>Historial de solicitudes</button></a>
+
+ <!-- SECCIÓN PRINCIPAL -->
+    <section class="seccion-frases">
+      <!-- BOTÓN RETROCEDER -->
+        <h2>Frases de supervivencia</h2>
+      </a>
+
+      <!-- Botón reproducir todo -->
+      <div class="centro">
+        <button class="btn btn--primary btn--wide">Reproducir todo</button>
+      </div>
+
+      <!-- LISTA DE FRASES -->
+      <div class="lista-frases">
+        <!-- FRASE 1 -->
+        <article class="tarjeta-frase">
+          <!-- Texto en tarjeta blanca -->
+          <div class="tarjeta-frase__texto">
+            <p>Hola / ¿Cómo estás?: Imaynallan kashanki?</p>
           </div>
 
-          <div class="soporte-form">
-            <label for="categoria" class="soporte-label">Categoría</label>
-            <select id="categoria" class="soporte-select">
-              <option>Escoja una opción</option>
-              <option>Cuenta</option>
-              <option>Descargas</option>
-              <option>Permisos</option>
-              <option>Otro</option>
-            </select>
-            <div class="soporte-textos">
-              <textarea
-                placeholder="Describe el problema"
-                class="soporte-textarea"
-              ></textarea>
-
-              <div class="soporte-adjuntar">
-                <textarea
-                  placeholder="Adjunta una captura (opcional)"
-                  class="soporte-textarea"
-                ></textarea>
-                <div class="soporte-iconos">
-                  <i class="fa-solid fa-paperclip"></i>
-                  <i class="fa-solid fa-image"></i>
-                </div>
-              </div>
+          <!-- Reproductor amarillo -->
+          <div class="tarjeta-frase__reproductor">
+           <button class="play"><i class="fa-solid fa-play"></i></button>
+            <div class="barra-audio">
+              <img src="imgA/reproduciendo.png" alt="" />
             </div>
-
-            <button class="btn-enviar">Enviar</button>
           </div>
-        </div>
+        </article>
 
-        <!-- COLUMNA DERECHA -->
-        <div class="soporte-derecha">
-          <h3>Configuración</h3>
-          <button class="btn-opcion"><a href= "accesibilidad.html">Accesibilidad</a></button>
-          <button class="btn-opcion activo">Soporte técnico</button>
-          <button class="btn-opcion"><a href="suscripcion.html">Suscripciones</a></button>
-          <button class="btn-opcion">Favoritos</button>
-        </div>
+        <!-- FRASE 2 -->
+        <article class="tarjeta-frase">
+          <div class="tarjeta-frase__texto">
+            <p>¿Habla español?: ¿Kastillanuta rimankirchu?</p>
+          </div>
+          <div class="tarjeta-frase__reproductor">
+            <button class="play"><i class="fa-solid fa-play"></i></button>
+            <div class="barra-audio">
+              <img src="imgA/reproduciendo.png" alt="" />
+            </div>
+          </div>
+        </article>
+
+        <!-- FRASE 3 -->
+        <article class="tarjeta-frase">
+          <div class="tarjeta-frase__texto">
+            <p>¿Dónde está el baño?: ¿Maypiñataq bañyu kashan?</p>
+          </div>
+          <div class="tarjeta-frase__reproductor">
+            <button class="play"><i class="fa-solid fa-play"></i></button>
+            <div class="barra-audio">
+              <img src="imgA/reproduciendo.png" alt="" />
+            </div>
+          </div>
+        </article>
+
+        <!-- FRASE 4 -->
+        <article class="tarjeta-frase">
+          <div class="tarjeta-frase__texto">
+            <p>Necesito un médico: Hampiqta munani</p>
+          </div>
+          <div class="tarjeta-frase__reproductor">
+            <button class="play"><i class="fa-solid fa-play"></i></button>
+            <div class="barra-audio">
+              <img src="imgA/reproduciendo.png" alt="" />
+            </div>
+          </div>
+        </article>
       </div>
     </section>
-    <!-- FOOTER -->
+        <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">
         <div class="footer-left">

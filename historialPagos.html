@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
-    <link rel="stylesheet" href="styleConfiguracion.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styleshistorialPagos.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-<!-- TOPHEADER-->
+  <body>
+   <!-- TOPHEADER-->
     <nav class="topheader">
       <div class="Logo-nombre">
         <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
@@ -97,59 +98,65 @@
         </li>
       </ul>
     </nav>
-    <!-- SECCIÓN DE SOPORTE TÉCNICO -->
-    <section class="seccion-soporte">
-      <div class="soporte-container">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="soporte-izquierda">
-          <h2>Soporte técnico</h2>
-          <div class="soporte-tabs">
-            <button class="tab-activo">Solicitudes</button>
-            <a href = "soporteHistorial.html"><button>Historial de solicitudes</button></a>
-          </div>
 
-          <div class="soporte-form">
-            <label for="categoria" class="soporte-label">Categoría</label>
-            <select id="categoria" class="soporte-select">
-              <option>Escoja una opción</option>
-              <option>Cuenta</option>
-              <option>Descargas</option>
-              <option>Permisos</option>
-              <option>Otro</option>
-            </select>
-            <div class="soporte-textos">
-              <textarea
-                placeholder="Describe el problema"
-                class="soporte-textarea"
-              ></textarea>
+    <div class="contenedor-principal">
+          <a href= "suscripcion.html"><i class="fa-solid fa-arrow-left"></i></a>
+      <h2 class="titulo-principal">Historial de Pagos</h2>
 
-              <div class="soporte-adjuntar">
-                <textarea
-                  placeholder="Adjunta una captura (opcional)"
-                  class="soporte-textarea"
-                ></textarea>
-                <div class="soporte-iconos">
-                  <i class="fa-solid fa-paperclip"></i>
-                  <i class="fa-solid fa-image"></i>
-                </div>
-              </div>
-            </div>
-
-            <button class="btn-enviar">Enviar</button>
-          </div>
+      <div class="tabla-container">
+        <div class="tabla-encabezados">
+          <span class="columna-header">Fecha</span>
+          <span class="columna-header">Descripción</span>
+          <span class="columna-header">Monto</span>
+          <span class="columna-header">Estado</span>
         </div>
 
-        <!-- COLUMNA DERECHA -->
-        <div class="soporte-derecha">
-          <h3>Configuración</h3>
-          <button class="btn-opcion"><a href= "accesibilidad.html">Accesibilidad</a></button>
-          <button class="btn-opcion activo">Soporte técnico</button>
-          <button class="btn-opcion"><a href="suscripcion.html">Suscripciones</a></button>
-          <button class="btn-opcion">Favoritos</button>
+        <div class="tabla-fila">
+          <span class="columna-dato">20/07/2025</span>
+          <span class="columna-dato">Suscripción plan mensual</span>
+          <span class="columna-dato">S/10.00</span>
+          <span class="columna-dato estado-pendiente">Pendiente</span>
+        </div>
+        <div class="tabla-fila">
+          <span class="columna-dato">20/06/2025</span>
+          <span class="columna-dato">Suscripción plan mensual</span>
+          <span class="columna-dato">S/10.00</span>
+          <span class="columna-dato estado-pagado">Pagado</span>
+        </div>
+        <div class="tabla-fila">
+          <span class="columna-dato">20/05/2025</span>
+          <span class="columna-dato">Suscripción plan mensual</span>
+          <span class="columna-dato">S/10.00</span>
+          <span class="columna-dato estado-pagado">Pagado</span>
+        </div>
+        <div class="tabla-fila">
+          <span class="columna-dato">20/04/2025</span>
+          <span class="columna-dato">Suscripción plan mensual</span>
+          <span class="columna-dato">S/10.00</span>
+          <span class="columna-dato estado-pagado">Pagado</span>
+        </div>
+        <div class="tabla-fila">
+          <span class="columna-dato">20/03/2025</span>
+          <span class="columna-dato">Suscripción plan mensual</span>
+          <span class="columna-dato">S/10.00</span>
+          <span class="columna-dato estado-pagado">Pagado</span>
+        </div>
+        <div class="tabla-fila">
+          <span class="columna-dato">20/02/2025</span>
+          <span class="columna-dato">Suscripción plan mensual</span>
+          <span class="columna-dato">S/10.00</span>
+          <span class="columna-dato estado-pagado">Pagado</span>
         </div>
       </div>
-    </section>
-    <!-- FOOTER -->
+
+      <p class="cargar-mas">Cargar más...</p>
+
+      <div class="botones-accion">
+        <button class="btn-cancelar"><a href="soporte.html">Cancelar suscripción</a></button>
+        <button class="btn-comprobante">Recibir comprobante de pago</button>
+      </div>
+    </div>
+        <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">
         <div class="footer-left">

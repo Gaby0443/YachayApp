@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
-    <link rel="stylesheet" href="styleConfiguracion.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylesNotificacion.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-<!-- TOPHEADER-->
+  <body>
+    <!-- TOPHEADER-->
     <nav class="topheader">
       <div class="Logo-nombre">
         <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
         <h1>YACHAYAPP</h1>
       </div>
-
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
       <ul class="Menu-Horizontal">
         <li>
           <a href="">Aprender</a>
@@ -29,6 +30,7 @@
               <ul class="Menu-Vertical2">
                 <li><a href="pronunciacion.html">Pronunciacion</a></li>
                 <li><a href="audios.html">Audios</a></li>
+                <li><a href="">Mini Juegos</a></li>
                 <li><a href="">Historias Narradas</a></li>
                 <li><a href="">Evaluaciones</a></li>
                 <li><a href="audio2.html">Lecciones Educativas</a></li>
@@ -43,7 +45,10 @@
               </ul>
             </li>
             <li>
-              <a href="practicaConversacional.html">Práctica Conversacional </a>
+              <a href="">Práctica Conversacional </a>
+              <ul class="Menu-Vertical2">
+                <li><a href="">Escenarios</a></li>
+              </ul>
             </li>
           </ul>
         </li>
@@ -58,7 +63,7 @@
           <a href="" target="_self">Menu</a>
           <ul class="Menu-Vertical">
             <li><a href="">Dispositivos Wearables</a></li>
-            <li><a href="glosarioPersonal.html">Glosario Personal</a></li>
+            <li><a href="">Glosario Personal</a></li>
             <li><a href="">Biblioteca Cultural</a></li>
             <li><a href="foroComunitario.html">Foro Comunitario</a></li>
             <li>
@@ -82,7 +87,7 @@
         </li>
 
         <li class="iconos">
-          <a href="notificaciond.html" title="Notificaciones"
+          <a href="notificacion.html" title="Notificaciones"
             ><i class="fa-regular fa-bell"></i
           ></a>
           <a href="soporte.html" title="Configuración"
@@ -97,58 +102,48 @@
         </li>
       </ul>
     </nav>
-    <!-- SECCIÓN DE SOPORTE TÉCNICO -->
-    <section class="seccion-soporte">
-      <div class="soporte-container">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="soporte-izquierda">
-          <h2>Soporte técnico</h2>
-          <div class="soporte-tabs">
-            <button class="tab-activo">Solicitudes</button>
-            <a href = "soporteHistorial.html"><button>Historial de solicitudes</button></a>
+    <div class="container">
+      <header class="header">
+        <div class="title-section">
+          <div class="title-left">
+            <h1>Notificaciones Diarias</h1>
           </div>
 
-          <div class="soporte-form">
-            <label for="categoria" class="soporte-label">Categoría</label>
-            <select id="categoria" class="soporte-select">
-              <option>Escoja una opción</option>
-              <option>Cuenta</option>
-              <option>Descargas</option>
-              <option>Permisos</option>
-              <option>Otro</option>
-            </select>
-            <div class="soporte-textos">
-              <textarea
-                placeholder="Describe el problema"
-                class="soporte-textarea"
-              ></textarea>
+          <a href="configNoti.html" title="NotificacionesConfiguracion">
+            <i class="fa-solid fa-gear config-icon"></i>
+          </a>
+        </div>
+      </header>
 
-              <div class="soporte-adjuntar">
-                <textarea
-                  placeholder="Adjunta una captura (opcional)"
-                  class="soporte-textarea"
-                ></textarea>
-                <div class="soporte-iconos">
-                  <i class="fa-solid fa-paperclip"></i>
-                  <i class="fa-solid fa-image"></i>
-                </div>
-              </div>
-            </div>
-
-            <button class="btn-enviar">Enviar</button>
+      <main class="notifications-container">
+        <div class="card">
+          <div class="icon-box new-lesson">
+            <span class="icon">📖</span>
           </div>
+          <h3 class="card-title">¡Nueva lección disponible!</h3>
+          <p class="card-text">Descubre el módulo de **historia inca**</p>
+          <button class="btn primary">Ver más</button>
         </div>
 
-        <!-- COLUMNA DERECHA -->
-        <div class="soporte-derecha">
-          <h3>Configuración</h3>
-          <button class="btn-opcion"><a href= "accesibilidad.html">Accesibilidad</a></button>
-          <button class="btn-opcion activo">Soporte técnico</button>
-          <button class="btn-opcion"><a href="suscripcion.html">Suscripciones</a></button>
-          <button class="btn-opcion">Favoritos</button>
+        <div class="card">
+          <div class="icon-box medal-won">
+            <span class="icon">🏆</span>
+          </div>
+          <h3 class="card-title">¡Haz ganado una medalla!</h3>
+          <p class="card-text">Completaste el desafío diario de vocabulario</p>
+          <button class="btn primary">Ver más</button>
         </div>
-      </div>
-    </section>
+
+        <div class="card">
+          <div class="icon-box reminder">
+            <span class="icon">🗓️</span>
+          </div>
+          <h3 class="card-title">¡Recordatorio de práctica!</h3>
+          <p class="card-text">Tu sesión de repaso está programada para hoy</p>
+          <button class="btn primary">Ver más</button>
+        </div>
+      </main>
+    </div>
     <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">
@@ -171,5 +166,6 @@
         </div>
       </div>
     </section>
+    <script src="menuApp_toggle.js"></script>
   </body>
 </html>

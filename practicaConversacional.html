@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YachayAPP</title>
+    <link rel="stylesheet" href="stylesPracticaConversacional.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+   <!-- TOPHEADER-->
+    <nav class="topheader">
+      <div class="Logo-nombre">
+        <img src="imgA/YachayApp SF1.png" alt="logo yachayAPP" />
+        <h1>YACHAYAPP</h1>
+      </div>
+
+      <ul class="Menu-Horizontal">
+        <li>
+          <a href="">Aprender</a>
+          <ul class="Menu-Vertical">
+            <li>
+              <a href="">Modulos</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="pronunciacion.html">Pronunciacion</a></li>
+                <li><a href="audios.html">Audios</a></li>
+                <li><a href="">Historias Narradas</a></li>
+                <li><a href="">Evaluaciones</a></li>
+                <li><a href="audio2.html">Lecciones Educativas</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Lecciones AR</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="misionCultural.html">Misiones</a></li>
+                <li><a href="leccionesRa.html"> Lecciones RA</a></li>
+                <li><a href="traduccion.html">Traducción</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="practicaConversacional.html">Práctica Conversacional </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Juegos</a>
+          <ul class="Menu-Vertical">
+            <li><a href="juegos.html">Flashcards</a></li>
+            <li><a href="desafioAuditivo.html">Desafios</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Menu</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Dispositivos Wearables</a></li>
+            <li><a href="glosarioPersonal.html">Glosario Personal</a></li>
+            <li><a href="">Biblioteca Cultural</a></li>
+            <li><a href="foroComunitario.html">Foro Comunitario</a></li>
+            <li>
+              <a href="">Docentes</a>
+              <ul class="Menu-Vertical2">
+                <li><a href="crearContenido.html">Crear Contenido</a></li>
+                <li><a href="crearTarea.html"> Crear Tarea</a></li>
+                <li><a href="resenasDocentes.html">Reseña de Docentes</a></li>
+                <li><a href="avanceEstudiantes.html">Avance Estudiantes</a></li>
+              </ul>
+            </li>
+            <li><a href="">Sesiones Con mentores nativos</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="" target="_self">Progreso</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Ranking Global</a></li>
+            <li><a href="progreso.html">Avance</a></li>
+          </ul>
+        </li>
+
+        <li class="iconos">
+          <a href="notificaciond.html" title="Notificaciones"
+            ><i class="fa-regular fa-bell"></i
+          ></a>
+          <a href="soporte.html" title="Configuración"
+            ><i class="fa-solid fa-gear"></i
+          ></a>
+          <a href="centroAyuda.html" title="Preguntas Frecuentes"
+            ><i class="fa-solid fa-headset"></i>
+          </a>
+          <a href="index.html" title="Perfil de usuario"
+            ><i class="fa-solid fa-user"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+  
+     <div class="app-container">
+        <main class="app-main-content">
+        <section id="home" class="page-section">
+          <div class="learn-ar-container">
+            <div class="ar-header">
+              <h1>Prácticas Conversacionales</h1>
+              <p>Elige cómo deseas practicar</p>
+            </div>
+
+            <div class="course-cards-grid">
+              <a href="#scenarios" class="course-card-link">
+                <div class="course-card">
+                  <div class="card-image-cont"></div>
+                  <div class="card-content">
+                    <h3>ESCENARIOS DE LA VIDA REAL</h3>
+                    <p>
+                      Practica conversaciones que vivirás en situaciones reales.
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#modes" class="course-card-link">
+                <div class="course-card">
+                  <div class="card-image-cont"></div>
+                  <div class="card-content">
+                    <h3>MODOS DE PRÁCTICA</h3>
+                    <p>
+                      Elige diferentes formatos de práctica para mejorar a tu
+                      ritmo.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="modes" class="page-section">
+          <div class="scenarios-container">
+            <input
+              type="radio"
+              name="mode_select"
+              id="mode_traduccion"
+              checked
+            />
+            <input type="radio" name="mode_select" id="mode_pistas" />
+            <input type="radio" name="mode_select" id="mode_conversacional" />
+
+            <div class="scenario-selection-panel">
+              <div class="scenario-header">
+                <div class="logo-circle">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <h2>Elige un Modo</h2>
+                <p>Practica conversaciones en diferentes modos de ayuda.</p>
+              </div>
+
+              <div class="scenario-options">
+                <label
+                  for="mode_traduccion"
+                  class="scenario-card"
+                  id="card_traduccion"
+                >
+                  <div class="icon-cont">
+                    <i class="fa-solid fa-language"></i>
+                  </div>
+                  <div class="text-cont">
+                    <p class="title">Modo Traducción</p>
+                    <p class="subtitle">Ayuda de traductor nativo</p>
+                  </div>
+                </label>
+
+                <label for="mode_pistas" class="scenario-card" id="card_pistas">
+                  <div class="icon-cont">
+                    <i class="fa-solid fa-lightbulb"></i>
+                  </div>
+                  <div class="text-cont">
+                    <p class="title">Modo Pistas</p>
+                    <p class="subtitle">Practica con pequeños atajos</p>
+                  </div>
+                </label>
+
+                <label
+                  for="mode_conversacional"
+                  class="scenario-card"
+                  id="card_conversacional"
+                >
+                  <div class="icon-cont">
+                    <i class="fa-solid fa-comment"></i>
+                  </div>
+                  <div class="text-cont">
+                    <p class="title">Conversacional</p>
+                    <p class="subtitle">Pon a prueba tus conocimientos</p>
+                  </div>
+                </label>
+              </div>
+
+              <a href="#home" class="back-btn-link">
+                <button class="start-practice-btn">
+                  <i class="fa-solid fa-arrow-left"></i> Volver a Inicio
+                </button>
+              </a>
+            </div>
+
+            <div class="conversation-panel">
+              <div class="conversation-box">
+                <div class="box-header">
+                  <i class="fa-solid fa-message"></i>
+                  <span>Conversación modelo activa</span>
+                </div>
+
+                <div class="chat-messages-wrapper">
+                  <div class="chat-content" id="content_traduccion">
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">¡Suma jayp'u!</p>
+                        <p class="spanish-text">¡Buenas tardes!</p>
+                        <p class="indigenous-text">¿kunjamas jumanakaxa?</p>
+                        <p class="spanish-text">¿Cómo estás?</p>
+                      </div>
+                    </div>
+                    <div class="message sent">
+                      <div class="bubble">
+                        <p class="indigenous-text">Hola, ¿podrías ayudarme?</p>
+                      </div>
+                    </div>
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          Jisa, ¿kunjamsa yanapt'irista?
+                        </p>
+                        <p class="spanish-text">Sí, ¿en qué te ayudo?</p>
+                      </div>
+                    </div>
+                    <div class="chat-options-bar">
+                      <button class="chat-option-btn active">
+                        <i class="fa-solid fa-language"></i> Traductor Activo
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="chat-content" id="content_pistas">
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">¡Rimaykullayki!</p>
+                      </div>
+                    </div>
+                    <div class="message sent">
+                      <div class="bubble">
+                        <p class="indigenous-text">Hola, ¿cómo estás?</p>
+                      </div>
+                    </div>
+                    <div class="message received">
+                      <div class="bubble">
+                        <div class="mode-hint-box">
+                          <p>Pista:</p>
+                          <p>Allinmi: "Estoy bien"</p>
+                          <p>Yanapakuyki: "Te ayudo"</p>
+                        </div>
+                        <p class="indigenous-text">
+                          Allinmi kani, qamtaq imaynallan kanki?
+                        </p>
+                        <p class="indigenous-text mode-highlight">
+                          Yanapakuyki munani.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="message sent">
+                      <div class="bubble">
+                        <p class="indigenous-text">¡Gracias! Allinmi kani.</p>
+                      </div>
+                    </div>
+                    <div class="chat-options-bar">
+                      <button class="chat-option-btn">
+                        <i class="fa-solid fa-lightbulb"></i> Pistas
+                      </button>
+                      <button class="chat-option-btn">
+                        <i class="fa-solid fa-volume-high"></i> Escuchar
+                      </button>
+                      <button class="chat-option-btn">
+                        <i class="fa-solid fa-book"></i> Gramática
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="chat-content" id="content_conversacional">
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">¡Rimaykullayki!</p>
+                      </div>
+                    </div>
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          Imaynallan kachkanki? Allinchu kashkanki?
+                        </p>
+                      </div>
+                    </div>
+                    <div class="message sent">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          Allinmi kachkani, raikuna!
+                        </p>
+                      </div>
+                    </div>
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          Sumaqmi! Kunar punchawqa sumaq inti kachkan. Maymanchu
+                          rinku?
+                        </p>
+                      </div>
+                    </div>
+                    <div class="chat-options-bar">
+                      <button class="chat-option-btn">
+                        <i class="fa-solid fa-lightbulb"></i> Pistas
+                      </button>
+                      <button class="chat-option-btn">
+                        <i class="fa-solid fa-volume-high"></i> Escuchar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-area">
+                  <div class="input-field">
+                    <input
+                      type="text"
+                      placeholder="Escribe o graba tu respuesta..."
+                    />
+                    <button class="send-btn">
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                  <div class="mic-status">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <span>Grabando...</span>
+                    <div class="audio-waves"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="scenarios" class="page-section">
+          <div class="scenarios-container">
+            <input
+              type="radio"
+              name="scenario_select"
+              id="scenario_mercado"
+              checked
+            />
+            <input type="radio" name="scenario_select" id="scenario_hotel" />
+            <input
+              type="radio"
+              name="scenario_select"
+              id="scenario_restaurante"
+            />
+
+            <div class="scenario-selection-panel">
+              <div class="scenario-header">
+                <div class="logo-circle">
+                  <i class="fa-solid fa-comment-dots"></i>
+                </div>
+                <h2>Elige un Escenario</h2>
+                <p>
+                  Practica conversaciones en diferentes situaciones en idiomas
+                  indígenas
+                </p>
+              </div>
+
+              <div class="scenario-options">
+                <label
+                  for="scenario_mercado"
+                  class="scenario-card"
+                  id="card_mercado"
+                >
+                  <div class="icon-cont">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                  </div>
+                  <div class="text-cont">
+                    <p class="title">Mercado Andino</p>
+                    <p class="subtitle">Compra productos típicos</p>
+                  </div>
+                </label>
+
+                <label
+                  for="scenario_hotel"
+                  class="scenario-card"
+                  id="card_hotel"
+                >
+                  <div class="icon-cont"><i class="fa-solid fa-bed"></i></div>
+                  <div class="text-cont">
+                    <p class="title">Hotel</p>
+                    <p class="subtitle">Reserva y check-in</p>
+                  </div>
+                </label>
+
+                <label
+                  for="scenario_restaurante"
+                  class="scenario-card"
+                  id="card_restaurante"
+                >
+                  <div class="icon-cont">
+                    <i class="fa-solid fa-utensils"></i>
+                  </div>
+                  <div class="text-cont">
+                    <p class="title">Restaurante</p>
+                    <p class="subtitle">Ordena comida típica</p>
+                  </div>
+                </label>
+              </div>
+
+              <a href="#home" class="back-btn-link">
+                <button class="start-practice-btn">
+                  <i class="fa-solid fa-arrow-left"></i> Volver a Inicio
+                </button>
+              </a>
+            </div>
+
+            <div class="conversation-panel">
+              <div class="conversation-box">
+                <div class="box-header">
+                  <i class="fa-solid fa-message"></i>
+                  <span>Conversación modelo activa</span>
+                </div>
+
+                <div class="chat-messages-wrapper">
+                  <div class="chat-content" id="content_mercado">
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">¿Imata munanki ranti?</p>
+                        <p class="spanish-text">¿Qué quieres comprar?</p>
+                      </div>
+                    </div>
+                    <div class="message sent">
+                      <div class="bubble">
+                        <p class="indigenous-text">Papata munaymi.</p>
+                        <p class="spanish-text">Quiero papas.</p>
+                      </div>
+                    </div>
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          ¡Allin! Kaypi kanku askha papakuna.
+                        </p>
+                        <p class="spanish-text">
+                          ¡Bien! Aquí hay muchas papas.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="chat-content" id="content_hotel">
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          Jallallaynat! Kunatsa yanap'asna?
+                        </p>
+                        <p class="spanish-text">
+                          ¡Hola! ¿En qué te puedo ayudar?
+                        </p>
+                      </div>
+                    </div>
+                    <div class="message sent">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          Jallallaya. Ma samañ uta mayisipk'tawa.
+                        </p>
+                        <p class="spanish-text">
+                          Hola. Necesito un cuarto para dormir.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          Jisa, utjawipawa. Qawqa jaqikunataki munta?
+                        </p>
+                        <p class="spanish-text">
+                          Sí, hay disponibilidad. ¿Para cuántas personas
+                          quieres?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="chat-content" id="content_restaurante">
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          ¡Suma qhali! ¿Kunas wakichita?
+                        </p>
+                        <p class="spanish-text">
+                          ¡Buenas tardes! ¿Qué va a ordenar?
+                        </p>
+                      </div>
+                    </div>
+                    <div class="message sent">
+                      <div class="bubble">
+                        <p class="indigenous-text">Nayax fritas papas munta.</p>
+                        <p class="spanish-text">Quiero papas fritas.</p>
+                      </div>
+                    </div>
+                    <div class="message received">
+                      <div class="bubble">
+                        <p class="indigenous-text">
+                          ¡Waliki! Taqi uka uñacht'äwinakaw utjistu:
+                        </p>
+                        <p class="spanish-text">
+                          ¡Perfecto! Tenemos todas estas presentaciones:
+                        </p>
+                      </div>
+                    </div>
+                    <div class="message received">
+                      <img
+                        src="imgA/papitas.png"
+                        alt="Opciones de papas fritas"
+                        style="max-width: 250px"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-area">
+                  <div class="input-field">
+                    <input
+                      type="text"
+                      placeholder="Escribe o graba tu respuesta..."
+                    />
+                    <button class="send-btn">
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                  <div class="mic-status">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <span>Grabando...</span>
+                    <div class="audio-waves"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    <!-- FOOTER -->
+    <section class="footer">
+      <div class="footer-cont">
+        <div class="footer-left">
+          <i class="fa-regular fa-copyright" aria-hidden="true"></i>
+          <span>YACHAYAPP</span>
+        </div>
+
+        <div class="footer-right">
+          <a href="#" class="footer-link">Términos y Condiciones</a>
+          <a href="mailto:info@AylluTalk.pe" class="footer-link"
+            >info@AylluTalk.pe</a
+          >
+          <a href="#" aria-label="Instagram" class="social"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="TikTok" class="social"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

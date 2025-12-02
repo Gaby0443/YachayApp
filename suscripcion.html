@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>YachayAPP</title>
-    <link rel="stylesheet" href="styleConfiguracion.css" />
     <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="stylesSuscripcion.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
+  <body>
 <!-- TOPHEADER-->
     <nav class="topheader">
       <div class="Logo-nombre">
@@ -97,58 +98,113 @@
         </li>
       </ul>
     </nav>
-    <!-- SECCIÓN DE SOPORTE TÉCNICO -->
-    <section class="seccion-soporte">
-      <div class="soporte-container">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="soporte-izquierda">
-          <h2>Soporte técnico</h2>
-          <div class="soporte-tabs">
-            <button class="tab-activo">Solicitudes</button>
-            <a href = "soporteHistorial.html"><button>Historial de solicitudes</button></a>
-          </div>
+ 
+     <div class="contenedor-principal">
+          <header class="encabezado">
+                 
+            <h3 class="titulo-principal"><a href= Accesibilidad.html><i class="fa-solid fa-arrow-left"></i></a>Elige tu plan de pago</h3>
+          </header>
 
-          <div class="soporte-form">
-            <label for="categoria" class="soporte-label">Categoría</label>
-            <select id="categoria" class="soporte-select">
-              <option>Escoja una opción</option>
-              <option>Cuenta</option>
-              <option>Descargas</option>
-              <option>Permisos</option>
-              <option>Otro</option>
-            </select>
-            <div class="soporte-textos">
-              <textarea
-                placeholder="Describe el problema"
-                class="soporte-textarea"
-              ></textarea>
-
-              <div class="soporte-adjuntar">
-                <textarea
-                  placeholder="Adjunta una captura (opcional)"
-                  class="soporte-textarea"
-                ></textarea>
-                <div class="soporte-iconos">
-                  <i class="fa-solid fa-paperclip"></i>
-                  <i class="fa-solid fa-image"></i>
-                </div>
+          <section class="planes-container">
+            <div class="tarjeta-plan">
+              <h2 class="nombre-plan">Plan Premium</h2>
+              <div class="precio">
+                <span class="simbolo">S/</span>
+                <span class="monto">0</span>
+                <span class="unidad">/mes</span>
               </div>
+              <p class="facturacion">Facturación mensual</p>
+
+              <ul class="beneficios">
+                <li><span class="check">✓</span> Acceso a algunas lecciones</li>
+                <li><span class="check">✓</span> Juegos ilimitados</li>
+                <li>
+                  <span class="check">✓</span> Conversacion limitada con chat
+                  bot interactivo
+                </li>
+              </ul>
             </div>
+            <a href="metodoPago.html" class="tarjeta-plan-link">
+            <div class="tarjeta-plan destacado">
+              <h2 class="nombre-plan">Plan Premium</h2>
+              <div class="precio">
+                <span class="simbolo">S/</span>
+                <span class="monto">10</span>
+                <span class="unidad">/mes</span>
+              </div>
+              <p class="facturacion">Facturación mensual</p>
 
-            <button class="btn-enviar">Enviar</button>
-          </div>
-        </div>
+              <ul class="beneficios">
+                <li>
+                  <span class="check">✓</span> Acceso a todas las lecciones
+                </li>
+                <li><span class="check">✓</span> Juegos ilimitados</li>
+                <li><span class="check">✓</span> Clases en vivo y exclusivo</li>
+                <li>
+                  <span class="check">✓</span> Conversacion ilimitada con chat
+                  bot interactivo
+                </li>
+                <li><span class="check">✓</span> Soporte prioritario</li>
+              </ul>
+            </div>
+            </a>
 
-        <!-- COLUMNA DERECHA -->
-        <div class="soporte-derecha">
-          <h3>Configuración</h3>
-          <button class="btn-opcion"><a href= "accesibilidad.html">Accesibilidad</a></button>
-          <button class="btn-opcion activo">Soporte técnico</button>
-          <button class="btn-opcion"><a href="suscripcion.html">Suscripciones</a></button>
-          <button class="btn-opcion">Favoritos</button>
+            <div class="tarjeta-plan">
+              <h2 class="nombre-plan">Plan Anual</h2>
+              <div class="precio">
+                <span class="simbolo">S/</span>
+                <span class="monto">90</span>
+                <span class="unidad">/anual</span>
+              </div>
+              <p class="facturacion">Facturación anual</p>
+
+              <ul class="beneficios">
+                <li>
+                  <span class="check">✓</span> Acceso a todas las lecciones
+                </li>
+                <li><span class="check">✓</span> Personalizacion avanzada</li>
+                <li><span class="check">✓</span> Modo offline</li>
+                <li>
+                  <span class="check">✓</span> Nuevas acciones en subir material
+                  de estudio
+                </li>
+                <li>
+                  <span class="check">✓</span> Beneficios del plan premium
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <footer class="info-pago">
+             <a href="historialPagos.html" class="ver-historial-btn">Ver mi historial de Pagos</a>
+            <h3 class="seguridad">Pagos seguros y cifrados</h3>
+            <div class="logos-pago">
+              <img
+                src="imgA/visalogo.png"
+                alt="Logo de Visa"
+                class="logo-img"
+              />
+              <img
+                src="imgA/mastercard.png"
+                alt="Logo de Mastercard"
+                class="logo-img"
+              />
+              <img
+                src="imgA/Ypaelogo.png"
+                alt="Logo de Yape"
+                class="logo-img"
+              />
+              <img
+                src="imgA/plinlogo.png"
+                alt="Logo de Plin"
+                class="logo-img"
+              />
+            </div>
+            <p class="descuento-link">
+              <a href="#">¿Tienes un código de descuento?</a>
+            </p>
+          </footer>
         </div>
-      </div>
-    </section>
     <!-- FOOTER -->
     <section class="footer">
       <div class="footer-cont">

@@ -21,7 +21,7 @@
   font-weight: 700;
 }
 
-/* --- SELECTOR DE IDIOMA --- */
+/* SELECTOR DE IDIOMA */
 .selector-idioma {
   margin: 20px 0px 50px 45px;
 }
@@ -39,7 +39,7 @@
   padding: 40px 0px 0px 90px;
 }
 
-/* --- PANEL IZQUIERDO (PROGRESO) --- */
+/*PANEL IZQUIERDO */
 .panel-izquierdo {
   display: flex;
   flex-direction: column;
@@ -47,7 +47,6 @@
   flex: 0 0 300px;
 }
 
-/* círculo reutilizado */
 .panel-izquierdo .circular {
   --size: 250px;
   width: var(--size);
@@ -64,7 +63,7 @@
   margin: 0 auto 15px auto;
 }
 
-.panel-izquierdo .circularbefore {
+.panel-izquierdo .circular::before {
   content: "";
   position: absolute;
   width: calc(var(--size) - 25px);
@@ -97,7 +96,7 @@
   color: black;
 }
 
-/* --- PANEL DERECHO (LISTA DE LOGROS) --- */
+/*PANEL DERECHO */
 .panel-derecho {
   margin-left: 177px;
   padding-left: 50px;
@@ -111,6 +110,7 @@
   align-items: flex-start;
   gap: 100px;
 }
+
 .logro {
   display: flex;
   flex-direction: row;
@@ -119,9 +119,11 @@
   width: 320px;
   text-align: left;
 }
+
 .logro img {
   width: 88px;
   height: 87px;
+  flex-shrink: 0;
 }
 
 .logro h4 {
@@ -137,4 +139,80 @@
   font-size: 18px;
   color: #323232;
   margin: 2px 0 0 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .logros-obtenidos {
+    padding: 100px 16px 40px 16px !important;
+  }
+
+  .titulo-volver {
+    gap: 16px !important;
+  }
+
+  .titulo-volver i {
+    font-size: 22px !important;
+  }
+
+  .titulo-volver h2 {
+    font-size: 20px !important;
+  }
+
+  .selector-idioma {
+    margin: 16px 0 32px 0 !important;
+    text-align: center;
+  }
+
+  .selector-idioma select {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 16px !important;
+    font-size: 16px !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .panel-izquierdo {
+    display: none !important;
+  }
+
+  .contenedor-logros {
+    padding: 24px 0 0 0 !important;
+  }
+
+  .panel-derecho {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .fila-logros {
+    flex-direction: grid !important;
+    gap: 24px !important;
+    align-items: center !important;
+  }
+
+  .logro {
+    flex-direction: column !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    gap: 16px !important;
+    padding: 16px !important;
+  }
+
+  .logro img {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .logro h4 {
+    font-size: 18px !important;
+  }
+
+  .logro p {
+    font-size: 15px !important;
+  }
 }
