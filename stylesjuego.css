@@ -102,8 +102,69 @@ body {
   font-size: 1.1rem;
   text-align: center;
 }
+@media (max-width: 1024px) {
+  .contenedor {
+    margin-top: 160px;
+    margin-bottom: 160px;
+    padding: 24px 24px 10px;
+  }
+
+  .breadcrumb {
+    margin-left: -80px;
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    margin-top: 140px;
+    margin-bottom: 120px;
+    padding: 20px 16px 10px;
+  }
+
+  .breadcrumb {
+    margin-left: 0;
+    margin-top: -24px;
+  }
+
+  .acciones-juegos {
+    gap: 14px;
+  }
+
+  .hero-icono img {
+    width: 64px;
+  }
+}
+
 @media (max-width: 520px) {
+  .contenedor {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    padding: 16px 12px 10px;
+  }
+
+  .breadcrumb {
+    margin-top: -12px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .hero-icono {
+    margin: 16px 0 20px;
+  }
+
+  .hero-icono img {
+    width: 56px;
+  }
+
+  .acciones-juegos {
+    width: 100%;
+    padding: 0 4px;
+  }
+
   .btn--juego {
     width: 100%;
+    padding: 14px 18px;
+    font-size: 1rem;
   }
 }

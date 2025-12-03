@@ -282,3 +282,90 @@ body {
   object-fit: contain;
   display: block;
 }
+@media (max-width: 950px) {
+  .seccion-puntaje {
+    padding: 120px 24px 90px;
+  }
+
+  .boton-retroceder {
+    margin-left: 0;
+  }
+
+  .tarjeta-puntaje__cuerpo {
+    padding: 26px 24px 70px;
+    min-height: 340px;
+  }
+
+  .item-palabra {
+    font-size: 16px;
+  }
+
+  .contenedor-total {
+    bottom: 22px;
+    right: 24px;
+  }
+
+  .insignia-total {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+
+  .contenedor-compartir {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-puntaje {
+    padding: 90px 12px 70px;
+  }
+
+  .boton-retroceder {
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .boton-retroceder strong {
+    font-size: 14px;
+  }
+
+  .tarjeta-puntaje__titulo {
+    font-size: 24px;
+  }
+
+  .tarjeta-puntaje__cuerpo {
+    padding: 18px 14px 70px;
+    min-height: 240px;
+  }
+
+  .item-palabra {
+    font-size: 13px;
+  }
+
+  .contenedor-total {
+    position: static;
+    margin-top: 18px;
+    text-align: right;
+  }
+
+  .insignia-total {
+    font-size: 13px;
+  }
+
+  .seccion-puntaje {
+    text-align: center;
+  }
+
+  .lista-palabras__subtitulo,
+  .lista-palabras__items {
+    text-align: left;
+  }
+
+  .contenedor-compartir {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+}

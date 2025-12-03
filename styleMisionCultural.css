@@ -110,4 +110,54 @@ a:active {
   line-height: 1.55;
   font-size: 16px;
 }
-    
+@media (max-width: 480px) {
+  .mision {
+    margin-top: 50px;
+    padding: 60px 16px 24px;
+  }
+
+  .back-btn {
+    gap: 6px;
+  }
+
+  .mision__title {
+    font-size: 22px;
+  }
+
+  .mision__card {
+    padding: 20px 16px 40px;
+  }
+
+  .mision__media img {
+    max-width: 95%;
+    border-radius: 14px;
+  }
+
+  .mision__text p {
+    font-size: 14px;
+    line-height: 1.52;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 380px) {
+  .mision {
+    padding: 50px 14px 20px;
+  }
+
+  .mision__title {
+    font-size: 20px;
+  }
+
+  .mision__card {
+    padding: 18px 14px 32px;
+  }
+
+  .mision__media img {
+    max-width: 98%;
+  }
+
+  .mision__text p {
+    font-size: 13.5px;
+  }
+}

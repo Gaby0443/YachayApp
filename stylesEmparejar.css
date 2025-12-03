@@ -1,6 +1,3 @@
-/* =============================================
-   VARIABLES GLOBALES
-   ============================================= */
 :root {
   --azul: #0e2f4f;
   --amarillo: #f5b94f;
@@ -11,7 +8,6 @@
     sans-serif;
 }
 
-/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,69 +30,53 @@ body {
   background: #fdfcf8;
 }
 
-/* =============================================
-     SECCIÓN PRINCIPAL
-     ============================================= */
-
+/* SECCIÓN PRINCIPAL DEL JUEGO */
 .seccion-juego {
-  max-width: 700px;
+  max-width: 1100px; /* más ancho → más distancia entre izquierda y derecha */
   margin: 0 auto;
-  padding: 80px 20px 100px;
+  padding: 100px 24px 90px; /* un poco menos alto */
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: scale(0.85); /* ← Reduce TODO al 85% */
-  transform-origin: center; /* ← Desde el centro */
 }
 
-/* =============================================
-     CABECERA: Retroceder + Ver Puntaje
-     ============================================= */
-
+/* CABECERA: ← Juegos Educativos + Ver Puntaje */
 .cabecera-juego {
   width: 100%;
   display: flex;
-  padding-bottom: 50px;
+  margin-top: 50px;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0px;
+  gap: 450px;
+  margin-bottom: 28px;
 }
 
-/* Botón retroceder (izquierda) */
 .boton-retroceder {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  cursor: pointer;
+  gap: 10px;
 }
 
-.boton-retroceder:hover {
-  opacity: 0.8;
+.boton-retroceder i {
+  font-size: 16px; /* más pequeño */
 }
 
-.boton-retroceder__icono {
-  width: 18px;
-  height: 28px;
-  object-fit: contain;
-  margin-left: -250px;
-}
-
-.boton-retroceder strong {
+.boton-retroceder h2 {
+  font-size: 24px; /* más pequeño */
   font-weight: 700;
-  font-size: 16px;
+  color: var(--azul);
 }
 
-/* Botón Ver Puntaje (derecha) */
 .boton-puntaje {
   background: var(--azul);
   color: var(--blanco);
-  padding: 10px 20px;
-  border-radius: 0;
+  padding: 8px 20px; /* botón más pequeño */
+  border-radius: 25px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  box-shadow: var(--sombra);
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: var(--sombra);
 }
 
 .boton-puntaje:hover {
@@ -104,148 +84,155 @@ body {
   transform: translateY(-2px);
 }
 
-/* =============================================
-     TÍTULO
-     ============================================= */
-
+/* TÍTULO CENTRAL "Empareja" */
 .titulo-juego {
   background: var(--azul);
   color: var(--blanco);
-  padding: 14px 50px;
+  padding: 12px 52px; /* un poco más compacto */
   border-radius: 0;
-  font-size: 22px;
+  font-size: 20px; /* más pequeño */
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   box-shadow: var(--sombra);
 }
 
-/* =============================================
-     TABLERO: Grid 2x3
-     ============================================= */
-
+/* TABLERO 2x3 */
 .tablero-juego {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(130px, 1fr));
+  gap: 22px; /* huecos ligeramente menores */
   width: 100%;
-  max-width: 450px;
-  margin-bottom: 30px;
-  transform: scale(0.65); /* ← Reduce al 85% */
-  transform-origin: top; /* ← Se reduce desde el centro */
+  max-width: 380px; /* tablero un poco más pequeño */
+  margin-inline: auto;
+  margin-bottom: 28px;
 }
 
-/* =============================================
-     TARJETAS
-     ============================================= */
-
+/* TARJETAS */
 .tarjeta {
   width: 100%;
   aspect-ratio: 1;
   border: none;
-  border-radius: 16px;
+  border-radius: 16px; /* menos redondo */
   cursor: pointer;
   box-shadow: var(--sombra);
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 20px;
+  gap: 8px;
+  padding: 16px; /* menos padding */
 }
 
-/* Efecto hover */
 .tarjeta:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
 }
 
-/* Efecto al hacer clic */
 .tarjeta:active {
   transform: translateY(0);
 }
 
-/* Tarjeta amarilla (vacía) */
 .tarjeta--amarilla {
   background: var(--amarillo);
 }
 
-/* Tarjeta blanca (con contenido) */
 .tarjeta--blanca {
   background: var(--blanco);
   border: 3px solid var(--amarillo);
 }
 
-/* Texto de la tarjeta */
 .tarjeta__texto {
-  font-size: 16px;
+  font-size: 15px; /* más pequeño */
   font-weight: 600;
   color: var(--texto);
-  margin: 0;
 }
 
-/* Imagen de la tarjeta */
 .tarjeta__imagen {
-  width: 80px;
-  height: 80px;
+  width: 70px; /* más pequeña */
+  height: 70px;
   object-fit: contain;
 }
 
-/* =============================================
-     MENSAJE ¡CORRECTO!
-     ============================================= */
-
+/* MENSAJE ¡CORRECTO! */
 .mensaje-correcto {
+  margin-top: 6px;
+  padding: 10px 40px; /* más compacto */
+  border-radius: 999px;
   background: var(--amarillo);
-  padding: 12px 40px;
-  border-radius: 25px;
   box-shadow: var(--sombra);
-
-  margin-top: -250px; /* ← Se reduce desde el centro */
 }
 
 .mensaje-correcto__texto {
-  font-size: 18px;
+  font-size: 16px; /* más pequeño */
   font-weight: 700;
   color: var(--texto);
 }
 
-/* =============================================
-     RESPONSIVE
-     ============================================= */
+/* ================== RESPONSIVE ================== */
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .seccion-juego {
-    padding: 100px 16px 80px;
+    padding: 90px 16px 70px;
+  }
+  .boton-retroceder h2 {
+    font-size: 20px !important; /* más pequeño */
+    font-weight: 700 !important;
+    color: var(--azul);
   }
 
   .cabecera-juego {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
-  .boton-puntaje {
-    align-self: flex-end;
+    flex-direction: row;
+    gap: 200px;
   }
 
   .titulo-juego {
     font-size: 18px;
-    padding: 12px 30px;
+    padding: 10px 40px;
   }
 
   .tablero-juego {
-    gap: 16px;
-    max-width: 100%;
+    max-width: 340px;
+    gap: 18px;
   }
 
   .tarjeta__imagen {
     width: 60px;
     height: 60px;
   }
+}
+
+@media (max-width: 540px) {
+  .cabecera-juego {
+    flex-direction: column;
+    align-items: center; /* centra todo horizontalmente */
+    gap: 8px;
+  }
+
+  .boton-puntaje {
+    align-self: center; /* botón "Ver Puntaje" centrado */
+  }
+
+  .titulo-juego {
+    font-size: 17px;
+    padding: 9px 32px;
+  }
+
+  .tablero-juego {
+    max-width: 100%;
+    gap: 16px;
+  }
 
   .tarjeta__texto {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  .tarjeta__imagen {
+    width: 52px;
+    height: 52px;
+  }
+
+  .mensaje-correcto {
+    padding-inline: 28px;
   }
 }
