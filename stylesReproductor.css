@@ -3,11 +3,15 @@
   --gris: #e5eaef;
   --texto: #0b2239;
   --wrap: 920px;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial,
+    sans-serif;
 }
 
 /* RESET */
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 body {
   margin: 0;
   color: var(--texto);
@@ -107,8 +111,8 @@ body {
 
 /* BOTONES DE CONTROL AGRANDADOS */
 .ctrl-btn {
-  width: 60px;     /* AUMENTADO */
-  height: 60px;    /* AUMENTADO */
+  width: 60px; /* AUMENTADO */
+  height: 60px; /* AUMENTADO */
   display: grid;
   place-items: center;
   border: none;
@@ -131,8 +135,6 @@ body {
   font-size: 62px; /* PLAY CENTRAL MÁS GRANDE */
 }
 
-
-
 /* Checkbox controlador */
 .modal-checkbox {
   display: none;
@@ -141,8 +143,10 @@ body {
 /* Fondo oscuro */
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.6);
   display: grid;
   place-items: center;
@@ -164,7 +168,7 @@ body {
   background: #fff;
   padding: 32px 40px;
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   width: 90%;
   max-width: 380px;
   text-align: center;
@@ -215,9 +219,7 @@ body {
   border: 2px solid var(--gris);
 }
 
-/* ============================================
-   RESPONSIVE
-============================================ */
+/* RESPONSIVE*/
 @media (max-width: 640px) {
   .ctrl-btn {
     width: 65px;
@@ -226,12 +228,128 @@ body {
   .ctrl-btn i {
     font-size: 36px;
   }
-  
+
   .ctrl-btn--main {
     width: 90px;
     height: 90px;
   }
   .ctrl-btn--main i {
     font-size: 50px;
+  }
+}
+/* Tablets */
+@media (max-width: 820px) {
+  .player {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .back-btn {
+    margin-left: 0;
+  }
+
+  .player__titulo {
+    font-size: 28px;
+  }
+
+  .seek {
+    width: 95%;
+    gap: 10px;
+  }
+
+  .controls {
+    gap: 26px;
+  }
+
+  .ctrl-btn {
+    width: 55px;
+    height: 55px;
+  }
+  .ctrl-btn i {
+    font-size: 28px;
+  }
+
+  .ctrl-btn--main {
+    width: 75px;
+    height: 75px;
+  }
+  .ctrl-btn--main i {
+    font-size: 50px;
+  }
+
+  .modal-ventana {
+    padding: 26px 28px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .player {
+    padding: 60px 16px;
+    gap: 18px;
+  }
+
+  .player__titulo {
+    font-size: 24px;
+  }
+
+  .player__sub {
+    font-size: 14px;
+  }
+
+  .seek {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .seek__time {
+    font-size: 12px;
+  }
+
+  .seek__dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .controls {
+    gap: 22px;
+  }
+
+  .ctrl-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .ctrl-btn i {
+    font-size: 26px;
+  }
+
+  .ctrl-btn--main {
+    width: 70px;
+    height: 70px;
+  }
+  .ctrl-btn--main i {
+    font-size: 46px;
+  }
+
+  .modal-ventana {
+    width: 92%;
+    padding: 24px;
+  }
+
+  .modal-icono {
+    width: 80px;
+    height: 80px;
+  }
+
+  .modal-icono img {
+    width: 48px;
+  }
+
+  .modal-pregunta {
+    font-size: 16px;
+  }
+
+  .modal-botones {
+    flex-direction: column;
   }
 }
