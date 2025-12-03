@@ -171,10 +171,6 @@
   display: block;
 }
 
-/* =============================================
-     RESPONSIVE: Pantallas pequeñas
-     ============================================= */
-
 @media (max-width: 768px) {
   .seccion-frases {
     padding: 100px 16px 80px;
@@ -197,5 +193,118 @@
     width: 32px;
     height: 32px;
     min-width: 32px;
+  }
+}
+@media (max-width: 1024px) {
+  .seccion-frases {
+    max-width: 800px;
+    padding: 100px 60px 90px;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .seccion-frases h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .seccion-frases {
+    max-width: 100%;
+    padding: 100px 24px 80px;
+    transform: none;
+  }
+
+  .seccion-frases h2 {
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 12px 18px;
+    max-width: 100%;
+  }
+
+  .lista-frases {
+    gap: 16px;
+  }
+
+  .tarjeta-frase__texto {
+    padding: 14px 16px;
+  }
+
+  .tarjeta-frase__texto p {
+    font-size: 14px;
+  }
+
+  .tarjeta-frase__reproductor {
+    padding: 10px 14px;
+    gap: 12px;
+  }
+
+  .play {
+    width: 32px;
+    height: 32px;
+  }
+
+  .barra-audio {
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-frases {
+    padding: 90px 16px 70px;
+  }
+
+  .seccion-frases h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .lista-frases {
+    gap: 14px;
+  }
+
+  .tarjeta-frase__texto {
+    padding: 12px 14px;
+  }
+
+  .tarjeta-frase__texto p {
+    font-size: 13px;
+  }
+
+  /* Ajuste del reproductor en móvil */
+  .tarjeta-frase__reproductor {
+    padding: 8px 12px;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .play {
+    width: 30px;
+    height: 30px;
+  }
+
+  .barra-audio {
+    width: 100%;
+    height: auto;
+    margin-top: 4px;
+  }
+
+  .barra-audio img {
+    width: 80%;
+    height: auto;
+    display: block;
   }
 }

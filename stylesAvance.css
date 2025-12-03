@@ -250,3 +250,141 @@
   display: inline-block;
   cursor: pointer;
 }
+/* ========= TABLET (≤ 992px) ========= */
+@media (max-width: 992px) {
+  .seccion-avances {
+    padding: 110px 40px 50px;
+    box-sizing: border-box;
+  }
+
+  .header-avances {
+    margin-bottom: 30px;
+    gap: 12px;
+  }
+
+  .header-avances h2 {
+    font-size: 26px;
+  }
+
+  .contenido-avances {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .columna-resumen {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .columna-detalles {
+    width: 100%;
+  }
+
+  .selector-idioma-docente select {
+    margin-bottom: 30px;
+  }
+}
+
+/* ========= MÓVIL (≤ 600px) ========= */
+@media (max-width: 600px) {
+  .seccion-avances {
+    padding: 96px 16px 40px;
+    box-sizing: border-box;
+  }
+
+  .header-avances {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+
+  .header-avances h2 {
+    font-size: 22px;
+  }
+
+  .contenido-avances {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .columna-resumen {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  .selector-idioma-docente select {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .mensaje-promedio {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .columna-detalles {
+    width: 100%;
+  }
+
+  /* Tabla desplazable horizontal dentro del área de detalles */
+  .tabla-avances {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    font-size: 14px;
+  }
+
+  .tabla-avances th,
+  .tabla-avances td {
+    padding: 8px;
+  }
+
+  .tabla-avances td:first-child {
+    font-size: 16px;
+  }
+
+  .tabla-avances td:first-child small {
+    font-size: 13px;
+    margin-left: 20px;
+  }
+
+  .btn-reproducir {
+    width: 100%;
+    text-align: center;
+  }
+
+  .actividades-recientes h4 {
+    font-size: 18px;
+  }
+
+  .actividades-recientes li {
+    font-size: 16px;
+  }
+
+  .btn-exportar-label {
+    margin-top: 24px;
+  }
+
+  .btn-exportar {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .reporte-modal-contenido {
+    width: 90%;
+    max-width: 320px;
+    padding: 24px 20px;
+  }
+
+  .modal-titulo {
+    font-size: 20px;
+  }
+
+  .modal-texto {
+    font-size: 14px;
+  }
+}

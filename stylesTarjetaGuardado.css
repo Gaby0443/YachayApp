@@ -1,4 +1,3 @@
-
 .contenedor-principal {
   max-width: 600px;
   padding-top: 100px;
@@ -153,5 +152,79 @@
   .grupo-input-doble {
     flex-direction: column;
     gap: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .contenedor-principal {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-principal {
+    padding-top: 110px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+
+  .titulo-pagina {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  .tarjeta-form-container {
+    padding: 24px 20px;
+  }
+
+  .logos-tarjetas {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .contenedor-principal {
+    max-width: 100%;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0 auto;
+  }
+
+  .titulo-pagina {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .tarjeta-form-container {
+    padding: 20px 14px;
+  }
+
+  .imagen-tarjeta img {
+    max-width: 200px;
+  }
+
+  .grupo-input-doble {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-confirmar {
+    font-size: 1em;
+    padding: 13px 16px;
+  }
+
+  .info-seguridad {
+    font-size: 0.8em;
+    gap: 6px;
   }
 }

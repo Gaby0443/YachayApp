@@ -190,3 +190,87 @@
   .resena[data-orden-valor="4"] {
   order: 2;
 }
+
+@media (max-width: 992px) {
+  .seccion-resenas {
+    padding: 110px 40px 50px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header-resenas {
+    gap: 16px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .header-resenas h2 {
+    margin: 0; /* quitamos el margen grande a la derecha */
+    font-size: 24px;
+  }
+
+  .ordenar-por {
+    margin-top: 10px;
+  }
+
+  .resenas-container {
+    gap: 40px;
+  }
+}
+
+/* ========= MÓVIL (≤ 600px) ========= */
+@media (max-width: 600px) {
+  .seccion-resenas {
+    padding: 96px 16px 40px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header-resenas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .header-resenas h2 {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .ordenar-por {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .btn-orden-actual {
+    width: 100%;
+    text-align: left;
+  }
+
+  .resenas-container {
+    flex-direction: column; /* columnas una debajo de otra */
+    gap: 20px;
+  }
+
+  .resena {
+    padding: 16px 14px;
+  }
+
+  .resena .nombre {
+    font-size: 18px;
+  }
+
+  .resena .comentario {
+    font-size: 15px;
+  }
+
+  .resena .fecha {
+    font-size: 13px;
+  }
+}

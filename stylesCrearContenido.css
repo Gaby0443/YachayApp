@@ -286,3 +286,109 @@
   color: #6a6a6a;
   margin: 0;
 }
+/* ========= TABLET (≤ 992px) ========= */
+@media (max-width: 992px) {
+  .seccion-crear-contenido {
+    padding: 110px 40px 50px; /* menos padding lateral */
+  }
+
+  .contenedor-principal-docente {
+    flex-direction: column; /* columnas una debajo de otra */
+    gap: 30px;
+    max-width: 900px;
+  }
+
+  .columna-derecha-docente {
+    min-width: 0; /* deja que se adapte al ancho disponible */
+  }
+
+  .panel-nuevo-contenido {
+    padding: 24px 28px;
+  }
+}
+
+/* ========= MÓVIL (≤ 600px) ========= */
+@media (max-width: 600px) {
+  .seccion-crear-contenido {
+    padding: 100px 16px 40px; /* buen margen lateral en móvil */
+  }
+
+  .header-crear-contenido {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .header-crear-contenido h2 {
+    font-size: 22px;
+  }
+
+  .contenedor-principal-docente {
+    gap: 24px;
+  }
+
+  .panel-nuevo-contenido {
+    padding: 20px 16px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input[type="text"] {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .form-group-media {
+    flex-direction: column; /* audio e imagen uno debajo del otro */
+    gap: 16px;
+  }
+
+  .controles-audio,
+  .controles-imagen {
+    flex-direction: column; /* botones en columna para que no se aplasten */
+  }
+
+  .btn-media-blanco,
+  .btn-media-amarillo {
+    width: 100%;
+  }
+
+  .btn-crear-contenido,
+  .btn-guardar-contenido {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+
+  .form-group-grupos h4 {
+    font-size: 16px;
+  }
+
+  .checkbox-item {
+    font-size: 14px;
+  }
+
+  /* Tarjetas de contenido creado: layout en columna */
+  .tarjeta-contenido-creado {
+    grid-template-areas:
+      "nombre"
+      "grupos"
+      "fecha";
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    padding: 16px 14px;
+  }
+
+  .nombre-contenido {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .grupos-asignados,
+  .fecha-creacion {
+    font-size: 13px;
+  }
+}
